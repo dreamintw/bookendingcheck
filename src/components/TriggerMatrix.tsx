@@ -8,7 +8,7 @@ const intensityCls = {
 };
 
 export function TriggerMatrix({ triggers }: { triggers: Trigger[] }) {
-  const [lang] = useLang();
+  const lang = useLang();
   if (triggers.length === 0) {
     return <p className="text-sm text-muted-foreground">—</p>;
   }

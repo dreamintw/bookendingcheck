@@ -2,8 +2,8 @@ import type { Decision } from "@/data/books";
 import { useLang, t } from "@/lib/i18n";
 import { Check, X, AlertTriangle } from "lucide-react";
 
-export function DecisionCard({ decision }: { decision: Decision }) {
-  const [lang] = useLang();
+export function DecisionCard({ decision, confidence }: { decision: Decision; confidence?: number }) {
+  const lang = useLang();
   const map = {
     read: { label: t.read[lang], Icon: Check, cls: "border-[color:var(--read)] bg-[color:var(--read)]/10 text-[color:var(--read)]" },
     skip: { label: t.skip[lang], Icon: X, cls: "border-[color:var(--skip)] bg-[color:var(--skip)]/10 text-[color:var(--skip)]" },
@@ -11,9 +11,16 @@ export function DecisionCard({ decision }: { decision: Decision }) {
   }[decision];
   const { Icon } = map;
   return (
-    <div className={`inline-flex items-center gap-2 rounded-lg border-2 px-4 py-2 font-display text-base font-semibold ${map.cls}`}>
-      <Icon className="h-5 w-5" />
-      {map.label}
+    <div className={`inline-flex flex-col items-start gap-1 rounded-lg border-2 px-4 py-2 font-display ${map.cls}`}>
+      <div className="inline-flex items-center gap-2 text-base font-semibold">
+        <Icon className="h-5 w-5" />
+        {map.label}
+      </div>
+      {typeof confidence === "number" && (
+        <div className="text-xs opacity-80 font-normal">
+          {t.confidence[lang]}: {confidence}%
+        </div>
+      )}
     </div>
   );
 }
