@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { books, ENDINGS, type Ending } from "@/data/books";
 import { useLang, t, type Lang } from "@/lib/i18n";
+import { homepageEntriesZh, homepageEntriesEn } from "@/data/collections";
 import { BookCard } from "@/components/BookCard";
 import { EndingBadge } from "@/components/EndingBadge";
 import { Search, Sparkles } from "lucide-react";
