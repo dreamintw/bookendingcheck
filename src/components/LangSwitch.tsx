@@ -20,7 +20,7 @@ export function LangSwitch() {
         to={buildHref("zh")}
         className={`px-2.5 py-1 transition-colors ${current === "zh" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
         aria-pressed={current === "zh"}
-        hreflang="zh"
+        hrefLang="zh"
       >
         中文
       </Link>
@@ -28,7 +28,7 @@ export function LangSwitch() {
         to={buildHref("en")}
         className={`px-2.5 py-1 transition-colors ${current === "en" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
         aria-pressed={current === "en"}
-        hreflang="en"
+        hrefLang="en"
       >
         EN
       </Link>
