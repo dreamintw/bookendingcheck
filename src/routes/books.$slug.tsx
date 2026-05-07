@@ -134,7 +134,7 @@ function BookDetail() {
               <Check className="h-4 w-4" /> {t.whoFor[lang]}
             </h3>
             <ul className="space-y-1.5 text-sm">
-              {book.whoFor[lang].map((line) => <li key={line}>· {line}</li>)}
+              {book.whoFor[lang].map((line: string) => <li key={line}>· {line}</li>)}
             </ul>
           </div>
           <div className="rounded-xl border border-destructive/30 bg-destructive/5 p-5">
@@ -142,7 +142,7 @@ function BookDetail() {
               <X className="h-4 w-4" /> {t.whoNot[lang]}
             </h3>
             <ul className="space-y-1.5 text-sm">
-              {book.whoNot[lang].map((line) => <li key={line}>· {line}</li>)}
+              {book.whoNot[lang].map((line: string) => <li key={line}>· {line}</li>)}
             </ul>
           </div>
         </section>
