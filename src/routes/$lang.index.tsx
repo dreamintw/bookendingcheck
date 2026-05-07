@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { books, ENDINGS, type Ending } from "@/data/books";
 import { useLang, t, type Lang } from "@/lib/i18n";
+import { homepageEntriesZh, homepageEntriesEn } from "@/data/collections";
 import { BookCard } from "@/components/BookCard";
 import { EndingBadge } from "@/components/EndingBadge";
 import { Search, Sparkles } from "lucide-react";
@@ -98,6 +99,38 @@ function HomePage() {
             <span>·</span>
             <Link to="/$lang/authors" params={{ lang }} className="hover:text-foreground underline-offset-4 hover:underline">{t.browseByAuthor[lang]}</Link>
           </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="reader-need-heading" className="border-b border-border bg-card/40">
+        <div className="mx-auto max-w-6xl w-full px-4 py-12">
+          <div className="mb-6">
+            <h2 id="reader-need-heading" className="font-display text-2xl md:text-3xl font-semibold">
+              {lang === "zh" ? "依讀者需求瀏覽（Browse by Reader Need）" : "Browse by Reader Need"}
+            </h2>
+            <p className="text-sm text-muted-foreground mt-2">
+              {lang === "zh"
+                ? "選一個最貼近你目前需求的入口，30 秒找到下一本書。"
+                : "Pick the entry that matches your current need — find your next book in 30 seconds."}
+            </p>
+          </div>
+          <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {(lang === "zh" ? homepageEntriesZh : homepageEntriesEn).map((entry) => (
+              <li key={entry.slug}>
+                <a
+                  href={`/${lang}/collections/${entry.slug}`}
+                  className="block rounded-lg border border-border bg-card px-4 py-3 text-sm hover:border-accent hover:text-accent hover:shadow-sm transition-colors"
+                >
+                  {entry.label} →
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-5 text-xs text-muted-foreground">
+            <a href={`/${lang}/collections`} className="hover:text-foreground underline-offset-4 hover:underline">
+              {lang === "zh" ? "查看全部主題清單" : "See all collections"} →
+            </a>
+          </p>
         </div>
       </section>
 

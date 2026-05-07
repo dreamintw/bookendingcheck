@@ -19,10 +19,12 @@ import { Route as LangAboutRouteImport } from './routes/$lang.about'
 import { Route as LangWarningsIndexRouteImport } from './routes/$lang.warnings.index'
 import { Route as LangGenresIndexRouteImport } from './routes/$lang.genres.index'
 import { Route as LangEndingsIndexRouteImport } from './routes/$lang.endings.index'
+import { Route as LangCollectionsIndexRouteImport } from './routes/$lang.collections.index'
 import { Route as LangAuthorsIndexRouteImport } from './routes/$lang.authors.index'
 import { Route as LangWarningsCodeRouteImport } from './routes/$lang.warnings.$code'
 import { Route as LangGenresSlugRouteImport } from './routes/$lang.genres.$slug'
 import { Route as LangEndingsEndingRouteImport } from './routes/$lang.endings.$ending'
+import { Route as LangCollectionsSlugRouteImport } from './routes/$lang.collections.$slug'
 import { Route as LangBookSlugRouteImport } from './routes/$lang.book.$slug'
 import { Route as LangAuthorsSlugRouteImport } from './routes/$lang.authors.$slug'
 
@@ -76,6 +78,11 @@ const LangEndingsIndexRoute = LangEndingsIndexRouteImport.update({
   path: '/endings/',
   getParentRoute: () => LangRoute,
 } as any)
+const LangCollectionsIndexRoute = LangCollectionsIndexRouteImport.update({
+  id: '/collections/',
+  path: '/collections/',
+  getParentRoute: () => LangRoute,
+} as any)
 const LangAuthorsIndexRoute = LangAuthorsIndexRouteImport.update({
   id: '/authors/',
   path: '/authors/',
@@ -94,6 +101,11 @@ const LangGenresSlugRoute = LangGenresSlugRouteImport.update({
 const LangEndingsEndingRoute = LangEndingsEndingRouteImport.update({
   id: '/endings/$ending',
   path: '/endings/$ending',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangCollectionsSlugRoute = LangCollectionsSlugRouteImport.update({
+  id: '/collections/$slug',
+  path: '/collections/$slug',
   getParentRoute: () => LangRoute,
 } as any)
 const LangBookSlugRoute = LangBookSlugRouteImport.update({
@@ -117,10 +129,12 @@ export interface FileRoutesByFullPath {
   '/$lang/': typeof LangIndexRoute
   '/$lang/authors/$slug': typeof LangAuthorsSlugRoute
   '/$lang/book/$slug': typeof LangBookSlugRoute
+  '/$lang/collections/$slug': typeof LangCollectionsSlugRoute
   '/$lang/endings/$ending': typeof LangEndingsEndingRoute
   '/$lang/genres/$slug': typeof LangGenresSlugRoute
   '/$lang/warnings/$code': typeof LangWarningsCodeRoute
   '/$lang/authors/': typeof LangAuthorsIndexRoute
+  '/$lang/collections/': typeof LangCollectionsIndexRoute
   '/$lang/endings/': typeof LangEndingsIndexRoute
   '/$lang/genres/': typeof LangGenresIndexRoute
   '/$lang/warnings/': typeof LangWarningsIndexRoute
@@ -134,10 +148,12 @@ export interface FileRoutesByTo {
   '/$lang': typeof LangIndexRoute
   '/$lang/authors/$slug': typeof LangAuthorsSlugRoute
   '/$lang/book/$slug': typeof LangBookSlugRoute
+  '/$lang/collections/$slug': typeof LangCollectionsSlugRoute
   '/$lang/endings/$ending': typeof LangEndingsEndingRoute
   '/$lang/genres/$slug': typeof LangGenresSlugRoute
   '/$lang/warnings/$code': typeof LangWarningsCodeRoute
   '/$lang/authors': typeof LangAuthorsIndexRoute
+  '/$lang/collections': typeof LangCollectionsIndexRoute
   '/$lang/endings': typeof LangEndingsIndexRoute
   '/$lang/genres': typeof LangGenresIndexRoute
   '/$lang/warnings': typeof LangWarningsIndexRoute
@@ -153,10 +169,12 @@ export interface FileRoutesById {
   '/$lang/': typeof LangIndexRoute
   '/$lang/authors/$slug': typeof LangAuthorsSlugRoute
   '/$lang/book/$slug': typeof LangBookSlugRoute
+  '/$lang/collections/$slug': typeof LangCollectionsSlugRoute
   '/$lang/endings/$ending': typeof LangEndingsEndingRoute
   '/$lang/genres/$slug': typeof LangGenresSlugRoute
   '/$lang/warnings/$code': typeof LangWarningsCodeRoute
   '/$lang/authors/': typeof LangAuthorsIndexRoute
+  '/$lang/collections/': typeof LangCollectionsIndexRoute
   '/$lang/endings/': typeof LangEndingsIndexRoute
   '/$lang/genres/': typeof LangGenresIndexRoute
   '/$lang/warnings/': typeof LangWarningsIndexRoute
@@ -173,10 +191,12 @@ export interface FileRouteTypes {
     | '/$lang/'
     | '/$lang/authors/$slug'
     | '/$lang/book/$slug'
+    | '/$lang/collections/$slug'
     | '/$lang/endings/$ending'
     | '/$lang/genres/$slug'
     | '/$lang/warnings/$code'
     | '/$lang/authors/'
+    | '/$lang/collections/'
     | '/$lang/endings/'
     | '/$lang/genres/'
     | '/$lang/warnings/'
@@ -190,10 +210,12 @@ export interface FileRouteTypes {
     | '/$lang'
     | '/$lang/authors/$slug'
     | '/$lang/book/$slug'
+    | '/$lang/collections/$slug'
     | '/$lang/endings/$ending'
     | '/$lang/genres/$slug'
     | '/$lang/warnings/$code'
     | '/$lang/authors'
+    | '/$lang/collections'
     | '/$lang/endings'
     | '/$lang/genres'
     | '/$lang/warnings'
@@ -208,10 +230,12 @@ export interface FileRouteTypes {
     | '/$lang/'
     | '/$lang/authors/$slug'
     | '/$lang/book/$slug'
+    | '/$lang/collections/$slug'
     | '/$lang/endings/$ending'
     | '/$lang/genres/$slug'
     | '/$lang/warnings/$code'
     | '/$lang/authors/'
+    | '/$lang/collections/'
     | '/$lang/endings/'
     | '/$lang/genres/'
     | '/$lang/warnings/'
@@ -296,6 +320,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangEndingsIndexRouteImport
       parentRoute: typeof LangRoute
     }
+    '/$lang/collections/': {
+      id: '/$lang/collections/'
+      path: '/collections'
+      fullPath: '/$lang/collections/'
+      preLoaderRoute: typeof LangCollectionsIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
     '/$lang/authors/': {
       id: '/$lang/authors/'
       path: '/authors'
@@ -324,6 +355,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangEndingsEndingRouteImport
       parentRoute: typeof LangRoute
     }
+    '/$lang/collections/$slug': {
+      id: '/$lang/collections/$slug'
+      path: '/collections/$slug'
+      fullPath: '/$lang/collections/$slug'
+      preLoaderRoute: typeof LangCollectionsSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
     '/$lang/book/$slug': {
       id: '/$lang/book/$slug'
       path: '/book/$slug'
@@ -347,10 +385,12 @@ interface LangRouteChildren {
   LangIndexRoute: typeof LangIndexRoute
   LangAuthorsSlugRoute: typeof LangAuthorsSlugRoute
   LangBookSlugRoute: typeof LangBookSlugRoute
+  LangCollectionsSlugRoute: typeof LangCollectionsSlugRoute
   LangEndingsEndingRoute: typeof LangEndingsEndingRoute
   LangGenresSlugRoute: typeof LangGenresSlugRoute
   LangWarningsCodeRoute: typeof LangWarningsCodeRoute
   LangAuthorsIndexRoute: typeof LangAuthorsIndexRoute
+  LangCollectionsIndexRoute: typeof LangCollectionsIndexRoute
   LangEndingsIndexRoute: typeof LangEndingsIndexRoute
   LangGenresIndexRoute: typeof LangGenresIndexRoute
   LangWarningsIndexRoute: typeof LangWarningsIndexRoute
@@ -362,10 +402,12 @@ const LangRouteChildren: LangRouteChildren = {
   LangIndexRoute: LangIndexRoute,
   LangAuthorsSlugRoute: LangAuthorsSlugRoute,
   LangBookSlugRoute: LangBookSlugRoute,
+  LangCollectionsSlugRoute: LangCollectionsSlugRoute,
   LangEndingsEndingRoute: LangEndingsEndingRoute,
   LangGenresSlugRoute: LangGenresSlugRoute,
   LangWarningsCodeRoute: LangWarningsCodeRoute,
   LangAuthorsIndexRoute: LangAuthorsIndexRoute,
+  LangCollectionsIndexRoute: LangCollectionsIndexRoute,
   LangEndingsIndexRoute: LangEndingsIndexRoute,
   LangGenresIndexRoute: LangGenresIndexRoute,
   LangWarningsIndexRoute: LangWarningsIndexRoute,
@@ -382,13 +424,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
