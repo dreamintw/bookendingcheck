@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { getCollection, collectionBooks, collections } from "@/data/collections";
+import { getCollection, collectionBooks, collections, type Collection } from "@/data/collections";
 import { useLang, t, type Lang } from "@/lib/i18n";
 import { BookCard } from "@/components/BookCard";
 import { siteUrl, langAlt, breadcrumbJsonLd } from "@/lib/seo";
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/$lang/collections/$slug")({
 
 function CollectionPage() {
   const lang = useLang();
-  const { collection } = Route.useLoaderData();
+  const { collection } = Route.useLoaderData() as { collection: Collection };
   const list = collectionBooks(collection);
   const intro = collection.intro[lang].split("\n\n");
 
