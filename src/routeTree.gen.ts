@@ -12,6 +12,9 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as LangRouteImport } from './routes/$lang'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang.index'
+import { Route as LangBooksRouteImport } from './routes/$lang.books'
+import { Route as LangAboutRouteImport } from './routes/$lang.about'
+import { Route as LangBookSlugRouteImport } from './routes/$lang.book.$slug'
 
 const LangRoute = LangRouteImport.update({
   id: '/$lang',
@@ -28,28 +31,65 @@ const LangIndexRoute = LangIndexRouteImport.update({
   path: '/',
   getParentRoute: () => LangRoute,
 } as any)
+const LangBooksRoute = LangBooksRouteImport.update({
+  id: '/books',
+  path: '/books',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangAboutRoute = LangAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangBookSlugRoute = LangBookSlugRouteImport.update({
+  id: '/book/$slug',
+  path: '/book/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteWithChildren
+  '/$lang/about': typeof LangAboutRoute
+  '/$lang/books': typeof LangBooksRoute
   '/$lang/': typeof LangIndexRoute
+  '/$lang/book/$slug': typeof LangBookSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$lang/about': typeof LangAboutRoute
+  '/$lang/books': typeof LangBooksRoute
   '/$lang': typeof LangIndexRoute
+  '/$lang/book/$slug': typeof LangBookSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteWithChildren
+  '/$lang/about': typeof LangAboutRoute
+  '/$lang/books': typeof LangBooksRoute
   '/$lang/': typeof LangIndexRoute
+  '/$lang/book/$slug': typeof LangBookSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$lang' | '/$lang/'
+  fullPaths:
+    | '/'
+    | '/$lang'
+    | '/$lang/about'
+    | '/$lang/books'
+    | '/$lang/'
+    | '/$lang/book/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$lang'
-  id: '__root__' | '/' | '/$lang' | '/$lang/'
+  to: '/' | '/$lang/about' | '/$lang/books' | '/$lang' | '/$lang/book/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/$lang'
+    | '/$lang/about'
+    | '/$lang/books'
+    | '/$lang/'
+    | '/$lang/book/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -80,15 +120,42 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangIndexRouteImport
       parentRoute: typeof LangRoute
     }
+    '/$lang/books': {
+      id: '/$lang/books'
+      path: '/books'
+      fullPath: '/$lang/books'
+      preLoaderRoute: typeof LangBooksRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/about': {
+      id: '/$lang/about'
+      path: '/about'
+      fullPath: '/$lang/about'
+      preLoaderRoute: typeof LangAboutRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/book/$slug': {
+      id: '/$lang/book/$slug'
+      path: '/book/$slug'
+      fullPath: '/$lang/book/$slug'
+      preLoaderRoute: typeof LangBookSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
   }
 }
 
 interface LangRouteChildren {
+  LangAboutRoute: typeof LangAboutRoute
+  LangBooksRoute: typeof LangBooksRoute
   LangIndexRoute: typeof LangIndexRoute
+  LangBookSlugRoute: typeof LangBookSlugRoute
 }
 
 const LangRouteChildren: LangRouteChildren = {
+  LangAboutRoute: LangAboutRoute,
+  LangBooksRoute: LangBooksRoute,
   LangIndexRoute: LangIndexRoute,
+  LangBookSlugRoute: LangBookSlugRoute,
 }
 
 const LangRouteWithChildren = LangRoute._addFileChildren(LangRouteChildren)
