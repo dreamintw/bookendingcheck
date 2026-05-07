@@ -1,4 +1,4 @@
-export type Ending = "HE" | "BE" | "OE" | "Bittersweet" | "Ambiguous";
+export type Ending = "HE" | "BE" | "OE" | "Bittersweet" | "Ambiguous" | "Unknown";
 export type Decision = "read" | "skip" | "caution";
 export type Intensity = "low" | "mid" | "high";
 
@@ -11,12 +11,14 @@ export interface Trigger {
 
 export interface Book {
   slug: string;
+  isbn?: string;
   title: { zh: string; en: string };
   author: { zh: string; en: string };
   year: number;
   genre: { zh: string; en: string };
   ending: Ending;
   decision: Decision;
+  confidence: number; // 0-100
   summary: { zh: string; en: string };
   spoilerSoft: { zh: string; en: string };
   spoilerHard: { zh: string; en: string };
@@ -25,15 +27,23 @@ export interface Book {
   triggers: Trigger[];
 }
 
+export const ENDINGS: Ending[] = ["HE", "BE", "OE", "Bittersweet", "Ambiguous", "Unknown"];
+
+export function slugify(s: string) {
+  return s.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fff]+/g, "-").replace(/^-|-$/g, "");
+}
+
 export const books: Book[] = [
   {
     slug: "the-song-of-achilles",
+    isbn: "9780062060624",
     title: { zh: "阿基里斯之歌", en: "The Song of Achilles" },
     author: { zh: "瑪德琳・米勒", en: "Madeline Miller" },
     year: 2011,
     genre: { zh: "歷史 / 神話 / LGBTQ+", en: "Historical / Mythology / LGBTQ+" },
     ending: "BE",
     decision: "caution",
+    confidence: 88,
     summary: {
       zh: "重述特洛伊戰爭，從帕特羅克洛斯的視角描繪他與阿基里斯之間的羈絆與宿命。",
       en: "A retelling of the Trojan War through Patroclus's eyes, tracing his bond with Achilles and their fated path.",
@@ -62,12 +72,14 @@ export const books: Book[] = [
   },
   {
     slug: "pride-and-prejudice",
+    isbn: "9780141439518",
     title: { zh: "傲慢與偏見", en: "Pride and Prejudice" },
     author: { zh: "珍・奧斯汀", en: "Jane Austen" },
     year: 1813,
     genre: { zh: "古典 / 愛情", en: "Classic / Romance" },
     ending: "HE",
     decision: "read",
+    confidence: 95,
     summary: {
       zh: "伊莉莎白與達西在誤解與成長中走向理解，是英國文學最經典的浪漫喜劇之一。",
       en: "Elizabeth and Darcy move from misunderstanding to mutual respect — a cornerstone of romantic comedy.",
@@ -94,12 +106,14 @@ export const books: Book[] = [
   },
   {
     slug: "no-longer-human",
+    isbn: "9780811204811",
     title: { zh: "人間失格", en: "No Longer Human" },
     author: { zh: "太宰治", en: "Osamu Dazai" },
     year: 1948,
     genre: { zh: "日本文學 / 純文學", en: "Japanese Literature / Literary" },
     ending: "BE",
     decision: "skip",
+    confidence: 90,
     summary: {
       zh: "以三本手記呈現一名男子自我毀滅的一生，是太宰治半自傳式代表作。",
       en: "Three notebooks chronicle one man's self-destruction — Dazai's semi-autobiographical masterpiece.",
@@ -128,12 +142,14 @@ export const books: Book[] = [
   },
   {
     slug: "norwegian-wood",
+    isbn: "9780375704024",
     title: { zh: "挪威的森林", en: "Norwegian Wood" },
     author: { zh: "村上春樹", en: "Haruki Murakami" },
     year: 1987,
     genre: { zh: "日本文學 / 成長", en: "Japanese Literature / Coming-of-age" },
     ending: "Bittersweet",
     decision: "caution",
+    confidence: 80,
     summary: {
       zh: "渡邊在 60 年代末的東京，於兩個女子與好友之死之間徘徊的青春輓歌。",
       en: "In late-60s Tokyo, Toru drifts between two women and the shadow of his friend's death.",
@@ -162,12 +178,14 @@ export const books: Book[] = [
   },
   {
     slug: "the-remains-of-the-day",
+    isbn: "9780679731726",
     title: { zh: "長日將盡", en: "The Remains of the Day" },
     author: { zh: "石黑一雄", en: "Kazuo Ishiguro" },
     year: 1989,
     genre: { zh: "文學 / 歷史", en: "Literary / Historical" },
     ending: "Ambiguous",
     decision: "read",
+    confidence: 85,
     summary: {
       zh: "英國管家史蒂文斯回首一生奉獻，發現自己錯過了愛情與道德判斷。",
       en: "An English butler retraces a life of service and realizes what love and judgment he missed.",
@@ -194,12 +212,14 @@ export const books: Book[] = [
   },
   {
     slug: "the-giver",
+    isbn: "9780544336261",
     title: { zh: "記憶傳承人", en: "The Giver" },
     author: { zh: "洛伊絲・勞瑞", en: "Lois Lowry" },
     year: 1993,
     genre: { zh: "反烏托邦 / YA", en: "Dystopia / YA" },
     ending: "OE",
     decision: "read",
+    confidence: 78,
     summary: {
       zh: "在一個沒有色彩與痛苦的「完美社區」，少年喬納斯被選為記憶傳承人。",
       en: "In a colorless 'perfect' community, young Jonas is chosen to receive its hidden memories.",
@@ -229,4 +249,28 @@ export const books: Book[] = [
 
 export function getBook(slug: string) {
   return books.find((b) => b.slug === slug);
+}
+
+export function getAllTriggers(): Trigger[] {
+  const map = new Map<string, Trigger>();
+  for (const b of books) for (const t of b.triggers) if (!map.has(t.code)) map.set(t.code, t);
+  return Array.from(map.values());
+}
+
+export function getAllGenres() {
+  const map = new Map<string, { slug: string; zh: string; en: string }>();
+  for (const b of books) {
+    const slug = slugify(b.genre.en);
+    if (!map.has(slug)) map.set(slug, { slug, zh: b.genre.zh, en: b.genre.en });
+  }
+  return Array.from(map.values());
+}
+
+export function getAllAuthors() {
+  const map = new Map<string, { slug: string; zh: string; en: string }>();
+  for (const b of books) {
+    const slug = slugify(b.author.en);
+    if (!map.has(slug)) map.set(slug, { slug, zh: b.author.zh, en: b.author.en });
+  }
+  return Array.from(map.values());
 }

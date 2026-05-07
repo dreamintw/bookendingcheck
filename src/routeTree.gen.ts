@@ -10,24 +10,35 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as BooksRouteImport } from './routes/books'
-import { Route as AboutRouteImport } from './routes/about'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
+import { Route as LangRouteImport } from './routes/$lang'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as BooksSlugRouteImport } from './routes/books.$slug'
+import { Route as LangIndexRouteImport } from './routes/$lang.index'
+import { Route as LangBooksRouteImport } from './routes/$lang.books'
+import { Route as LangAboutRouteImport } from './routes/$lang.about'
+import { Route as LangWarningsIndexRouteImport } from './routes/$lang.warnings.index'
+import { Route as LangGenresIndexRouteImport } from './routes/$lang.genres.index'
+import { Route as LangEndingsIndexRouteImport } from './routes/$lang.endings.index'
+import { Route as LangAuthorsIndexRouteImport } from './routes/$lang.authors.index'
+import { Route as LangWarningsCodeRouteImport } from './routes/$lang.warnings.$code'
+import { Route as LangGenresSlugRouteImport } from './routes/$lang.genres.$slug'
+import { Route as LangEndingsEndingRouteImport } from './routes/$lang.endings.$ending'
+import { Route as LangBookSlugRouteImport } from './routes/$lang.book.$slug'
+import { Route as LangAuthorsSlugRouteImport } from './routes/$lang.authors.$slug'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BooksRoute = BooksRouteImport.update({
-  id: '/books',
-  path: '/books',
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
+const LangRoute = LangRouteImport.update({
+  id: '/$lang',
+  path: '/$lang',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -35,46 +46,181 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BooksSlugRoute = BooksSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => BooksRoute,
+const LangIndexRoute = LangIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangBooksRoute = LangBooksRouteImport.update({
+  id: '/books',
+  path: '/books',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangAboutRoute = LangAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangWarningsIndexRoute = LangWarningsIndexRouteImport.update({
+  id: '/warnings/',
+  path: '/warnings/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangGenresIndexRoute = LangGenresIndexRouteImport.update({
+  id: '/genres/',
+  path: '/genres/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangEndingsIndexRoute = LangEndingsIndexRouteImport.update({
+  id: '/endings/',
+  path: '/endings/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangAuthorsIndexRoute = LangAuthorsIndexRouteImport.update({
+  id: '/authors/',
+  path: '/authors/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangWarningsCodeRoute = LangWarningsCodeRouteImport.update({
+  id: '/warnings/$code',
+  path: '/warnings/$code',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangGenresSlugRoute = LangGenresSlugRouteImport.update({
+  id: '/genres/$slug',
+  path: '/genres/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangEndingsEndingRoute = LangEndingsEndingRouteImport.update({
+  id: '/endings/$ending',
+  path: '/endings/$ending',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangBookSlugRoute = LangBookSlugRouteImport.update({
+  id: '/book/$slug',
+  path: '/book/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangAuthorsSlugRoute = LangAuthorsSlugRouteImport.update({
+  id: '/authors/$slug',
+  path: '/authors/$slug',
+  getParentRoute: () => LangRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/books': typeof BooksRouteWithChildren
+  '/$lang': typeof LangRouteWithChildren
+  '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/books/$slug': typeof BooksSlugRoute
+  '/$lang/about': typeof LangAboutRoute
+  '/$lang/books': typeof LangBooksRoute
+  '/$lang/': typeof LangIndexRoute
+  '/$lang/authors/$slug': typeof LangAuthorsSlugRoute
+  '/$lang/book/$slug': typeof LangBookSlugRoute
+  '/$lang/endings/$ending': typeof LangEndingsEndingRoute
+  '/$lang/genres/$slug': typeof LangGenresSlugRoute
+  '/$lang/warnings/$code': typeof LangWarningsCodeRoute
+  '/$lang/authors/': typeof LangAuthorsIndexRoute
+  '/$lang/endings/': typeof LangEndingsIndexRoute
+  '/$lang/genres/': typeof LangGenresIndexRoute
+  '/$lang/warnings/': typeof LangWarningsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/books': typeof BooksRouteWithChildren
+  '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/books/$slug': typeof BooksSlugRoute
+  '/$lang/about': typeof LangAboutRoute
+  '/$lang/books': typeof LangBooksRoute
+  '/$lang': typeof LangIndexRoute
+  '/$lang/authors/$slug': typeof LangAuthorsSlugRoute
+  '/$lang/book/$slug': typeof LangBookSlugRoute
+  '/$lang/endings/$ending': typeof LangEndingsEndingRoute
+  '/$lang/genres/$slug': typeof LangGenresSlugRoute
+  '/$lang/warnings/$code': typeof LangWarningsCodeRoute
+  '/$lang/authors': typeof LangAuthorsIndexRoute
+  '/$lang/endings': typeof LangEndingsIndexRoute
+  '/$lang/genres': typeof LangGenresIndexRoute
+  '/$lang/warnings': typeof LangWarningsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/books': typeof BooksRouteWithChildren
+  '/$lang': typeof LangRouteWithChildren
+  '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/books/$slug': typeof BooksSlugRoute
+  '/$lang/about': typeof LangAboutRoute
+  '/$lang/books': typeof LangBooksRoute
+  '/$lang/': typeof LangIndexRoute
+  '/$lang/authors/$slug': typeof LangAuthorsSlugRoute
+  '/$lang/book/$slug': typeof LangBookSlugRoute
+  '/$lang/endings/$ending': typeof LangEndingsEndingRoute
+  '/$lang/genres/$slug': typeof LangGenresSlugRoute
+  '/$lang/warnings/$code': typeof LangWarningsCodeRoute
+  '/$lang/authors/': typeof LangAuthorsIndexRoute
+  '/$lang/endings/': typeof LangEndingsIndexRoute
+  '/$lang/genres/': typeof LangGenresIndexRoute
+  '/$lang/warnings/': typeof LangWarningsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/books' | '/sitemap.xml' | '/books/$slug'
+  fullPaths:
+    | '/'
+    | '/$lang'
+    | '/robots.txt'
+    | '/sitemap.xml'
+    | '/$lang/about'
+    | '/$lang/books'
+    | '/$lang/'
+    | '/$lang/authors/$slug'
+    | '/$lang/book/$slug'
+    | '/$lang/endings/$ending'
+    | '/$lang/genres/$slug'
+    | '/$lang/warnings/$code'
+    | '/$lang/authors/'
+    | '/$lang/endings/'
+    | '/$lang/genres/'
+    | '/$lang/warnings/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/books' | '/sitemap.xml' | '/books/$slug'
-  id: '__root__' | '/' | '/about' | '/books' | '/sitemap.xml' | '/books/$slug'
+  to:
+    | '/'
+    | '/robots.txt'
+    | '/sitemap.xml'
+    | '/$lang/about'
+    | '/$lang/books'
+    | '/$lang'
+    | '/$lang/authors/$slug'
+    | '/$lang/book/$slug'
+    | '/$lang/endings/$ending'
+    | '/$lang/genres/$slug'
+    | '/$lang/warnings/$code'
+    | '/$lang/authors'
+    | '/$lang/endings'
+    | '/$lang/genres'
+    | '/$lang/warnings'
+  id:
+    | '__root__'
+    | '/'
+    | '/$lang'
+    | '/robots.txt'
+    | '/sitemap.xml'
+    | '/$lang/about'
+    | '/$lang/books'
+    | '/$lang/'
+    | '/$lang/authors/$slug'
+    | '/$lang/book/$slug'
+    | '/$lang/endings/$ending'
+    | '/$lang/genres/$slug'
+    | '/$lang/warnings/$code'
+    | '/$lang/authors/'
+    | '/$lang/endings/'
+    | '/$lang/genres/'
+    | '/$lang/warnings/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
-  BooksRoute: typeof BooksRouteWithChildren
+  LangRoute: typeof LangRouteWithChildren
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
@@ -87,18 +233,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/books': {
-      id: '/books'
-      path: '/books'
-      fullPath: '/books'
-      preLoaderRoute: typeof BooksRouteImport
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
+    '/$lang': {
+      id: '/$lang'
+      path: '/$lang'
+      fullPath: '/$lang'
+      preLoaderRoute: typeof LangRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -108,32 +254,141 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/books/$slug': {
-      id: '/books/$slug'
-      path: '/$slug'
-      fullPath: '/books/$slug'
-      preLoaderRoute: typeof BooksSlugRouteImport
-      parentRoute: typeof BooksRoute
+    '/$lang/': {
+      id: '/$lang/'
+      path: '/'
+      fullPath: '/$lang/'
+      preLoaderRoute: typeof LangIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/books': {
+      id: '/$lang/books'
+      path: '/books'
+      fullPath: '/$lang/books'
+      preLoaderRoute: typeof LangBooksRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/about': {
+      id: '/$lang/about'
+      path: '/about'
+      fullPath: '/$lang/about'
+      preLoaderRoute: typeof LangAboutRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/warnings/': {
+      id: '/$lang/warnings/'
+      path: '/warnings'
+      fullPath: '/$lang/warnings/'
+      preLoaderRoute: typeof LangWarningsIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/genres/': {
+      id: '/$lang/genres/'
+      path: '/genres'
+      fullPath: '/$lang/genres/'
+      preLoaderRoute: typeof LangGenresIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/endings/': {
+      id: '/$lang/endings/'
+      path: '/endings'
+      fullPath: '/$lang/endings/'
+      preLoaderRoute: typeof LangEndingsIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/authors/': {
+      id: '/$lang/authors/'
+      path: '/authors'
+      fullPath: '/$lang/authors/'
+      preLoaderRoute: typeof LangAuthorsIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/warnings/$code': {
+      id: '/$lang/warnings/$code'
+      path: '/warnings/$code'
+      fullPath: '/$lang/warnings/$code'
+      preLoaderRoute: typeof LangWarningsCodeRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/genres/$slug': {
+      id: '/$lang/genres/$slug'
+      path: '/genres/$slug'
+      fullPath: '/$lang/genres/$slug'
+      preLoaderRoute: typeof LangGenresSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/endings/$ending': {
+      id: '/$lang/endings/$ending'
+      path: '/endings/$ending'
+      fullPath: '/$lang/endings/$ending'
+      preLoaderRoute: typeof LangEndingsEndingRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/book/$slug': {
+      id: '/$lang/book/$slug'
+      path: '/book/$slug'
+      fullPath: '/$lang/book/$slug'
+      preLoaderRoute: typeof LangBookSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/authors/$slug': {
+      id: '/$lang/authors/$slug'
+      path: '/authors/$slug'
+      fullPath: '/$lang/authors/$slug'
+      preLoaderRoute: typeof LangAuthorsSlugRouteImport
+      parentRoute: typeof LangRoute
     }
   }
 }
 
-interface BooksRouteChildren {
-  BooksSlugRoute: typeof BooksSlugRoute
+interface LangRouteChildren {
+  LangAboutRoute: typeof LangAboutRoute
+  LangBooksRoute: typeof LangBooksRoute
+  LangIndexRoute: typeof LangIndexRoute
+  LangAuthorsSlugRoute: typeof LangAuthorsSlugRoute
+  LangBookSlugRoute: typeof LangBookSlugRoute
+  LangEndingsEndingRoute: typeof LangEndingsEndingRoute
+  LangGenresSlugRoute: typeof LangGenresSlugRoute
+  LangWarningsCodeRoute: typeof LangWarningsCodeRoute
+  LangAuthorsIndexRoute: typeof LangAuthorsIndexRoute
+  LangEndingsIndexRoute: typeof LangEndingsIndexRoute
+  LangGenresIndexRoute: typeof LangGenresIndexRoute
+  LangWarningsIndexRoute: typeof LangWarningsIndexRoute
 }
 
-const BooksRouteChildren: BooksRouteChildren = {
-  BooksSlugRoute: BooksSlugRoute,
+const LangRouteChildren: LangRouteChildren = {
+  LangAboutRoute: LangAboutRoute,
+  LangBooksRoute: LangBooksRoute,
+  LangIndexRoute: LangIndexRoute,
+  LangAuthorsSlugRoute: LangAuthorsSlugRoute,
+  LangBookSlugRoute: LangBookSlugRoute,
+  LangEndingsEndingRoute: LangEndingsEndingRoute,
+  LangGenresSlugRoute: LangGenresSlugRoute,
+  LangWarningsCodeRoute: LangWarningsCodeRoute,
+  LangAuthorsIndexRoute: LangAuthorsIndexRoute,
+  LangEndingsIndexRoute: LangEndingsIndexRoute,
+  LangGenresIndexRoute: LangGenresIndexRoute,
+  LangWarningsIndexRoute: LangWarningsIndexRoute,
 }
 
-const BooksRouteWithChildren = BooksRoute._addFileChildren(BooksRouteChildren)
+const LangRouteWithChildren = LangRoute._addFileChildren(LangRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
-  BooksRoute: BooksRouteWithChildren,
+  LangRoute: LangRouteWithChildren,
+  RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

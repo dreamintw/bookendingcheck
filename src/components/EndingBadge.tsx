@@ -7,13 +7,14 @@ const styles: Record<Ending, string> = {
   OE: "bg-[color:var(--oe)]/15 text-[color:var(--oe)] border-[color:var(--oe)]/30",
   Bittersweet: "bg-[color:var(--bittersweet)]/15 text-[color:var(--bittersweet)] border-[color:var(--bittersweet)]/30",
   Ambiguous: "bg-[color:var(--ambiguous)]/15 text-[color:var(--ambiguous)] border-[color:var(--ambiguous)]/30",
+  Unknown: "bg-muted text-muted-foreground border-border",
 };
 
 export function EndingBadge({ ending, full = false }: { ending: Ending; full?: boolean }) {
-  const [lang] = useLang();
-  const labelKey = full
-    ? (`ending${ending}` as keyof typeof t)
-    : (`endingShort${ending}` as keyof typeof t);
+  const lang = useLang();
+  const labelKey = (full ? `ending${ending}` : `endingShort${ending}`) as
+    | "endingHE" | "endingBE" | "endingOE" | "endingBittersweet" | "endingAmbiguous" | "endingUnknown"
+    | "endingShortHE" | "endingShortBE" | "endingShortOE" | "endingShortBittersweet" | "endingShortAmbiguous" | "endingShortUnknown";
   return (
     <span className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium ${styles[ending]}`}>
       {t[labelKey][lang]}

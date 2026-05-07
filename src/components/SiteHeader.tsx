@@ -4,22 +4,28 @@ import { LangSwitch } from "./LangSwitch";
 import { BookOpenCheck } from "lucide-react";
 
 export function SiteHeader() {
-  const [lang] = useLang();
+  const lang = useLang();
   return (
     <header className="border-b border-border bg-background/80 backdrop-blur sticky top-0 z-30">
       <div className="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 font-display text-lg font-semibold">
+        <Link to="/$lang" params={{ lang }} className="flex items-center gap-2 font-display text-lg font-semibold">
           <BookOpenCheck className="h-5 w-5 text-accent" />
           <span>{t.siteName[lang]}</span>
         </Link>
-        <nav className="flex items-center gap-5 text-sm">
-          <Link to="/" activeOptions={{ exact: true }} className="text-muted-foreground hover:text-foreground" activeProps={{ className: "text-foreground font-medium" }}>
+        <nav className="flex items-center gap-4 text-sm">
+          <Link to="/$lang" params={{ lang }} activeOptions={{ exact: true }} className="text-muted-foreground hover:text-foreground" activeProps={{ className: "text-foreground font-medium" }}>
             {t.home[lang]}
           </Link>
-          <Link to="/books" className="text-muted-foreground hover:text-foreground" activeProps={{ className: "text-foreground font-medium" }}>
+          <Link to="/$lang/books" params={{ lang }} className="text-muted-foreground hover:text-foreground" activeProps={{ className: "text-foreground font-medium" }}>
             {t.books[lang]}
           </Link>
-          <Link to="/about" className="text-muted-foreground hover:text-foreground" activeProps={{ className: "text-foreground font-medium" }}>
+          <Link to="/$lang/endings" params={{ lang }} className="text-muted-foreground hover:text-foreground hidden sm:inline" activeProps={{ className: "text-foreground font-medium" }}>
+            {t.endings[lang]}
+          </Link>
+          <Link to="/$lang/warnings" params={{ lang }} className="text-muted-foreground hover:text-foreground hidden sm:inline" activeProps={{ className: "text-foreground font-medium" }}>
+            {t.warnings[lang]}
+          </Link>
+          <Link to="/$lang/about" params={{ lang }} className="text-muted-foreground hover:text-foreground hidden md:inline" activeProps={{ className: "text-foreground font-medium" }}>
             {t.about[lang]}
           </Link>
           <LangSwitch />
@@ -30,7 +36,7 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
-  const [lang] = useLang();
+  const lang = useLang();
   return (
     <footer className="border-t border-border mt-16 py-8 text-xs text-muted-foreground">
       <div className="mx-auto max-w-6xl px-4 space-y-2">

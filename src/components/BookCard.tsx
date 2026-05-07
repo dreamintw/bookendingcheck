@@ -1,10 +1,10 @@
-import { Link } from "@tanstack/react-router";
 import type { Book } from "@/data/books";
+import { Link } from "@tanstack/react-router";
 import { useLang, t } from "@/lib/i18n";
 import { EndingBadge } from "./EndingBadge";
 
 export function BookCard({ book }: { book: Book }) {
-  const [lang] = useLang();
+  const lang = useLang();
   const decisionDot = {
     read: "bg-[color:var(--read)]",
     skip: "bg-[color:var(--skip)]",
@@ -12,8 +12,8 @@ export function BookCard({ book }: { book: Book }) {
   }[book.decision];
   return (
     <Link
-      to="/books/$slug"
-      params={{ slug: book.slug }}
+      to="/$lang/book/$slug"
+      params={{ lang, slug: book.slug }}
       className="group block rounded-xl border border-border bg-card p-5 hover:border-accent/60 hover:shadow-md transition-all"
     >
       <div className="flex items-start justify-between gap-3 mb-2">
