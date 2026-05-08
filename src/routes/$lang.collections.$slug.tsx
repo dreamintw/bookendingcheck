@@ -28,11 +28,14 @@ export const Route = createFileRoute("/$lang/collections/$slug")({
   loader: ({ params }) => {
     const c = getCollection(params.slug);
     if (!c) throw notFound();
-    return { collection: c };
+    // Return only the slug — Collection contains a non-serializable `filter`
+    // function which breaks SSR dehydration and causes a hydration invariant
+    // failure that blanks the page on the client.
+    return { slug: c.slug };
   },
   head: ({ loaderData, params }) => {
     const lang = (params.lang as Lang) ?? "zh";
-    const c = loaderData?.collection ?? collections[0];
+    const c = (loaderData?.slug && getCollection(loaderData.slug)) || collections[0];
     const title = c.title[lang];
     const desc = c.description[lang];
     const path = `/collections/${c.slug}`;
@@ -67,22 +70,18 @@ export const Route = createFileRoute("/$lang/collections/$slug")({
             inLanguage: lang === "zh" ? "zh-Hant" : "en",
           }),
         },
-        ...(((loaderData?.collection?.faq?.length ?? 0) > 0 || true)
-          ? [
-              {
-                type: "application/ld+json",
-                children: JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "FAQPage",
-                  mainEntity: faqWithFallback(c, lang).map((f) => ({
-                    "@type": "Question",
-                    name: f.q,
-                    acceptedAnswer: { "@type": "Answer", text: f.a },
-                  })),
-                }),
-              },
-            ]
-          : []),
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqWithFallback(c, lang).map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
+          }),
+        },
       ],
     };
   },
@@ -91,7 +90,8 @@ export const Route = createFileRoute("/$lang/collections/$slug")({
 
 function CollectionPage() {
   const lang = useLang();
-  const { collection } = Route.useLoaderData() as { collection: Collection };
+  const { slug } = Route.useLoaderData() as { slug: string };
+  const collection = (getCollection(slug) ?? collections[0]) as Collection;
   const list = collectionBooks(collection);
   const intro = collection.intro[lang].split("\n\n");
 
