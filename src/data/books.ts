@@ -251,8 +251,36 @@ export function getBook(slug: string) {
   return books.find((b) => b.slug === slug);
 }
 
+// Canonical warning catalog. Independent of any specific book so a warning
+// page can exist even when no book yet carries that trigger.
+export const WARNING_CATALOG: Trigger[] = [
+  { code: "pet-death", zh: "寵物死亡", en: "Pet death", intensity: "high" },
+  { code: "death", zh: "主角死亡", en: "Major character death", intensity: "high" },
+  { code: "suicide", zh: "自殺", en: "Suicide", intensity: "high" },
+  { code: "self-harm", zh: "自傷", en: "Self-harm", intensity: "high" },
+  { code: "sexual-violence", zh: "性暴力", en: "Sexual violence", intensity: "high" },
+  { code: "domestic-abuse", zh: "家暴", en: "Domestic abuse", intensity: "high" },
+  { code: "cheating", zh: "外遇 / 出軌", en: "Cheating / infidelity", intensity: "mid" },
+  { code: "addiction", zh: "成癮", en: "Addiction", intensity: "high" },
+  { code: "bullying", zh: "霸凌", en: "Bullying", intensity: "mid" },
+  { code: "depression", zh: "憂鬱", en: "Depression", intensity: "high" },
+  { code: "grief", zh: "悲痛", en: "Grief", intensity: "mid" },
+  { code: "war", zh: "戰爭暴力", en: "War violence", intensity: "high" },
+  { code: "sex", zh: "性描寫", en: "Sexual content", intensity: "mid" },
+  { code: "regret", zh: "強烈悔恨", en: "Deep regret", intensity: "mid" },
+  { code: "infanticide", zh: "嬰兒被「解除」", en: "Infant 'release'", intensity: "high" },
+  { code: "control", zh: "極權控制", en: "Authoritarian control", intensity: "mid" },
+  { code: "classism", zh: "階級偏見", en: "Classism", intensity: "low" },
+];
+
+export function getWarning(code: string): Trigger | undefined {
+  return WARNING_CATALOG.find((w) => w.code === code)
+    ?? getAllTriggers().find((w) => w.code === code);
+}
+
 export function getAllTriggers(): Trigger[] {
   const map = new Map<string, Trigger>();
+  for (const w of WARNING_CATALOG) map.set(w.code, w);
   for (const b of books) for (const t of b.triggers) if (!map.has(t.code)) map.set(t.code, t);
   return Array.from(map.values());
 }
