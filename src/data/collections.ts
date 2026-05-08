@@ -360,6 +360,5 @@ export function getCollection(slug: string): Collection | undefined {
 }
 
 export function collectionBooks(c: Collection): Book[] {
-  const list = books.filter(c.filter);
-  return list.length > 0 ? list : books.slice(0, 3); // graceful fallback
+  return books.filter(c.filter);
 }

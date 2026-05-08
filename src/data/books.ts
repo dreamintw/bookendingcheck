@@ -25,7 +25,11 @@ export interface Book {
   whoFor: { zh: string[]; en: string[] };
   whoNot: { zh: string[]; en: string[] };
   triggers: Trigger[];
+  originalLanguage?: string;
+  relatedBooks?: string[];
 }
+
+import { extraBooks } from "./books-extra";
 
 export const ENDINGS: Ending[] = ["HE", "BE", "OE", "Bittersweet", "Ambiguous", "Unknown"];
 
@@ -245,6 +249,7 @@ export const books: Book[] = [
       { code: "control", zh: "極權控制", en: "Authoritarian control", intensity: "mid" },
     ],
   },
+  ...extraBooks,
 ];
 
 export function getBook(slug: string) {
