@@ -28,11 +28,14 @@ export const Route = createFileRoute("/$lang/collections/$slug")({
   loader: ({ params }) => {
     const c = getCollection(params.slug);
     if (!c) throw notFound();
-    return { collection: c };
+    // Return only the slug — Collection contains a non-serializable `filter`
+    // function which breaks SSR dehydration and causes a hydration invariant
+    // failure that blanks the page on the client.
+    return { slug: c.slug };
   },
   head: ({ loaderData, params }) => {
     const lang = (params.lang as Lang) ?? "zh";
-    const c = loaderData?.collection ?? collections[0];
+    const c = (loaderData?.slug && getCollection(loaderData.slug)) || collections[0];
     const title = c.title[lang];
     const desc = c.description[lang];
     const path = `/collections/${c.slug}`;
