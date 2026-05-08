@@ -99,7 +99,16 @@ function CollectionPage() {
           {lang === "zh" ? "符合此主題的作品" : "Books in this collection"}
         </h2>
         {list.length === 0 ? (
-          <p className="text-muted-foreground">{t.noResults[lang]}</p>
+          <div className="rounded-lg border border-dashed border-border p-6 text-sm text-muted-foreground">
+            <p className="mb-3">
+              {lang === "zh"
+                ? "我們仍在為這個主題收錄書籍，敬請稍後回來，或先瀏覽全部作品。"
+                : "We are still adding books to this collection. Check back soon or browse all books."}
+            </p>
+            <a href={`/${lang}/books`} className="text-accent hover:underline">
+              {lang === "zh" ? "瀏覽全部作品 →" : "Browse all books →"}
+            </a>
+          </div>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {list.map((b) => <BookCard key={b.slug} book={b} />)}
