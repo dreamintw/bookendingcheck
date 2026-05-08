@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bookendingcheck.xyz/sitemap.xml
