@@ -529,6 +529,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/slavery"/>
   </url>
   <url>
+    <loc>https://bookendingcheck.xyz/zh/warnings/infidelity</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/infidelity"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/infidelity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/infidelity"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/warnings/infidelity</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/infidelity"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/infidelity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/infidelity"/>
+  </url>
+  <url>
     <loc>https://bookendingcheck.xyz/zh/warnings/dub-con</loc>
     <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/dub-con"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/dub-con"/>
@@ -551,6 +563,42 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/animal-death"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/animal-death"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/animal-death"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/warnings/abortion</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/abortion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/abortion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/abortion"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/warnings/abortion</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/abortion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/abortion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/abortion"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/warnings/betrayal</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/betrayal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/betrayal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/betrayal"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/warnings/betrayal</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/betrayal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/betrayal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/betrayal"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/warnings/sexual-assault</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/sexual-assault"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/sexual-assault"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/sexual-assault"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/warnings/sexual-assault</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/sexual-assault"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/sexual-assault"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/sexual-assault"/>
   </url>
   <url>
     <loc>https://bookendingcheck.xyz/zh/genres/historical-mythology-lgbtq</loc>
@@ -1127,6 +1175,90 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/genres/contemporary-pet"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/genres/contemporary-pet"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/genres/contemporary-pet"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/genres/classic-literary</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/genres/classic-literary"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/genres/classic-literary"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/genres/classic-literary"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/genres/classic-literary</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/genres/classic-literary"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/genres/classic-literary"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/genres/classic-literary"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/genres/literary-postwar-british</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/genres/literary-postwar-british"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/genres/literary-postwar-british"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/genres/literary-postwar-british"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/genres/literary-postwar-british</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/genres/literary-postwar-british"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/genres/literary-postwar-british"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/genres/literary-postwar-british"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/genres/contemporary-family</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/genres/contemporary-family"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/genres/contemporary-family"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/genres/contemporary-family"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/genres/contemporary-family</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/genres/contemporary-family"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/genres/contemporary-family"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/genres/contemporary-family"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/genres/literary-marriage</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/genres/literary-marriage"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/genres/literary-marriage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/genres/literary-marriage"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/genres/literary-marriage</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/genres/literary-marriage"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/genres/literary-marriage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/genres/literary-marriage"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/genres/contemporary-literary</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/genres/contemporary-literary"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/genres/contemporary-literary"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/genres/contemporary-literary"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/genres/contemporary-literary</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/genres/contemporary-literary"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/genres/contemporary-literary"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/genres/contemporary-literary"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/genres/music-historical-fiction</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/genres/music-historical-fiction"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/genres/music-historical-fiction"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/genres/music-historical-fiction"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/genres/music-historical-fiction</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/genres/music-historical-fiction"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/genres/music-historical-fiction"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/genres/music-historical-fiction"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/genres/literary-philosophical</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/genres/literary-philosophical"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/genres/literary-philosophical"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/genres/literary-philosophical"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/genres/literary-philosophical</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/genres/literary-philosophical"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/genres/literary-philosophical"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/genres/literary-philosophical"/>
   </url>
   <url>
     <loc>https://bookendingcheck.xyz/zh/authors/madeline-miller</loc>
@@ -1775,6 +1907,138 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/garth-stein"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/garth-stein"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/garth-stein"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/authors/gustave-flaubert</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/gustave-flaubert"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/gustave-flaubert"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/gustave-flaubert"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/authors/gustave-flaubert</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/gustave-flaubert"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/gustave-flaubert"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/gustave-flaubert"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/authors/leo-tolstoy</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/leo-tolstoy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/leo-tolstoy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/leo-tolstoy"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/authors/leo-tolstoy</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/leo-tolstoy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/leo-tolstoy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/leo-tolstoy"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/authors/robert-james-waller</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/robert-james-waller"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/robert-james-waller"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/robert-james-waller"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/authors/robert-james-waller</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/robert-james-waller"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/robert-james-waller"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/robert-james-waller"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/authors/f-scott-fitzgerald</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/f-scott-fitzgerald"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/f-scott-fitzgerald"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/f-scott-fitzgerald"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/authors/f-scott-fitzgerald</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/f-scott-fitzgerald"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/f-scott-fitzgerald"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/f-scott-fitzgerald"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/authors/graham-greene</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/graham-greene"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/graham-greene"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/graham-greene"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/authors/graham-greene</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/graham-greene"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/graham-greene"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/graham-greene"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/authors/celeste-ng</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/celeste-ng"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/celeste-ng"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/celeste-ng"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/authors/celeste-ng</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/celeste-ng"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/celeste-ng"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/celeste-ng"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/authors/lauren-groff</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/lauren-groff"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/lauren-groff"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/lauren-groff"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/authors/lauren-groff</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/lauren-groff"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/lauren-groff"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/lauren-groff"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/authors/miranda-cowley-heller</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/miranda-cowley-heller"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/miranda-cowley-heller"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/miranda-cowley-heller"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/authors/miranda-cowley-heller</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/miranda-cowley-heller"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/miranda-cowley-heller"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/miranda-cowley-heller"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/authors/sally-rooney</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/sally-rooney"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/sally-rooney"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/sally-rooney"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/authors/sally-rooney</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/sally-rooney"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/sally-rooney"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/sally-rooney"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/authors/taylor-jenkins-reid</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/taylor-jenkins-reid"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/taylor-jenkins-reid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/taylor-jenkins-reid"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/authors/taylor-jenkins-reid</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/taylor-jenkins-reid"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/taylor-jenkins-reid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/taylor-jenkins-reid"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/authors/milan-kundera</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/milan-kundera"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/milan-kundera"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/milan-kundera"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/authors/milan-kundera</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/authors/milan-kundera"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/milan-kundera"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/milan-kundera"/>
   </url>
   <url>
     <loc>https://bookendingcheck.xyz/zh/collections/happy-ending-books</loc>
@@ -2687,5 +2951,137 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-art-of-racing-in-the-rain"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-art-of-racing-in-the-rain"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-art-of-racing-in-the-rain"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/madame-bovary</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/madame-bovary"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/madame-bovary"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/madame-bovary"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/madame-bovary</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/madame-bovary"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/madame-bovary"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/madame-bovary"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/anna-karenina</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/anna-karenina"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/anna-karenina"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/anna-karenina"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/anna-karenina</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/anna-karenina"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/anna-karenina"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/anna-karenina"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/the-bridges-of-madison-county</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-bridges-of-madison-county"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-bridges-of-madison-county"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-bridges-of-madison-county"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/the-bridges-of-madison-county</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-bridges-of-madison-county"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-bridges-of-madison-county"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-bridges-of-madison-county"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/the-great-gatsby</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-great-gatsby"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-great-gatsby"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-great-gatsby"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/the-great-gatsby</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-great-gatsby"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-great-gatsby"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-great-gatsby"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/the-end-of-the-affair</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-end-of-the-affair"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-end-of-the-affair"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-end-of-the-affair"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/the-end-of-the-affair</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-end-of-the-affair"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-end-of-the-affair"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-end-of-the-affair"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/little-fires-everywhere</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/little-fires-everywhere"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/little-fires-everywhere"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/little-fires-everywhere"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/little-fires-everywhere</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/little-fires-everywhere"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/little-fires-everywhere"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/little-fires-everywhere"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/fates-and-furies</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/fates-and-furies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/fates-and-furies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/fates-and-furies"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/fates-and-furies</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/fates-and-furies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/fates-and-furies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/fates-and-furies"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/the-paper-palace</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-paper-palace"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-paper-palace"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-paper-palace"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/the-paper-palace</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-paper-palace"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-paper-palace"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-paper-palace"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/conversations-with-friends</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/conversations-with-friends"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/conversations-with-friends"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/conversations-with-friends"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/conversations-with-friends</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/conversations-with-friends"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/conversations-with-friends"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/conversations-with-friends"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/daisy-jones-and-the-six</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/daisy-jones-and-the-six"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/daisy-jones-and-the-six"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/daisy-jones-and-the-six"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/daisy-jones-and-the-six</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/daisy-jones-and-the-six"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/daisy-jones-and-the-six"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/daisy-jones-and-the-six"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/the-unbearable-lightness-of-being</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-unbearable-lightness-of-being"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-unbearable-lightness-of-being"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-unbearable-lightness-of-being"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/the-unbearable-lightness-of-being</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-unbearable-lightness-of-being"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-unbearable-lightness-of-being"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-unbearable-lightness-of-being"/>
   </url>
 </urlset>
