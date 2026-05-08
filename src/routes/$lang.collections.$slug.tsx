@@ -110,7 +110,7 @@ function CollectionPage() {
 
       <article className="prose prose-sm max-w-none mb-10 text-foreground/90 space-y-4">
         {intro.map((p, i) => (
-          <p key={i} className="leading-relaxed">{p}</p>
+          <p key={i} className="leading-relaxed" dangerouslySetInnerHTML={{ __html: p }} />
         ))}
       </article>
 
