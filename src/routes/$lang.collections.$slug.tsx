@@ -90,7 +90,8 @@ export const Route = createFileRoute("/$lang/collections/$slug")({
 
 function CollectionPage() {
   const lang = useLang();
-  const { collection } = Route.useLoaderData() as { collection: Collection };
+  const { slug } = Route.useLoaderData() as { slug: string };
+  const collection = (getCollection(slug) ?? collections[0]) as Collection;
   const list = collectionBooks(collection);
   const intro = collection.intro[lang].split("\n\n");
 
