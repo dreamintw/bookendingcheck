@@ -102,7 +102,23 @@ function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="reader-need-heading" className="border-b border-border bg-card/40">
+      <section className="mx-auto max-w-6xl w-full px-4 py-12 border-b border-border">
+        <div className="flex items-baseline justify-between mb-6">
+          <h2 className="font-display text-2xl font-semibold">{t.browseAll[lang]}</h2>
+          <Link to="/$lang/books" params={{ lang }} className="text-sm text-accent hover:underline">
+            {t.books[lang]} →
+          </Link>
+        </div>
+        {results.length === 0 ? (
+          <p className="text-center text-muted-foreground py-16">{t.noResults[lang]}</p>
+        ) : (
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {results.map((b) => <BookCard key={b.slug} book={b} />)}
+          </div>
+        )}
+      </section>
+
+      <section aria-labelledby="reader-need-heading" className="bg-card/40 flex-1">
         <div className="mx-auto max-w-6xl w-full px-4 py-12">
           <div className="mb-6">
             <h2 id="reader-need-heading" className="font-display text-2xl md:text-3xl font-semibold">
@@ -132,22 +148,6 @@ function HomePage() {
             </a>
           </p>
         </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl w-full px-4 py-12 flex-1">
-        <div className="flex items-baseline justify-between mb-6">
-          <h2 className="font-display text-2xl font-semibold">{t.browseAll[lang]}</h2>
-          <Link to="/$lang/books" params={{ lang }} className="text-sm text-accent hover:underline">
-            {t.books[lang]} →
-          </Link>
-        </div>
-        {results.length === 0 ? (
-          <p className="text-center text-muted-foreground py-16">{t.noResults[lang]}</p>
-        ) : (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {results.map((b) => <BookCard key={b.slug} book={b} />)}
-          </div>
-        )}
       </section>
     </>
   );
