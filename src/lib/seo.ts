@@ -1,4 +1,4 @@
-export const siteUrl = "https://xiongqibookcheck.fun";
+export const siteUrl = "https://bookendingcheck.xyz";
 
 export function langAlt(path: string) {
   // path should start with "/" and NOT include /zh or /en
