@@ -47,17 +47,17 @@ export const Route = createFileRoute("/$lang/collections/$slug")({
             inLanguage: lang === "zh" ? "zh-Hant" : "en",
           }),
         },
-        ...(c.faq.length > 0
+        ...(((loaderData?.collection?.faq?.length ?? 0) > 0 || true)
           ? [
               {
                 type: "application/ld+json",
                 children: JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "FAQPage",
-                  mainEntity: c.faq.map((f) => ({
+                  mainEntity: faqWithFallback(c, lang).map((f) => ({
                     "@type": "Question",
-                    name: f.q[lang],
-                    acceptedAnswer: { "@type": "Answer", text: f.a[lang] },
+                    name: f.q,
+                    acceptedAnswer: { "@type": "Answer", text: f.a },
                   })),
                 }),
               },
