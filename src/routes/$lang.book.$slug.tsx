@@ -7,6 +7,7 @@ import { SpoilerBlock } from "@/components/SpoilerBlock";
 import { TriggerMatrix } from "@/components/TriggerMatrix";
 import { ChevronLeft, Check, X } from "lucide-react";
 import { siteUrl, langAlt, breadcrumbJsonLd } from "@/lib/seo";
+import { BOOK_ENRICHMENT } from "@/data/enrichment";
 
 export const Route = createFileRoute("/$lang/book/$slug")({
   loader: ({ params }) => {
