@@ -3,6 +3,7 @@ import { getCollection, collectionBooks, collections, type Collection } from "@/
 import { useLang, t, type Lang } from "@/lib/i18n";
 import { BookCard } from "@/components/BookCard";
 import { siteUrl, langAlt, breadcrumbJsonLd } from "@/lib/seo";
+import { COLLECTION_ENRICHMENT } from "@/data/enrichment";
 
 const GENERIC_FAQ_ZH = [
   { q: "這個清單多久更新一次？", a: "每週新增書目，避雷標籤會根據讀者回饋持續修訂。" },
