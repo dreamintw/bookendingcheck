@@ -3,6 +3,7 @@ import { books, getWarning } from "@/data/books";
 import { useLang, t, type Lang } from "@/lib/i18n";
 import { BookCard } from "@/components/BookCard";
 import { siteUrl, langAlt, breadcrumbJsonLd } from "@/lib/seo";
+import { WARNING_ENRICHMENT } from "@/data/enrichment";
 
 const CUSTOM_META: Record<string, { title: { zh: string; en: string }; desc: { zh: string; en: string }; h1: { zh: string; en: string } }> = {
   "pet-death": {
