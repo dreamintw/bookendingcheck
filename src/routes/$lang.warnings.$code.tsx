@@ -67,6 +67,7 @@ function WarningDetail() {
   const custom = CUSTOM_META[trigger.code];
   const h1 = custom?.h1[lang] ?? trigger[lang];
   const list = books.filter((b) => b.triggers.some((x) => x.code === trigger.code));
+  const enrich = WARNING_ENRICHMENT[trigger.code];
   return (
     <main className="mx-auto max-w-6xl w-full px-4 py-12 flex-1">
       <nav className="text-xs text-muted-foreground mb-4">
@@ -79,6 +80,36 @@ function WarningDetail() {
           ? `共 ${list.length} 本含此避雷標籤的小說。`
           : `${list.length} book${list.length === 1 ? "" : "s"} tagged with this warning.`}
       </p>
+
+      {enrich && (
+        <>
+          <section className="mb-8 rounded-xl border border-border bg-card p-6">
+            <h2 className="font-display text-xl font-semibold mb-3">
+              {lang === "zh" ? "如何使用這個頁面" : "How to use this page"}
+            </h2>
+            <p className="text-sm leading-relaxed text-foreground/90">{enrich.howToUse[lang]}</p>
+          </section>
+          <section className="mb-8 grid md:grid-cols-2 gap-4">
+            <div className="rounded-xl border border-border bg-card p-6">
+              <h2 className="font-display text-xl font-semibold mb-3">
+                {lang === "zh" ? "這個避雷標籤的定義" : "What this warning means"}
+              </h2>
+              <p className="text-sm leading-relaxed text-foreground/90">{enrich.whatItMeans[lang]}</p>
+            </div>
+            <div className="rounded-xl border border-border bg-card p-6">
+              <h2 className="font-display text-xl font-semibold mb-3">
+                {lang === "zh" ? "讀者決策建議" : "Reader decision tips"}
+              </h2>
+              <ul className="space-y-2 text-sm text-foreground/90">
+                {enrich.decisionTips[lang].map((tip, i) => (
+                  <li key={i} className="flex gap-2"><span className="text-accent">·</span><span>{tip}</span></li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        </>
+      )}
+
       {list.length === 0 ? (
         <p className="text-sm text-muted-foreground">
           {lang === "zh"
@@ -90,6 +121,31 @@ function WarningDetail() {
           {list.map((b) => <BookCard key={b.slug} book={b} />)}
         </div>
       )}
+
+      {enrich && (
+        <section className="mt-12">
+          <h2 className="font-display text-2xl font-semibold mb-4">FAQ</h2>
+          <dl className="space-y-4">
+            {enrich.faq.map((f, i) => (
+              <div key={i} className="rounded-lg border border-border p-4">
+                <dt className="font-medium mb-1">{f.q[lang]}</dt>
+                <dd className="text-sm text-muted-foreground">{f.a[lang]}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      )}
+
+      <section className="mt-12 border-t border-border pt-6 text-sm">
+        <p className="font-medium mb-2">{lang === "zh" ? "相關分類" : "Related categories"}</p>
+        <div className="flex flex-wrap gap-2">
+          <a href={`/${lang}/collections/happy-ending-books`} className="rounded-full border border-border px-3 py-1.5 hover:border-accent hover:text-accent">{lang === "zh" ? "HE 小說" : "Happy Ending Books"}</a>
+          <a href={`/${lang}/collections/sad-ending-books`} className="rounded-full border border-border px-3 py-1.5 hover:border-accent hover:text-accent">{lang === "zh" ? "BE 小說" : "Sad Ending Books"}</a>
+          <a href={`/${lang}/collections/${trigger.code}-warning`} className="rounded-full border border-border px-3 py-1.5 hover:border-accent hover:text-accent">{trigger[lang]}</a>
+          <a href={`/${lang}/warnings`} className="rounded-full border border-border px-3 py-1.5 hover:border-accent hover:text-accent">{lang === "zh" ? "全部避雷" : "All warnings"}</a>
+        </div>
+      </section>
     </main>
   );
 }
+
