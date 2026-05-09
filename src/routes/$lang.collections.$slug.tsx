@@ -3,6 +3,7 @@ import { getCollection, collectionBooks, collections, type Collection } from "@/
 import { useLang, t, type Lang } from "@/lib/i18n";
 import { BookCard } from "@/components/BookCard";
 import { siteUrl, langAlt, breadcrumbJsonLd } from "@/lib/seo";
+import { COLLECTION_ENRICHMENT } from "@/data/enrichment";
 
 const GENERIC_FAQ_ZH = [
   { q: "這個清單多久更新一次？", a: "每週新增書目，避雷標籤會根據讀者回饋持續修訂。" },
@@ -19,9 +20,12 @@ const GENERIC_FAQ_EN = [
 
 function faqWithFallback(c: Collection, lang: Lang) {
   const own = (c.faq ?? []).map((f) => ({ q: f.q[lang], a: f.a[lang] }));
+  const enrich = COLLECTION_ENRICHMENT[c.slug];
+  const enrichFaq = enrich ? enrich.faq.map((f) => ({ q: f.q[lang], a: f.a[lang] })) : [];
+  const merged = [...own, ...enrichFaq];
+  if (merged.length >= 4) return merged;
   const generic = lang === "zh" ? GENERIC_FAQ_ZH : GENERIC_FAQ_EN;
-  const need = Math.max(0, 4 - own.length);
-  return [...own, ...generic.slice(0, need)];
+  return [...merged, ...generic.slice(0, 4 - merged.length)];
 }
 
 export const Route = createFileRoute("/$lang/collections/$slug")({
@@ -94,6 +98,7 @@ function CollectionPage() {
   const collection = (getCollection(slug) ?? collections[0]) as Collection;
   const list = collectionBooks(collection);
   const intro = collection.intro[lang].split("\n\n");
+  const enrich = COLLECTION_ENRICHMENT[collection.slug];
 
   return (
     <main className="mx-auto max-w-5xl w-full px-4 py-12 flex-1">
@@ -113,6 +118,15 @@ function CollectionPage() {
           <p key={i} className="leading-relaxed" dangerouslySetInnerHTML={{ __html: p }} />
         ))}
       </article>
+
+      {enrich && (
+        <section aria-labelledby="how-to-use" className="mb-10 rounded-xl border border-border bg-card p-6">
+          <h2 id="how-to-use" className="font-display text-xl font-semibold mb-3">
+            {lang === "zh" ? "如何使用這個頁面" : "How to use this page"}
+          </h2>
+          <p className="text-sm leading-relaxed text-foreground/90">{enrich.howToUse[lang]}</p>
+        </section>
+      )}
 
       <section aria-labelledby="books-heading" className="mb-12">
         <h2 id="books-heading" className="font-display text-2xl font-semibold mb-5">
@@ -152,6 +166,27 @@ function CollectionPage() {
                 #{w}
               </a>
             ))}
+          </div>
+        </section>
+      )}
+
+      {enrich && (
+        <section aria-labelledby="what-it-means" className="mb-10 grid md:grid-cols-2 gap-4">
+          <div className="rounded-xl border border-border bg-card p-6">
+            <h2 id="what-it-means" className="font-display text-xl font-semibold mb-3">
+              {lang === "zh" ? "這個分類實際上代表什麼" : "What this really means"}
+            </h2>
+            <p className="text-sm leading-relaxed text-foreground/90">{enrich.whatItMeans[lang]}</p>
+          </div>
+          <div className="rounded-xl border border-border bg-card p-6">
+            <h2 className="font-display text-xl font-semibold mb-3">
+              {lang === "zh" ? "讀者決策建議" : "Reader decision tips"}
+            </h2>
+            <ul className="space-y-2 text-sm text-foreground/90">
+              {enrich.decisionTips[lang].map((tip, i) => (
+                <li key={i} className="flex gap-2"><span className="text-accent">·</span><span>{tip}</span></li>
+              ))}
+            </ul>
           </div>
         </section>
       )}
