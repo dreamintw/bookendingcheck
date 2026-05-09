@@ -155,6 +155,56 @@ function BookDetail() {
         </div>
       </section>
 
+      {(() => {
+        const en = BOOK_ENRICHMENT[book.slug];
+        if (!en) return null;
+        const sameEnding = (en.similarByEnding ?? []).map((s) => books.find((b) => b.slug === s)).filter(Boolean);
+        const sameWarning = (en.similarByWarning ?? []).map((s) => books.find((b) => b.slug === s)).filter(Boolean);
+        return (
+          <>
+            <section className="mb-10 grid md:grid-cols-2 gap-4">
+              <div className="rounded-xl border border-border bg-card p-5">
+                <h2 className="font-display text-lg font-semibold mb-2">{lang === "zh" ? "結局調性說明" : "Ending tone explained"}</h2>
+                <p className="text-sm leading-relaxed text-foreground/90">{en.endingTone[lang]}</p>
+              </div>
+              <div className="rounded-xl border border-border bg-card p-5">
+                <h2 className="font-display text-lg font-semibold mb-2">{lang === "zh" ? "主要避雷標籤說明" : "Main trigger warnings explained"}</h2>
+                <p className="text-sm leading-relaxed text-foreground/90">{en.warningsExplained[lang]}</p>
+              </div>
+            </section>
+            <section className="mb-10 rounded-xl border border-accent/30 bg-accent/5 p-5">
+              <h2 className="font-display text-lg font-semibold mb-2">{lang === "zh" ? "免雷判決" : "Spoiler-safe verdict"}</h2>
+              <p className="text-sm leading-relaxed text-foreground/90">{en.verdict[lang]}</p>
+            </section>
+            {sameWarning.length > 0 && (
+              <section className="mb-10">
+                <h2 className="font-display text-lg font-semibold mb-3">{lang === "zh" ? "避雷標籤相近的書" : "Similar warning profile"}</h2>
+                <div className="grid sm:grid-cols-3 gap-3">
+                  {sameWarning.map((r: any) => (
+                    <Link key={r.slug} to="/$lang/book/$slug" params={{ lang, slug: r.slug }} className="rounded-lg border border-border bg-card p-4 hover:border-accent/60">
+                      <EndingBadge ending={r.ending} />
+                      <p className="font-display font-semibold mt-2">{r.title[lang]}</p>
+                      <p className="text-xs text-muted-foreground">{r.author[lang]}</p>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            )}
+            <section className="mb-10">
+              <h2 className="font-display text-lg font-semibold mb-3">FAQ</h2>
+              <dl className="space-y-3">
+                {en.faq.map((f, i) => (
+                  <div key={i} className="rounded-lg border border-border p-4">
+                    <dt className="font-medium mb-1">{f.q[lang]}</dt>
+                    <dd className="text-sm text-muted-foreground">{f.a[lang]}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          </>
+        );
+      })()}
+
       {related.length > 0 && (
         <section>
           <h2 className="font-display text-xl font-semibold mb-4">{t.relatedEnding[lang]}</h2>
