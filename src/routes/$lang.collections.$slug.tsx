@@ -98,6 +98,7 @@ function CollectionPage() {
   const collection = (getCollection(slug) ?? collections[0]) as Collection;
   const list = collectionBooks(collection);
   const intro = collection.intro[lang].split("\n\n");
+  const enrich = COLLECTION_ENRICHMENT[collection.slug];
 
   return (
     <main className="mx-auto max-w-5xl w-full px-4 py-12 flex-1">
@@ -117,6 +118,15 @@ function CollectionPage() {
           <p key={i} className="leading-relaxed" dangerouslySetInnerHTML={{ __html: p }} />
         ))}
       </article>
+
+      {enrich && (
+        <section aria-labelledby="how-to-use" className="mb-10 rounded-xl border border-border bg-card p-6">
+          <h2 id="how-to-use" className="font-display text-xl font-semibold mb-3">
+            {lang === "zh" ? "如何使用這個頁面" : "How to use this page"}
+          </h2>
+          <p className="text-sm leading-relaxed text-foreground/90">{enrich.howToUse[lang]}</p>
+        </section>
+      )}
 
       <section aria-labelledby="books-heading" className="mb-12">
         <h2 id="books-heading" className="font-display text-2xl font-semibold mb-5">
