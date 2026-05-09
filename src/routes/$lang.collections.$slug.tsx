@@ -170,6 +170,27 @@ function CollectionPage() {
         </section>
       )}
 
+      {enrich && (
+        <section aria-labelledby="what-it-means" className="mb-10 grid md:grid-cols-2 gap-4">
+          <div className="rounded-xl border border-border bg-card p-6">
+            <h2 id="what-it-means" className="font-display text-xl font-semibold mb-3">
+              {lang === "zh" ? "這個分類實際上代表什麼" : "What this really means"}
+            </h2>
+            <p className="text-sm leading-relaxed text-foreground/90">{enrich.whatItMeans[lang]}</p>
+          </div>
+          <div className="rounded-xl border border-border bg-card p-6">
+            <h2 className="font-display text-xl font-semibold mb-3">
+              {lang === "zh" ? "讀者決策建議" : "Reader decision tips"}
+            </h2>
+            <ul className="space-y-2 text-sm text-foreground/90">
+              {enrich.decisionTips[lang].map((tip, i) => (
+                <li key={i} className="flex gap-2"><span className="text-accent">·</span><span>{tip}</span></li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
       <section aria-labelledby="faq-heading" className="mb-12">
         <h2 id="faq-heading" className="font-display text-2xl font-semibold mb-4">FAQ</h2>
         <dl className="space-y-4">
