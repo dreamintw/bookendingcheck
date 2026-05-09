@@ -61,6 +61,20 @@ export const Route = createFileRoute("/$lang/book/$slug")({
             { name: b.title[lang], url: `${siteUrl}/${lang}/book/${b.slug}` },
           ])),
         },
+        ...(BOOK_ENRICHMENT[b.slug]?.faq?.length
+          ? [{
+              type: "application/ld+json",
+              children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: BOOK_ENRICHMENT[b.slug].faq.map((f) => ({
+                  "@type": "Question",
+                  name: f.q[lang],
+                  acceptedAnswer: { "@type": "Answer", text: f.a[lang] },
+                })),
+              }),
+            }]
+          : []),
       ],
     };
   },
