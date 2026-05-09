@@ -55,6 +55,20 @@ export const Route = createFileRoute("/$lang/warnings/$code")({
             { name: label, url: `${siteUrl}/${lang}/warnings/${params.code}` },
           ])),
         },
+        ...(WARNING_ENRICHMENT[params.code]?.faq?.length
+          ? [{
+              type: "application/ld+json",
+              children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: WARNING_ENRICHMENT[params.code].faq.map((f) => ({
+                  "@type": "Question",
+                  name: f.q[lang],
+                  acceptedAnswer: { "@type": "Answer", text: f.a[lang] },
+                })),
+              }),
+            }]
+          : []),
       ],
     };
   },
