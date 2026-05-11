@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { getBook, books } from "@/data/books";
+import { getBook, books, slugify } from "@/data/books";
 import { useLang, t, type Lang } from "@/lib/i18n";
 import { EndingBadge } from "@/components/EndingBadge";
 import { DecisionCard } from "@/components/DecisionCard";
@@ -120,7 +120,14 @@ function BookDetail() {
           {book.title[lang]}
         </h1>
         <p className="text-lg text-muted-foreground">
-          {t.by[lang]} <span className="text-foreground">{book.author[lang]}</span>
+          {t.by[lang]}{" "}
+          <Link
+            to="/$lang/authors/$slug"
+            params={{ lang, slug: slugify(book.author.en) }}
+            className="text-foreground hover:text-accent hover:underline"
+          >
+            {book.author[lang]}
+          </Link>
           {lang === "zh" && <span className="text-sm ml-2">／ {book.title.en}</span>}
         </p>
       </header>
