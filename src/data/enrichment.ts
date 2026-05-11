@@ -534,4 +534,201 @@ export const BOOK_ENRICHMENT: Record<string, BookEnrichment> = {
       { q: { en: "Where to start with the author?", zh: "想接觸作者的入門書？" }, a: { en: "This book; Theonite series is YA-ish and earlier work.", zh: "就從本書開始；Theonite 系列偏 YA 且為早期作品。" } },
     ],
   },
+
+  "the-name-of-the-wind": {
+    endingTone: {
+      en: "Open ending by design — book one of an unfinished trilogy whose third volume has been absent for over a decade. The frame story closes a chapter but the central mystery (how Kvothe falls from legend to innkeeper) remains unanswered. Treating the published two books as 'the series' is the only honest way to read it today.",
+      zh: "本書是刻意的開放結局——三部曲的第一集，第三集已經難產超過十年。框架敘事在當集收尾，但「Kvothe 如何從傳奇墮落為旅店老闆」這個核心謎題完全未解。今天閱讀本書，最誠實的態度是：把已出版的兩本當成「整個系列」。",
+    },
+    warningsExplained: {
+      en: "Mid-intensity violence (school duels, bandit fights, one extended trauma flashback to a caravan massacre that includes child death and parental death). Sex is referenced and lightly on-page, not explicit. The largest practical 'warning' is non-textual: investing in an unfinished epic with no known completion date.",
+      zh: "中等強度暴力（校園決鬥、強盜戰、一段較長的童年創傷回憶，含父母與兒童之死）。性描寫僅提及與輕度正面描寫，並不露骨。真正最大的「避雷」其實在文本之外：投入一部完結遙遙無期的長篇史詩。",
+    },
+    verdict: {
+      en: "Read if you love prose-driven fantasy, music in fiction, and slow magic-school worldbuilding — and if you can accept that book three may never arrive. Skip if 'series must be finished' is a hard rule for you.",
+      zh: "若你喜歡文筆掛帥的奇幻、書中音樂題材、與慢節奏魔法學院世界觀，且能接受第三集可能永遠不會出版：請讀。若「系列必須完結」是硬性規則：請略。",
+    },
+    similarByEnding: ["classroom-of-the-elite"],
+    similarByWarning: ["the-sword-of-kaigen"],
+    faq: [
+      { q: { en: "Is book three ever coming out?", zh: "第三集會出嗎？" }, a: { en: "No public timeline. Treat the series as paused indefinitely.", zh: "無任何公開時程。請當作無限期暫停。" } },
+      { q: { en: "Can I read book one alone?", zh: "可以只讀第一集嗎？" }, a: { en: "Yes — book one is structurally complete as a standalone arc within the frame story.", zh: "可以——第一集在框架內是結構完整的獨立弧線。" } },
+      { q: { en: "Is the prose really that good?", zh: "文筆真的那麼好嗎？" }, a: { en: "Yes; that, plus a magic system tied to language, is the main draw and worth the read even unfinished.", zh: "是；文筆加上以語言為核心的魔法系統，是主要賣點，即使系列未完仍值得一讀。" } },
+      { q: { en: "Any content younger readers should know about?", zh: "青少年閱讀有需要注意的內容嗎？" }, a: { en: "The caravan-massacre chapter is genuinely heavy — readers under 14 may struggle.", zh: "車隊屠殺一章分量真實沉重，14 歲以下讀者可能難以負荷。" } },
+    ],
+  },
+
+  "conversations-with-friends": {
+    endingTone: {
+      en: "Quietly open. The famous final line ('come and get me') is not a HEA — it is Frances making a choice without resolving the marriage, the friendship, or her own self-understanding. Rooney leaves you mid-breath on purpose.",
+      zh: "安靜的開放結局。著名的最後一句「come and get me」並非 HEA——而是 Frances 在沒有解決婚姻、友誼或自我認識的前提下做出選擇。Rooney 刻意把你停在半口氣的位置。",
+    },
+    warningsExplained: {
+      en: "On-page infidelity from the protagonist's POV (high — sustained, not a single mistake), self-harm depicted with literary distance but specifically, endometriosis pain handled with medical detail, emotional distance played as the texture of every relationship. Sex is on-page and frank but written cool, not erotic.",
+      zh: "從主角 POV 描寫的正面外遇（high——是持續性的，不是一次錯誤）、自傷以文學距離但具體呈現、子宮內膜異位症的疼痛有醫學細節、情緒疏離是所有關係的底色。性場景正面且直接，但筆法冷感、非情色。",
+    },
+    verdict: {
+      en: "Read if you want a precise, cool-voiced novel about young people navigating an affair without easy moral framing. Skip if cheating from the protagonist's POV is a hard pass, or if you need narrative warmth.",
+      zh: "想讀一本筆觸精準、語氣冷靜，描寫年輕人面對外遇而不給道德便利答案的小說：請讀。若主角 POV 出軌是硬底線、或你需要敘事溫度：請略。",
+    },
+    similarByEnding: ["the-name-of-the-wind"],
+    similarByWarning: ["gone-girl", "the-paper-palace", "madame-bovary"],
+    faq: [
+      { q: { en: "Is this the same vibe as Normal People?", zh: "和《正常人》氛圍一樣嗎？" }, a: { en: "Adjacent but cooler and more group-dynamics-driven; Normal People is two-handed, this is four-handed.", zh: "相鄰但更冷、更注重群體動力學；《正常人》是雙人戲，本書是四人戲。" } },
+      { q: { en: "Is the cheating handled critically?", zh: "外遇有被批判性處理嗎？" }, a: { en: "Examined rather than judged. Readers who need the text to condemn the affair will be frustrated.", zh: "是被審視而非被審判。需要文本明確譴責外遇的讀者會挫折。" } },
+      { q: { en: "How explicit is the sex?", zh: "性描寫多露骨？" }, a: { en: "Frank but not erotic — described, not staged.", zh: "直接但非情色——是描述，而非上演。" } },
+      { q: { en: "Should I watch the show first?", zh: "要先看影集嗎？" }, a: { en: "No. The novel's interiority is the point and the show flattens it.", zh: "不要。小說的內心戲是核心，影集會把它壓平。" } },
+    ],
+  },
 };
+
+// ---------------------------------------------------------------------------
+// Authors — featured pages with hand-authored bios
+// ---------------------------------------------------------------------------
+
+export const AUTHOR_ENRICHMENT: Record<string, AuthorEnrichment> = {
+  "aldous-huxley": {
+    bio: {
+      en: "Aldous Huxley (1894–1963) was a British writer and philosopher best known for Brave New World (1932), one of the foundational dystopian novels of the twentieth century. Trained in literature at Oxford after near-blindness ruled out medicine, Huxley moved between satirical society novels in the 1920s, the cool speculative fiction of his middle period, and the mystical essays of his California years. His fiction is consistently more interested in ideas than in plot, and his prose carries a clinical, almost essayistic tone. Read him for systemic critique, not catharsis.",
+      zh: "阿道斯・赫胥黎（1894–1963）是英國作家與思想者，最為人所知的作品是 1932 年的《美麗新世界》，二十世紀最重要的反烏托邦小說之一。年少時因眼疾無法成為醫生，他轉而在牛津修讀文學。1920 年代他寫諷刺性的社交小說，中期轉向冷靜的思辨小說，晚年定居加州後則寫神秘主義散文。赫胥黎的小說對觀念的興趣高於情節，文筆冷感、近乎散文式。閱讀他是為了讀系統性批判，而非情緒宣洩。",
+    },
+    endingTendency: {
+      en: "Huxley rarely writes a clean HE. His major novels lean toward Bittersweet or BE — characters who try to escape a controlled society usually pay for it. Endings are deliberately deflating: the system wins on its own terms, and the cost of seeing clearly is loneliness or death.",
+      zh: "赫胥黎極少寫乾淨的 HE。主要長篇多偏 Bittersweet 或 BE——試圖逃離被控制社會的角色通常為此付出代價。結局刻意洩氣：體系以它自己的邏輯獲勝，看清真相的代價是孤獨或死亡。",
+    },
+    commonWarnings: {
+      en: "Across his work expect: institutional dehumanisation, eugenics and population engineering, drug use as state control, suicide, and pervasive misogyny encoded into the imagined societies. Sexual content is referenced rather than explicit, but consent in his future societies is structurally compromised by design.",
+      zh: "整體常見避雷：機構性去人性化、優生學與人口工程、藥物作為國家控制工具、自殺、以及被內建在虛構社會中的性別歧視。性內容多為提及、非露骨，但他筆下未來社會的「同意權」結構性地被削弱。",
+    },
+    whoFor: {
+      en: ["Readers who want ideas-first dystopias", "Fans of cool, essayistic prose", "Anyone studying foundational science fiction"],
+      zh: ["想讀觀念先行反烏托邦的讀者", "喜歡冷感、散文式筆法", "想研究科幻奠基之作"],
+    },
+    whoNot: {
+      en: ["Readers needing emotional warmth or HE", "Fans of plot-driven thrillers", "Readers in a low mood"],
+      zh: ["需要情緒溫度或 HE", "偏好情節驅動的驚悚", "近期情緒低落"],
+    },
+    startWith: {
+      en: "Start with Brave New World — short, structurally clean, and the clearest distillation of his concerns. Move on to Island only if you want his late, more spiritual answer to the same questions.",
+      zh: "從《美麗新世界》開始——篇幅短、結構乾淨，是他關懷的最清晰提煉。若想看他晚期、更靈性的回應，再讀《島》。",
+    },
+    relatedGenres: ["dystopian", "science-fiction"],
+    relatedEndings: ["BE", "Bittersweet"],
+    relatedWarnings: ["death", "suicide"],
+    faq: [
+      { q: { en: "Is Brave New World harder than 1984?", zh: "《美麗新世界》比《1984》難讀嗎？" }, a: { en: "Less narrative drive but shorter and cleaner. Most readers find it faster than Orwell.", zh: "敘事推進較弱，但較短較乾淨。多數讀者覺得比歐威爾快。" } },
+      { q: { en: "Where to start with Huxley if not Brave New World?", zh: "不從《美麗新世界》開始的話該選哪本？" }, a: { en: "Try Point Counter Point for his social-novel mode, or The Doors of Perception for the late essayist.", zh: "想看社會小說模式可選《針鋒相對》；想看晚期散文可選《知覺之門》。" } },
+      { q: { en: "Are his books safe for high-school readers?", zh: "適合高中生嗎？" }, a: { en: "Brave New World is widely taught at 16+; the sexual-coding is restrained but adult.", zh: "《美麗新世界》在 16 歲以上廣為教學使用；性方面的暗碼克制但屬成人主題。" } },
+      { q: { en: "Did he write any HE?", zh: "他有寫過 HE 嗎？" }, a: { en: "Not in the major novels. Hope when it appears is qualified, not affirmed.", zh: "主要長篇沒有。即使出現希望，也是有條件的，不是肯定的。" } },
+    ],
+  },
+
+  "talia-hibbert": {
+    bio: {
+      en: "Talia Hibbert is a British contemporary romance author best known for the Brown Sisters trilogy (Get a Life, Chloe Brown / Take a Hint, Dani Brown / Act Your Age, Eve Brown). Her work is character-led, openly inclusive, and intentionally sex-positive: heroines are Black, plus-size, queer, neurodivergent, or chronically ill, and the romance is structured to take their lives seriously rather than 'fix' them. The voice is funny but the grief, anxiety, and disability content is real — not décor.",
+      zh: "塔莉雅・希貝爾（Talia Hibbert）是英國當代言情作家，最為人所知的是「布朗姐妹三部曲」（《Chloe，活出自己的人生》／《Dani，給我一個提示》／《Eve，做你這個年紀的事》）。她的作品以角色為中心，開誠布公地多元，且刻意 sex-positive：女主多為黑人、大尺碼、酷兒、神經多樣或慢性病患者，戀情結構是認真對待她們的人生，而不是「修好」她們。語氣幽默，但悲傷、焦慮、慢性病的內容是真實的——不是裝飾。",
+    },
+    endingTendency: {
+      en: "HEA across the board. Hibbert writes within romance-genre rules: every standalone delivers a clear, earned, on-page happy ending for the central couple, with epilogue beats common.",
+      zh: "全面 HEA。希貝爾在言情類型規則內寫作：每本單行本都會給核心戀人明確、應得、正面描寫的 HE 結局，常附後記。",
+    },
+    commonWarnings: {
+      en: "On-page sex (mid–high intensity), references to past trauma (chronic illness, anxiety, an abusive ex in book one), brief grief beats, occasional explicit language. No cheating between leads; no on-page sexual violence in her main romances.",
+      zh: "正面性描寫（中高強度）、過去創傷的回顧（慢性病、焦慮、第一集中前任的虐待關係）、少量哀悼情節、偶有露骨用語。男女主之間無出軌；主要言情作品中無正面性暴力。",
+    },
+    whoFor: {
+      en: ["Readers wanting guaranteed HEA", "Fans of inclusive, sex-positive romance", "Readers who like funny narration with serious stakes"],
+      zh: ["想要保證 HEA 的讀者", "喜歡多元、sex-positive 言情", "喜歡幽默敘述但情感分量真實"],
+    },
+    whoNot: {
+      en: ["Readers who want closed-door / low-spice romance", "Readers avoiding explicit language", "Readers who dislike contemporary settings"],
+      zh: ["要 closed-door／低肉度的讀者", "迴避露骨用語", "不喜歡當代背景"],
+    },
+    startWith: {
+      en: "Start with Get a Life, Chloe Brown — the cleanest entry point and the book most readers cite as the strongest of the trilogy.",
+      zh: "從《Get a Life, Chloe Brown》開始——進入點最乾淨，也是多數讀者公認三部曲中最強的一本。",
+    },
+    relatedGenres: ["romance", "contemporary"],
+    relatedEndings: ["HE"],
+    relatedWarnings: ["sex"],
+    faq: [
+      { q: { en: "Are her books standalone or a series?", zh: "單行本還是系列？" }, a: { en: "The Brown Sisters books are interconnected but each is fully standalone — read in any order.", zh: "布朗姐妹三本互有連結但各自獨立——任何順序都可。" } },
+      { q: { en: "Spice level?", zh: "肉度？" }, a: { en: "Mid–high. Open-door, several full scenes per book, frank language.", zh: "中高。Open-door，每本數場完整描寫，用語直接。" } },
+      { q: { en: "Is it heavy despite being romance?", zh: "雖是言情但會沉嗎？" }, a: { en: "The grief and disability content is real and present, but the structure always lands on safety and care.", zh: "悲傷與身障內容真實存在，但結構最後一定收於安全與照顧。" } },
+      { q: { en: "Where after the Brown Sisters?", zh: "看完布朗姐妹之後？" }, a: { en: "Try the Ravenswood series for small-town vibes, or her novellas for short hits.", zh: "想看小鎮氛圍可試 Ravenswood 系列；想看短篇可選她的中篇。" } },
+    ],
+  },
+
+  "margaret-atwood": {
+    bio: {
+      en: "Margaret Atwood (b. 1939) is a Canadian novelist, poet, and essayist whose career spans speculative fiction, historical novel, literary criticism, and graphic narrative. Her best-known book, The Handmaid's Tale (1985), reframed dystopia around reproductive control and was followed in 2019 by The Testaments. Atwood resists the label science fiction for her speculative work — she prefers 'speculative fiction' on the grounds that everything in her novels has a real-world precedent. Expect precise prose, dry irony, and a moral seriousness that does not soften its endings.",
+      zh: "瑪格麗特・愛特伍（生於 1939）是加拿大小說家、詩人與散文家，創作橫跨推想小說、歷史小說、文學評論與圖像敘事。最為人所知的《使女的故事》（1985）以生育控制重構了反烏托邦，2019 年續作《證詞》延續其框架。愛特伍拒絕把自己的推想作品稱為「科幻」——她偏好「speculative fiction」，理由是書中每一件事都有現實前例。她的作品文筆精準、反諷冷峻、道德分量不為結局打折。",
+    },
+    endingTendency: {
+      en: "Tilts toward Open Ending and Bittersweet. Even her happier resolutions arrive qualified — survival is granted but not safety, and the reader is rarely allowed to forget the cost. Outright HE is rare across her major fiction.",
+      zh: "偏向 Open Ending 與 Bittersweet。即使是較好的結局，也都是有條件的——倖存被允許，但安全沒有保證，讀者很少被允許忘記代價。她主要長篇中明確的 HE 罕見。",
+    },
+    commonWarnings: {
+      en: "Reproductive coercion, sexual violence (often institutional), state-level misogyny, on-page death, surveillance, environmental collapse. Even outside the Gilead novels, expect adult themes handled directly. Sexual content is present but non-erotic in framing.",
+      zh: "生育脅迫、性暴力（多為機構性）、國家層級的性別歧視、正面死亡、監控、環境崩壞。即使是基列系列以外的作品，成人主題也以直接方式處理。性內容存在但敘述上非情色。",
+    },
+    whoFor: {
+      en: ["Readers of literary speculative fiction", "Fans of cool, ironic prose", "Readers ready for politically serious endings"],
+      zh: ["文學性推想小說讀者", "喜歡冷感、反諷筆法", "願意面對政治分量重的結局"],
+    },
+    whoNot: {
+      en: ["Readers needing HEA", "Survivors avoiding reproductive-coercion content right now", "Fans of fast plot-driven thrillers"],
+      zh: ["需要 HEA", "目前正在迴避生育脅迫題材的倖存者", "喜歡快節奏情節驅動的驚悚"],
+    },
+    startWith: {
+      en: "Start with The Handmaid's Tale if you want her defining concerns; start with Alias Grace if you want her historical-fiction voice without the dystopia.",
+      zh: "想看她最具代表性的關懷：從《使女的故事》開始。想看她的歷史小說、避開反烏托邦：從《雙面葛蕾斯》開始。",
+    },
+    relatedGenres: ["dystopian", "literary"],
+    relatedEndings: ["OE", "Bittersweet"],
+    relatedWarnings: ["sexual-violence", "death"],
+    faq: [
+      { q: { en: "Should I watch the show before reading?", zh: "要先看影集嗎？" }, a: { en: "No. The novel is structurally tighter and the ending is genuinely different in scope.", zh: "不需要。原著結構更緊，結局格局明顯不同。" } },
+      { q: { en: "Do I need The Handmaid's Tale before The Testaments?", zh: "看《證詞》前需要先讀《使女的故事》嗎？" }, a: { en: "Strongly recommended — it gives the world model and the emotional baseline.", zh: "強烈建議——它建立了世界模型與情緒基準。" } },
+      { q: { en: "Is her work safe for teenagers?", zh: "適合青少年嗎？" }, a: { en: "The Handmaid's Tale is widely taught at 16+; younger readers may find the sexual-coercion content overwhelming.", zh: "《使女的故事》在 16 歲以上廣為教學使用；更年輕的讀者可能無法承受其中的性脅迫內容。" } },
+      { q: { en: "Does she write anything light?", zh: "她有輕鬆作品嗎？" }, a: { en: "Her short fiction and essays are wittier in tone, but the novels stay morally serious.", zh: "她的短篇與散文語氣較俏皮，但長篇保持道德嚴肅。" } },
+    ],
+  },
+
+  "j-d-salinger": {
+    bio: {
+      en: "J. D. Salinger (1919–2010) was an American writer best known for The Catcher in the Rye (1951) and the Glass family stories (Franny and Zooey, Nine Stories, Raise High the Roof Beam, Carpenters). After the explosive reception of Catcher he withdrew from public life almost entirely; the Glass cycle published in The New Yorker through the 1950s and 1960s is widely considered his real artistic project. His prose is voice-driven, unmistakably American mid-century, and obsessed with how unbearable it is to be intelligent and young in a world that rewards performance over honesty.",
+      zh: "J. D. 沙林傑（1919–2010）是美國作家，最為人所知的是 1951 年的《麥田捕手》以及格拉斯家族系列（《法蘭妮與卓依》《九個故事》《抬高屋樑吧，木匠們》）。《麥田捕手》引發的爆炸性反應後，他幾乎完全退出公眾生活；1950–60 年代陸續刊於《紐約客》的格拉斯家族系列被普遍視為他真正的藝術志業。他的文筆以聲音驅動、極具美國二十世紀中葉氣味，執迷於一個主題：在一個獎勵表演而非誠實的世界裡，當一個聰明的年輕人有多難受。",
+    },
+    endingTendency: {
+      en: "Open and Ambiguous. Salinger almost never closes a story — his finishes are deliberately unresolved, often mid-thought, and ask the reader to finish the emotional arc themselves. Catcher's last paragraph is the canonical example.",
+      zh: "開放與曖昧結局。沙林傑幾乎從不把故事收死——他的結尾刻意不解決，常停在念頭中段，要求讀者自行完成情緒弧線。《麥田捕手》的最後一段是經典示範。",
+    },
+    commonWarnings: {
+      en: "Suicide and suicidal ideation (a recurring theme — Seymour Glass's death frames much of the cycle), depression, alienation, period-typical sexual coding, mid-century misogyny in some character voices, brief discussion of childhood sexual abuse in 'A Perfect Day for Bananafish'. No graphic violence, no on-page sex.",
+      zh: "自殺與自殺意念（反覆出現——Seymour Glass 之死貫穿整個格拉斯系列）、憂鬱、疏離、時代背景下的性編碼、部分角色聲音中的中世紀性別歧視、〈A Perfect Day for Bananafish〉中對童年性侵的簡短提及。無具體暴力、無正面性場景。",
+    },
+    whoFor: {
+      en: ["Readers who love voice-driven prose", "Fans of mid-century American fiction", "Readers comfortable with open endings"],
+      zh: ["喜愛聲音驅動的文筆", "中世紀美國小說讀者", "能接受開放結局"],
+    },
+    whoNot: {
+      en: ["Readers avoiding suicide content", "Readers who need plot resolution", "Readers expecting Catcher to be a feel-good coming-of-age"],
+      zh: ["正在迴避自殺題材", "需要情節明確收束", "誤把《麥田捕手》當作療癒系成長小說"],
+    },
+    startWith: {
+      en: "Start with Nine Stories if you want his short-form mastery, or The Catcher in the Rye if you want the cultural touchstone. Save the Glass-family novellas for after — they reward familiarity.",
+      zh: "想看他的短篇功力：從《九個故事》開始；想接觸文化座標：從《麥田捕手》。格拉斯家族中篇留待之後讀，熟悉之後才能領會。",
+    },
+    relatedGenres: ["literary", "contemporary"],
+    relatedEndings: ["OE", "Ambiguous"],
+    relatedWarnings: ["suicide", "depression"],
+    faq: [
+      { q: { en: "Why are there so few Salinger books?", zh: "為什麼沙林傑作品數量這麼少？" }, a: { en: "He stopped publishing in 1965 and lived as a recluse; the estate has hinted at posthumous manuscripts but nothing has appeared.", zh: "他在 1965 年停止出版並長期隱居；遺產管理方曾暗示有遺稿，但至今未公開。" } },
+      { q: { en: "Is Catcher dated now?", zh: "《麥田捕手》現在過時了嗎？" }, a: { en: "The voice is dated by design and that's part of the experience; the alienation theme isn't.", zh: "敘述聲音的時代感是設計的一部分，那本身就是閱讀體驗；疏離主題並未過時。" } },
+      { q: { en: "Should I read the Glass stories in order?", zh: "格拉斯系列要照順序讀嗎？" }, a: { en: "Recommended but not required — internal chronology and publication order differ.", zh: "建議但非必要——內部年表與出版順序並不一致。" } },
+      { q: { en: "Is there explicit content?", zh: "有露骨內容嗎？" }, a: { en: "No graphic violence or on-page sex; the suicide content is the heaviest element.", zh: "無具體暴力與正面性場景；最沉重的元素是自殺題材。" } },
+    ],
+  },
+};
+
