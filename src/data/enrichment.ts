@@ -23,6 +23,19 @@ export interface BookEnrichment {
   faq: BiFaq;
 }
 
+export interface AuthorEnrichment {
+  bio: Bi;                       // 200–400 zh / 120–250 en words
+  endingTendency: Bi;            // common ending tendencies in their work
+  commonWarnings: Bi;            // common trigger warnings across their books
+  whoFor: BiList;                // 3–5 reader fits
+  whoNot: BiList;                // 3–5 reader misfits
+  startWith: Bi;                 // recommended entry point
+  relatedGenres?: string[];      // genre slugs (slugify(genre.en))
+  relatedEndings?: string[];     // ending codes
+  relatedWarnings?: string[];    // trigger codes
+  faq: BiFaq;
+}
+
 // ---------------------------------------------------------------------------
 // Collections
 // ---------------------------------------------------------------------------
