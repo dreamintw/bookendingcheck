@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { getBook, books } from "@/data/books";
+import { getBook, books, slugify } from "@/data/books";
 import { useLang, t, type Lang } from "@/lib/i18n";
 import { EndingBadge } from "@/components/EndingBadge";
 import { DecisionCard } from "@/components/DecisionCard";
