@@ -43,3 +43,18 @@ ${paths.map((p) => urlEntry(p === "" ? "" : p)).join("\n")}
 mkdirSync("public", { recursive: true });
 writeFileSync("public/sitemap.xml", body);
 console.log(`Wrote public/sitemap.xml (${paths.length * 2} URLs)`);
+
+// Simplified fallback sitemap: plain <url><loc> only, no xhtml:link / lastmod / changefreq / priority.
+const simpleLocs: string[] = [];
+for (const p of paths) {
+  const clean = p === "" ? "" : p;
+  simpleLocs.push(`${siteUrl}/en${clean}`);
+  simpleLocs.push(`${siteUrl}/zh${clean}`);
+}
+const simpleBody = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${simpleLocs.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}
+</urlset>
+`;
+writeFileSync("public/sitemap-simple.xml", simpleBody);
+console.log(`Wrote public/sitemap-simple.xml (${simpleLocs.length} URLs)`);
