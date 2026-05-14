@@ -66,9 +66,43 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
   return brandedErrorResponse();
 }
 
+const APEX_HOST = "bookendingcheck.xyz";
+
+// Server-side 301 canonicalization for the production domain:
+//   - http  -> https
+//   - www.bookendingcheck.xyz -> bookendingcheck.xyz
+//   - trailing slash on /zh/ and /en/ language homes -> no trailing slash
+// Other hosts (lovable.app preview/published, custom dev domains) are passed through unchanged.
+function canonicalRedirect(request: Request): Response | null {
+  const url = new URL(request.url);
+  const host = url.host.toLowerCase();
+  const isApex = host === APEX_HOST || host === `www.${APEX_HOST}`;
+  if (!isApex) return null;
+
+  let changed = false;
+
+  if (url.protocol === "http:") {
+    url.protocol = "https:";
+    changed = true;
+  }
+  if (host === `www.${APEX_HOST}`) {
+    url.host = APEX_HOST;
+    changed = true;
+  }
+  if (url.pathname === "/zh/" || url.pathname === "/en/") {
+    url.pathname = url.pathname.slice(0, -1);
+    changed = true;
+  }
+
+  if (!changed) return null;
+  return Response.redirect(url.toString(), 301);
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const redirect = canonicalRedirect(request);
+      if (redirect) return redirect;
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);
