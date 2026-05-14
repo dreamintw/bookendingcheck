@@ -95,7 +95,12 @@ function canonicalRedirect(request: Request): Response | null {
   }
 
   if (!changed) return null;
-  return Response.redirect(url.toString(), 301);
+  // Use explicit 301 via Location header — Response.redirect() emits 302 by default
+  // in the Workers runtime regardless of the status arg.
+  return new Response(null, {
+    status: 301,
+    headers: { location: url.toString() },
+  });
 }
 
 export default {
