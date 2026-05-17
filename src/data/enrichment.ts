@@ -329,11 +329,14 @@ export const BOOK_ENRICHMENT: Record<string, BookEnrichment> = {
       zh: "若你情緒穩定，想看寫得極美、悲劇分量擲地有聲的酷兒神話重述，請讀。若你正情緒低落或需要 HE，請略——這本書會留下痕跡。",
     },
     similarByEnding: ["no-longer-human", "anna-karenina", "madame-bovary"],
-    similarByWarning: ["anna-karenina", "no-longer-human"],
+    similarByWarning: ["anna-karenina", "no-longer-human", "circe"],
     faq: [
-      { q: { en: "Do I need to know the Iliad first?", zh: "需要先讀伊利亞德嗎？" }, a: { en: "No. Miller assumes no background; light familiarity with the names helps but isn't required.", zh: "不用。米勒不假設讀者有背景，知道幾個名字會更順但非必要。" } },
-      { q: { en: "Is it explicit?", zh: "肉度高嗎？" }, a: { en: "No — sex is present but written with restraint and emotional focus.", zh: "不高——有性場景但筆法克制，重情緒而非肢體。" } },
-      { q: { en: "Will the ending get retconned in Circe?", zh: "Circe 會推翻這本的結局嗎？" }, a: { en: "No. Circe is set in the same mythic universe but doesn't undo the events here.", zh: "不會。Circe 與本書同神話宇宙，但不推翻本書事件。" } },
+      { q: { en: "Does The Song of Achilles have a happy ending?", zh: "《阿基里斯之歌》是 HE 嗎？" }, a: { en: "No. The Song of Achilles ending is firmly tragic — both leads die and the novel closes on grief, not reunion in any conventional happy sense. If you need a HE, skip.", zh: "不是。《阿基里斯之歌》的結局明確悲劇——雙主角皆死，全書收於悲痛，並非任何傳統意義上的團圓。需要 HE 請略。" } },
+      { q: { en: "Is The Song of Achilles sad?", zh: "《阿基里斯之歌》會很難過嗎？" }, a: { en: "Yes — readers consistently report crying in the final 80 pages. The first half is tender and warm, which is exactly what makes the ending land so hard.", zh: "會。讀者普遍反映最後 80 頁會哭。前半段越溫柔，結局打擊越強。" } },
+      { q: { en: "What are the main The Song of Achilles trigger warnings?", zh: "《阿基里斯之歌》主要避雷標籤有哪些？" }, a: { en: "Major character death (both leads), graphic war violence including Achilles' rampage, sustained intense grief in the final quarter, and brief references to sexual violence in the wider war context (not on-page between leads).", zh: "主角死亡（雙主角皆亡）、具體戰爭暴力含阿基里斯暴行、最後四分之一持續的強烈悲痛，以及戰爭背景下對性暴力的簡短指涉（雙主角之間並無正面性暴力）。" } },
+      { q: { en: "The Song of Achilles ending explained — what actually happens?", zh: "《阿基里斯之歌》結局究竟發生了什麼？" }, a: { en: "Full plot spoilers are kept in the collapsed spoiler block above. In short: the novel follows the Iliad's broad arc but reframes it through Patroclus's voice, so the ending feels less like myth and more like personal loss.", zh: "完整劇透請展開上方折疊區。簡言之：本書依循伊利亞德主線，但透過 Patroclus 的視角重述，因此結局讀來不像神話，而像私人失去。" } },
+      { q: { en: "Should I read The Song of Achilles?", zh: "我該讀《阿基里斯之歌》嗎？" }, a: { en: "Read if you're emotionally stable, want a queer mythology retelling that earns its tragedy, and enjoy lyrical prose. Skip if you're in a low mood, need a happy ending, or avoid major character death.", zh: "情緒穩定、想看寫得極美的酷兒神話悲劇、喜歡抒情文筆：請讀。情緒低落、需要 HE、或迴避主角死亡：請略。" } },
+      { q: { en: "Are there books like The Song of Achilles?", zh: "有沒有像《阿基里斯之歌》的書？" }, a: { en: "For prose and queer tragedy: similar emotional weight in Anna Karenina and No Longer Human (see Similar warning profile below). For the same mythic voice with a lighter ending, try Circe by the same author.", zh: "文筆與酷兒悲劇向：Anna Karenina、No Longer Human 情緒重量相近（見下方相似避雷標籤）。同樣的神話語感但結局較溫和：可讀同作者的 Circe。" } },
     ],
   },
 
@@ -580,10 +583,33 @@ export const BOOK_ENRICHMENT: Record<string, BookEnrichment> = {
       { q: { en: "Should I watch the show first?", zh: "要先看影集嗎？" }, a: { en: "No. The novel's interiority is the point and the show flattens it.", zh: "不要。小說的內心戲是核心，影集會把它壓平。" } },
     ],
   },
-};
 
-// ---------------------------------------------------------------------------
-// Authors — featured pages with hand-authored bios
+  "piranesi": {
+    endingTone: {
+      en: "Ambiguous by design. Piranesi is technically rescued from the labyrinthine House, but Clarke refuses to frame this as a clean win — he keeps returning to the House, and the final pages leave his identity, his loss, and the meaning of the world deliberately unresolved. It is closer to a quiet acceptance than to either HE or BE.",
+      zh: "《皮拉內西》結局是開放式（Ambiguous），刻意保留留白。技術上他被救出迷宮般的房屋，但 Clarke 拒絕把它寫成乾淨的勝利——他持續回訪 The House，最後幾頁刻意不解決他的身份、失去與這個世界的意義。整體更接近「安靜的接受」，而非 HE 或 BE。",
+    },
+    warningsExplained: {
+      en: "Mid-intensity captivity (sustained, but the prose is gentle and the protagonist himself does not experience it as horror for most of the book), gaslighting and identity erasure by an antagonist, references to off-page abuse and missing persons. No on-page sexual violence, no graphic gore. The hardest content is psychological, not visceral.",
+      zh: "《皮拉內西》主要避雷標籤集中在：中等強度的囚禁（持續性，但全書筆觸溫柔，主角大半時間並不視之為恐怖）、被反派操控與身份抹除（gaslighting）、間接提及書外的虐待與失蹤者。無正面性暴力、無血腥場景。真正最重的內容是心理層面，非視覺層面。",
+    },
+    verdict: {
+      en: "Read if you love lyrical, slow-paced literary fantasy and can sit with an open ending that prizes atmosphere and meaning over plot resolution. Skip if you need clear answers, dislike unreliable narrators, or want a fast-moving fantasy with conventional stakes. Piranesi 值得讀嗎？對「氛圍派」讀者：強烈值得；對「劇情派」讀者：可能會挫折。",
+      zh: "《皮拉內西》免雷讀前判斷：喜歡抒情、慢節奏文學奇幻，能接受重氛圍與意義、輕劇情解答的開放結局，請讀。需要明確答案、不喜歡不可靠敘述者、想看快節奏奇幻：請略。對「氛圍派」讀者極度推薦；對「劇情派」讀者可能會挫折。",
+    },
+    similarByEnding: ["the-name-of-the-wind", "conversations-with-friends"],
+    similarByWarning: ["the-night-circus", "circe"],
+    faq: [
+      { q: { en: "《皮拉內西》結局是 HE、BE 還是開放式？", zh: "《皮拉內西》結局是 HE、BE 還是開放式？" }, a: { en: "開放式（Ambiguous）。皮拉內西被救出 The House，但選擇繼續回訪它；他原本的身份是否完整恢復、那個世界對他到底意味著什麼，書中刻意不給答案。它不是 HE，也不是 BE。", zh: "開放式（Ambiguous）。皮拉內西被救出 The House，但選擇繼續回訪它；他原本的身份是否完整恢復、那個世界對他到底意味著什麼，書中刻意不給答案。它不是 HE，也不是 BE。" } },
+      { q: { en: "《皮拉內西》有哪些主要避雷標籤？", zh: "《皮拉內西》有哪些主要避雷標籤？" }, a: { en: "主要是囚禁（中等強度，但筆觸溫柔）、被操控與身份抹除、以及對書外虐待與失蹤的間接提及。沒有正面性暴力、沒有血腥場景。最重的部份是心理層面，不是畫面層面。", zh: "主要是囚禁（中等強度，但筆觸溫柔）、被操控與身份抹除、以及對書外虐待與失蹤的間接提及。沒有正面性暴力、沒有血腥場景。最重的部份是心理層面，不是畫面層面。" } },
+      { q: { en: "《皮拉內西》適合誰讀？", zh: "《皮拉內西》適合誰讀？" }, a: { en: "適合喜歡氛圍勝過劇情、能享受詩意散文式敘述、不排斥開放結局的讀者；也適合想要一本可以慢讀、重讀、討論的文學奇幻入門。", zh: "適合喜歡氛圍勝過劇情、能享受詩意散文式敘述、不排斥開放結局的讀者；也適合想要一本可以慢讀、重讀、討論的文學奇幻入門。" } },
+      { q: { en: "《皮拉內西》不適合誰？", zh: "《皮拉內西》不適合誰？" }, a: { en: "不適合需要明確答案、追求快節奏、不能接受不可靠敘述者，或正處於對「被困住、失去自我」題材敏感期的讀者。", zh: "不適合需要明確答案、追求快節奏、不能接受不可靠敘述者，或正處於對「被困住、失去自我」題材敏感期的讀者。" } },
+      { q: { en: "《皮拉內西》劇透嚴重嗎？要先看劇透嗎？", zh: "《皮拉內西》劇透嚴重嗎？要先看劇透嗎？" }, a: { en: "本書的閱讀體驗高度依賴「逐步發現 The House 與主角是什麼」這個過程，建議第一次閱讀前不要看完整劇透。完整劇透請展開上方的「完整劇透（預設折疊）」區塊。", zh: "本書的閱讀體驗高度依賴「逐步發現 The House 與主角是什麼」這個過程，建議第一次閱讀前不要看完整劇透。完整劇透請展開上方的「完整劇透（預設折疊）」區塊。" } },
+      { q: { en: "《皮拉內西》值得讀嗎？", zh: "《皮拉內西》值得讀嗎？" }, a: { en: "對氛圍派讀者極度值得——文字節制、意象迷人、結局耐回味。對劇情派讀者：可能會覺得「然後呢？」這就是它與一般奇幻小說的分水嶺。", zh: "對氛圍派讀者極度值得——文字節制、意象迷人、結局耐回味。對劇情派讀者：可能會覺得「然後呢？」這就是它與一般奇幻小說的分水嶺。" } },
+      { q: { en: "如果喜歡《皮拉內西》還可以讀什麼？", zh: "如果喜歡《皮拉內西》還可以讀什麼？" }, a: { en: "同調性氛圍奇幻：The Night Circus；同樣神話與孤獨主題：Circe；同樣帶開放結局的文學奇幻：The Name of the Wind。詳見頁面下方相似書籍。", zh: "同調性氛圍奇幻：The Night Circus；同樣神話與孤獨主題：Circe；同樣帶開放結局的文學奇幻：The Name of the Wind。詳見頁面下方相似書籍。" } },
+    ],
+  },
+};
 // ---------------------------------------------------------------------------
 
 export const AUTHOR_ENRICHMENT: Record<string, AuthorEnrichment> = {

@@ -448,8 +448,34 @@ export const extraBooks: B[] = [
     summary: { zh: "在無盡迷宮般的房屋中，皮拉內西獨自記錄潮汐與雕像。", en: "Piranesi lives alone in an endless labyrinthine House, recording tides and statues." },
     spoilerSoft: { zh: "詩意、緩慢，結局留白。", en: "Lyrical and slow; ending is open." },
     spoilerHard: { zh: "他被救出，但選擇繼續造訪 The House，意義開放。", en: "He is rescued but chooses to revisit the House — meaning is open." },
-    whoFor: { zh: ["喜歡神秘、詩意"], en: ["Love mystery and lyricism"] },
-    whoNot: { zh: ["需要明確答案"], en: ["Need clear answers"] },
+    whoFor: {
+      zh: [
+        "喜歡神秘、詩意，氛圍勝於劇情的讀者",
+        "能享受不可靠敘述者與開放結局",
+        "想要一本可以慢讀、重讀、討論的文學奇幻",
+        "對「孤獨與意義」題材有共鳴",
+      ],
+      en: [
+        "Love lyrical, atmospheric prose over plot",
+        "Comfortable with unreliable narrators and open endings",
+        "Want a literary fantasy worth re-reading slowly",
+        "Drawn to themes of solitude and meaning",
+      ],
+    },
+    whoNot: {
+      zh: [
+        "需要明確答案與結局解釋",
+        "追求快節奏、強情節驅動",
+        "對「被困住、失去自我」題材正處敏感期",
+        "不喜歡第一人稱日記式敘述",
+      ],
+      en: [
+        "Need clear answers and a resolved ending",
+        "Want fast pacing and plot-driven stakes",
+        "Sensitive to captivity / identity-erasure themes right now",
+        "Dislike first-person journal-style narration",
+      ],
+    },
     triggers: [{ code: "captivity", zh: "囚禁", en: "Captivity", intensity: "mid" }],
     originalLanguage: "en",
   },
