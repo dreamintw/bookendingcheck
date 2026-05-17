@@ -329,11 +329,14 @@ export const BOOK_ENRICHMENT: Record<string, BookEnrichment> = {
       zh: "若你情緒穩定，想看寫得極美、悲劇分量擲地有聲的酷兒神話重述，請讀。若你正情緒低落或需要 HE，請略——這本書會留下痕跡。",
     },
     similarByEnding: ["no-longer-human", "anna-karenina", "madame-bovary"],
-    similarByWarning: ["anna-karenina", "no-longer-human"],
+    similarByWarning: ["anna-karenina", "no-longer-human", "circe"],
     faq: [
-      { q: { en: "Do I need to know the Iliad first?", zh: "需要先讀伊利亞德嗎？" }, a: { en: "No. Miller assumes no background; light familiarity with the names helps but isn't required.", zh: "不用。米勒不假設讀者有背景，知道幾個名字會更順但非必要。" } },
-      { q: { en: "Is it explicit?", zh: "肉度高嗎？" }, a: { en: "No — sex is present but written with restraint and emotional focus.", zh: "不高——有性場景但筆法克制，重情緒而非肢體。" } },
-      { q: { en: "Will the ending get retconned in Circe?", zh: "Circe 會推翻這本的結局嗎？" }, a: { en: "No. Circe is set in the same mythic universe but doesn't undo the events here.", zh: "不會。Circe 與本書同神話宇宙，但不推翻本書事件。" } },
+      { q: { en: "Does The Song of Achilles have a happy ending?", zh: "《阿基里斯之歌》是 HE 嗎？" }, a: { en: "No. The Song of Achilles ending is firmly tragic — both leads die and the novel closes on grief, not reunion in any conventional happy sense. If you need a HE, skip.", zh: "不是。《阿基里斯之歌》的結局明確悲劇——雙主角皆死，全書收於悲痛，並非任何傳統意義上的團圓。需要 HE 請略。" } },
+      { q: { en: "Is The Song of Achilles sad?", zh: "《阿基里斯之歌》會很難過嗎？" }, a: { en: "Yes — readers consistently report crying in the final 80 pages. The first half is tender and warm, which is exactly what makes the ending land so hard.", zh: "會。讀者普遍反映最後 80 頁會哭。前半段越溫柔，結局打擊越強。" } },
+      { q: { en: "What are the main The Song of Achilles trigger warnings?", zh: "《阿基里斯之歌》主要避雷標籤有哪些？" }, a: { en: "Major character death (both leads), graphic war violence including Achilles' rampage, sustained intense grief in the final quarter, and brief references to sexual violence in the wider war context (not on-page between leads).", zh: "主角死亡（雙主角皆亡）、具體戰爭暴力含阿基里斯暴行、最後四分之一持續的強烈悲痛，以及戰爭背景下對性暴力的簡短指涉（雙主角之間並無正面性暴力）。" } },
+      { q: { en: "The Song of Achilles ending explained — what actually happens?", zh: "《阿基里斯之歌》結局究竟發生了什麼？" }, a: { en: "Full plot spoilers are kept in the collapsed spoiler block above. In short: the novel follows the Iliad's broad arc but reframes it through Patroclus's voice, so the ending feels less like myth and more like personal loss.", zh: "完整劇透請展開上方折疊區。簡言之：本書依循伊利亞德主線，但透過 Patroclus 的視角重述，因此結局讀來不像神話，而像私人失去。" } },
+      { q: { en: "Should I read The Song of Achilles?", zh: "我該讀《阿基里斯之歌》嗎？" }, a: { en: "Read if you're emotionally stable, want a queer mythology retelling that earns its tragedy, and enjoy lyrical prose. Skip if you're in a low mood, need a happy ending, or avoid major character death.", zh: "情緒穩定、想看寫得極美的酷兒神話悲劇、喜歡抒情文筆：請讀。情緒低落、需要 HE、或迴避主角死亡：請略。" } },
+      { q: { en: "Are there books like The Song of Achilles?", zh: "有沒有像《阿基里斯之歌》的書？" }, a: { en: "For prose and queer tragedy: similar emotional weight in Anna Karenina and No Longer Human (see Similar warning profile below). For the same mythic voice with a lighter ending, try Circe by the same author.", zh: "文筆與酷兒悲劇向：Anna Karenina、No Longer Human 情緒重量相近（見下方相似避雷標籤）。同樣的神話語感但結局較溫和：可讀同作者的 Circe。" } },
     ],
   },
 
