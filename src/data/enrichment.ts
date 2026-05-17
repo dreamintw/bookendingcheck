@@ -583,10 +583,33 @@ export const BOOK_ENRICHMENT: Record<string, BookEnrichment> = {
       { q: { en: "Should I watch the show first?", zh: "要先看影集嗎？" }, a: { en: "No. The novel's interiority is the point and the show flattens it.", zh: "不要。小說的內心戲是核心，影集會把它壓平。" } },
     ],
   },
-};
 
-// ---------------------------------------------------------------------------
-// Authors — featured pages with hand-authored bios
+  "piranesi": {
+    endingTone: {
+      en: "Ambiguous by design. Piranesi is technically rescued from the labyrinthine House, but Clarke refuses to frame this as a clean win — he keeps returning to the House, and the final pages leave his identity, his loss, and the meaning of the world deliberately unresolved. It is closer to a quiet acceptance than to either HE or BE.",
+      zh: "《皮拉內西》結局是開放式（Ambiguous），刻意保留留白。技術上他被救出迷宮般的房屋，但 Clarke 拒絕把它寫成乾淨的勝利——他持續回訪 The House，最後幾頁刻意不解決他的身份、失去與這個世界的意義。整體更接近「安靜的接受」，而非 HE 或 BE。",
+    },
+    warningsExplained: {
+      en: "Mid-intensity captivity (sustained, but the prose is gentle and the protagonist himself does not experience it as horror for most of the book), gaslighting and identity erasure by an antagonist, references to off-page abuse and missing persons. No on-page sexual violence, no graphic gore. The hardest content is psychological, not visceral.",
+      zh: "《皮拉內西》主要避雷標籤集中在：中等強度的囚禁（持續性，但全書筆觸溫柔，主角大半時間並不視之為恐怖）、被反派操控與身份抹除（gaslighting）、間接提及書外的虐待與失蹤者。無正面性暴力、無血腥場景。真正最重的內容是心理層面，非視覺層面。",
+    },
+    verdict: {
+      en: "Read if you love lyrical, slow-paced literary fantasy and can sit with an open ending that prizes atmosphere and meaning over plot resolution. Skip if you need clear answers, dislike unreliable narrators, or want a fast-moving fantasy with conventional stakes. Piranesi 值得讀嗎？對「氛圍派」讀者：強烈值得；對「劇情派」讀者：可能會挫折。",
+      zh: "《皮拉內西》免雷讀前判斷：喜歡抒情、慢節奏文學奇幻，能接受重氛圍與意義、輕劇情解答的開放結局，請讀。需要明確答案、不喜歡不可靠敘述者、想看快節奏奇幻：請略。對「氛圍派」讀者極度推薦；對「劇情派」讀者可能會挫折。",
+    },
+    similarByEnding: ["the-name-of-the-wind", "conversations-with-friends"],
+    similarByWarning: ["the-night-circus", "circe"],
+    faq: [
+      { q: { en: "《皮拉內西》結局是 HE、BE 還是開放式？", zh: "《皮拉內西》結局是 HE、BE 還是開放式？" }, a: { en: "開放式（Ambiguous）。皮拉內西被救出 The House，但選擇繼續回訪它；他原本的身份是否完整恢復、那個世界對他到底意味著什麼，書中刻意不給答案。它不是 HE，也不是 BE。", zh: "開放式（Ambiguous）。皮拉內西被救出 The House，但選擇繼續回訪它；他原本的身份是否完整恢復、那個世界對他到底意味著什麼，書中刻意不給答案。它不是 HE，也不是 BE。" } },
+      { q: { en: "《皮拉內西》有哪些主要避雷標籤？", zh: "《皮拉內西》有哪些主要避雷標籤？" }, a: { en: "主要是囚禁（中等強度，但筆觸溫柔）、被操控與身份抹除、以及對書外虐待與失蹤的間接提及。沒有正面性暴力、沒有血腥場景。最重的部份是心理層面，不是畫面層面。", zh: "主要是囚禁（中等強度，但筆觸溫柔）、被操控與身份抹除、以及對書外虐待與失蹤的間接提及。沒有正面性暴力、沒有血腥場景。最重的部份是心理層面，不是畫面層面。" } },
+      { q: { en: "《皮拉內西》適合誰讀？", zh: "《皮拉內西》適合誰讀？" }, a: { en: "適合喜歡氛圍勝過劇情、能享受詩意散文式敘述、不排斥開放結局的讀者；也適合想要一本可以慢讀、重讀、討論的文學奇幻入門。", zh: "適合喜歡氛圍勝過劇情、能享受詩意散文式敘述、不排斥開放結局的讀者；也適合想要一本可以慢讀、重讀、討論的文學奇幻入門。" } },
+      { q: { en: "《皮拉內西》不適合誰？", zh: "《皮拉內西》不適合誰？" }, a: { en: "不適合需要明確答案、追求快節奏、不能接受不可靠敘述者，或正處於對「被困住、失去自我」題材敏感期的讀者。", zh: "不適合需要明確答案、追求快節奏、不能接受不可靠敘述者，或正處於對「被困住、失去自我」題材敏感期的讀者。" } },
+      { q: { en: "《皮拉內西》劇透嚴重嗎？要先看劇透嗎？", zh: "《皮拉內西》劇透嚴重嗎？要先看劇透嗎？" }, a: { en: "本書的閱讀體驗高度依賴「逐步發現 The House 與主角是什麼」這個過程，建議第一次閱讀前不要看完整劇透。完整劇透請展開上方的「完整劇透（預設折疊）」區塊。", zh: "本書的閱讀體驗高度依賴「逐步發現 The House 與主角是什麼」這個過程，建議第一次閱讀前不要看完整劇透。完整劇透請展開上方的「完整劇透（預設折疊）」區塊。" } },
+      { q: { en: "《皮拉內西》值得讀嗎？", zh: "《皮拉內西》值得讀嗎？" }, a: { en: "對氛圍派讀者極度值得——文字節制、意象迷人、結局耐回味。對劇情派讀者：可能會覺得「然後呢？」這就是它與一般奇幻小說的分水嶺。", zh: "對氛圍派讀者極度值得——文字節制、意象迷人、結局耐回味。對劇情派讀者：可能會覺得「然後呢？」這就是它與一般奇幻小說的分水嶺。" } },
+      { q: { en: "如果喜歡《皮拉內西》還可以讀什麼？", zh: "如果喜歡《皮拉內西》還可以讀什麼？" }, a: { en: "同調性氛圍奇幻：The Night Circus；同樣神話與孤獨主題：Circe；同樣帶開放結局的文學奇幻：The Name of the Wind。詳見頁面下方相似書籍。", zh: "同調性氛圍奇幻：The Night Circus；同樣神話與孤獨主題：Circe；同樣帶開放結局的文學奇幻：The Name of the Wind。詳見頁面下方相似書籍。" } },
+    ],
+  },
+};
 // ---------------------------------------------------------------------------
 
 export const AUTHOR_ENRICHMENT: Record<string, AuthorEnrichment> = {
