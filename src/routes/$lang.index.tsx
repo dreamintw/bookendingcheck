@@ -154,7 +154,87 @@ function HomePage() {
             </div>
           </section>
         );
-        return hasSearched ? <>{booksSection}{needSection}</> : <>{needSection}{booksSection}</>;
+        const zhIntro = lang === "zh" ? (
+          <section key="zh-intro" aria-labelledby="zh-intro-heading" className="border-b border-border">
+            <div className="mx-auto max-w-4xl w-full px-4 py-12 space-y-10">
+              <div className="space-y-3">
+                <h2 id="zh-intro-heading" className="font-display text-2xl md:text-3xl font-semibold">
+                  關於讀前決策站｜中文小說讀前查詢工具
+                </h2>
+                <p className="text-sm md:text-base text-muted-foreground leading-7">
+                  讀前決策站是一個專為中文讀者設計的<strong>小說讀前決策工具</strong>。
+                  在你正式翻開一本小說之前，我們幫你 30 秒內看清這本書的結局走向（HE 圓滿、BE 悲劇、OE 開放、Bittersweet 苦樂參半、Ambiguous 曖昧結局），
+                  整理出常見的<strong>避雷標籤</strong>（例如寵物死亡、外遇出軌、自傷、性暴力、家暴、童年創傷等），
+                  並提供<strong>分層劇透設計</strong>：免雷摘要永遠可見，微雷氛圍與完整劇透預設折疊，由你自己決定要看到哪一層。
+                </p>
+                <p className="text-sm md:text-base text-muted-foreground leading-7">
+                  我們收錄英文原作、翻譯小說、言情、奇幻、推理、文學等多種類型，
+                  支援用中文書名、英文書名、作者、ISBN 或標籤查詢。
+                  本站不提供小說全文，也不提供任何盜版下載連結，
+                  只專注在「這本書現在適不適合你讀」這一個問題。
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="font-display text-xl font-semibold">什麼時候會用到讀前決策站？</h3>
+                <ul className="grid gap-2 sm:grid-cols-2 text-sm text-muted-foreground">
+                  <li className="rounded-md border border-border bg-card px-3 py-2">想先確認是 HE 還是 BE，再決定要不要入坑</li>
+                  <li className="rounded-md border border-border bg-card px-3 py-2">想避開寵物死亡、外遇、自傷、性暴力等高強度雷點</li>
+                  <li className="rounded-md border border-border bg-card px-3 py-2">想看免雷摘要，但不想被完整劇透爆雷</li>
+                  <li className="rounded-md border border-border bg-card px-3 py-2">想判斷一本小說「現在」適不適合自己的心情</li>
+                  <li className="rounded-md border border-border bg-card px-3 py-2">看完一本書想找走向、氛圍相近的作品</li>
+                  <li className="rounded-md border border-border bg-card px-3 py-2">看完一本書想找避雷標籤類似的安全替代</li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="font-display text-xl font-semibold">中文讀者熱門入口</h3>
+                <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3 text-sm">
+                  <li><a className="block rounded-md border border-border bg-card px-3 py-2 hover:border-accent hover:text-accent" href="/zh/endings/HE">HE 圓滿結局小說 →</a></li>
+                  <li><a className="block rounded-md border border-border bg-card px-3 py-2 hover:border-accent hover:text-accent" href="/zh/endings/BE">BE 悲劇結局小說 →</a></li>
+                  <li><a className="block rounded-md border border-border bg-card px-3 py-2 hover:border-accent hover:text-accent" href="/zh/endings/OE">OE 開放結局小說 →</a></li>
+                  <li><a className="block rounded-md border border-border bg-card px-3 py-2 hover:border-accent hover:text-accent" href="/zh/endings/Bittersweet">Bittersweet 苦樂參半 →</a></li>
+                  <li><a className="block rounded-md border border-border bg-card px-3 py-2 hover:border-accent hover:text-accent" href="/zh/warnings">避雷標籤總覽 →</a></li>
+                  <li><a className="block rounded-md border border-border bg-card px-3 py-2 hover:border-accent hover:text-accent" href="/zh/genres">依類型瀏覽 →</a></li>
+                  <li><a className="block rounded-md border border-border bg-card px-3 py-2 hover:border-accent hover:text-accent" href="/zh/authors">依作者瀏覽 →</a></li>
+                  <li><a className="block rounded-md border border-border bg-card px-3 py-2 hover:border-accent hover:text-accent" href="/zh/collections">主題書單 →</a></li>
+                  <li><a className="block rounded-md border border-border bg-card px-3 py-2 hover:border-accent hover:text-accent" href="/zh/books">作品庫 →</a></li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="font-display text-xl font-semibold">常見問題 FAQ</h3>
+                <div className="space-y-3 text-sm">
+                  <details className="rounded-md border border-border bg-card px-4 py-3">
+                    <summary className="cursor-pointer font-medium">這個網站會提供小說全文或下載嗎？</summary>
+                    <p className="mt-2 text-muted-foreground leading-7">不會。讀前決策站<strong>不提供小說全文、不提供盜版下載、不提供任何違反版權的閱讀連結</strong>。我們只提供結局類型、避雷標籤、免雷摘要與分層劇透等讀前決策資訊。</p>
+                  </details>
+                  <details className="rounded-md border border-border bg-card px-4 py-3">
+                    <summary className="cursor-pointer font-medium">HE、BE、OE 是什麼意思？</summary>
+                    <p className="mt-2 text-muted-foreground leading-7">HE 指 Happy Ending 圓滿結局，BE 指 Bad / Tragic Ending 悲劇或主角不幸的結局，OE 指 Open Ending 開放式結局。另外還有 Bittersweet（苦樂參半）和 Ambiguous（曖昧結局）等中間值。</p>
+                  </details>
+                  <details className="rounded-md border border-border bg-card px-4 py-3">
+                    <summary className="cursor-pointer font-medium">避雷標籤本身會不會就是劇透？</summary>
+                    <p className="mt-2 text-muted-foreground leading-7">我們把避雷標籤設計成「主題層級」而非「情節層級」，例如「寵物死亡」「外遇」「自傷」「性暴力」。它會告訴你存在這個主題，但不會告訴你發生在第幾章、發生在誰身上。完整劇情仍然保留在預設折疊的完整劇透區。</p>
+                  </details>
+                  <details className="rounded-md border border-border bg-card px-4 py-3">
+                    <summary className="cursor-pointer font-medium">完整劇透會直接顯示出來嗎？</summary>
+                    <p className="mt-2 text-muted-foreground leading-7">不會。每本書的完整劇透預設都是<strong>折疊狀態</strong>，需要你主動點擊「展開完整劇透」才會顯示。免雷摘要與避雷標籤則永遠可見。</p>
+                  </details>
+                  <details className="rounded-md border border-border bg-card px-4 py-3">
+                    <summary className="cursor-pointer font-medium">可以用中文或英文書名搜尋嗎？</summary>
+                    <p className="mt-2 text-muted-foreground leading-7">可以。搜尋欄同時支援中文書名、英文書名、作者中英文名與 ISBN。若是翻譯小說，輸入原文或譯名都應該能找到。</p>
+                  </details>
+                  <details className="rounded-md border border-border bg-card px-4 py-3">
+                    <summary className="cursor-pointer font-medium">資料有誤或不確定怎麼辦？</summary>
+                    <p className="mt-2 text-muted-foreground leading-7">部分書目的結局或標籤會標記為 low confidence 或 unknown，表示資料尚未完全確認。歡迎透過<a className="underline underline-offset-4 hover:text-foreground" href="/zh/about">關於頁</a>聯絡方式回報修正。</p>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </section>
+        ) : null;
+        return hasSearched ? <>{booksSection}{needSection}{zhIntro}</> : <>{needSection}{zhIntro}{booksSection}</>;
       })()}
     </>
   );
