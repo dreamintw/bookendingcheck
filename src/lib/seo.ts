@@ -6,6 +6,7 @@ export function langAlt(path: string) {
   const zhHref = `${siteUrl}/zh${clean === "/" ? "" : clean}`;
   const enHref = `${siteUrl}/en${clean === "/" ? "" : clean}`;
   return [
+    { rel: "alternate", hreflang: "zh-Hant", href: zhHref },
     { rel: "alternate", hreflang: "zh", href: zhHref },
     { rel: "alternate", hreflang: "en", href: enHref },
     { rel: "alternate", hreflang: "x-default", href: enHref },
