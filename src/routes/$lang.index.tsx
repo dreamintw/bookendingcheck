@@ -17,6 +17,14 @@ export const Route = createFileRoute("/$lang/")({
     const desc = lang === "zh"
       ? "輸入書名，快速查看這本小說是 HE、BE、OE，是否有高風險雷點，以及它是否適合你現在閱讀。"
       : "Search a book to check its ending tone, trigger warnings, spoiler-safe summary, and whether it is right for you.";
+    const zhFaq = [
+      ["這個網站會提供小說全文或下載嗎？", "不會。讀前決策站不提供小說全文、不提供盜版下載、不提供任何違反版權的閱讀連結。我們只提供結局類型、避雷標籤、免雷摘要與分層劇透等讀前決策資訊。"],
+      ["HE、BE、OE 是什麼意思？", "HE 指 Happy Ending 圓滿結局，BE 指 Bad / Tragic Ending 悲劇或主角不幸的結局，OE 指 Open Ending 開放式結局。另外還有 Bittersweet 苦樂參半 和 Ambiguous 曖昧結局。"],
+      ["避雷標籤本身會不會就是劇透？", "避雷標籤只標示主題層級（例如寵物死亡、外遇、自傷、性暴力），不會告訴你發生在第幾章、發生在誰身上。完整劇情仍保留在預設折疊的完整劇透區。"],
+      ["完整劇透會直接顯示出來嗎？", "不會。每本書的完整劇透預設都是折疊狀態，需要主動點擊「展開完整劇透」才會顯示。免雷摘要與避雷標籤則永遠可見。"],
+      ["可以用中文或英文書名搜尋嗎？", "可以。搜尋欄同時支援中文書名、英文書名、作者中英文名與 ISBN。"],
+      ["資料有誤或不確定怎麼辦？", "部分書目的結局或標籤會標記為 low confidence 或 unknown，表示資料尚未完全確認。可透過關於頁的聯絡方式回報修正。"],
+    ];
     return {
       meta: [
         { title },
@@ -29,6 +37,18 @@ export const Route = createFileRoute("/$lang/")({
         { rel: "canonical", href: `${siteUrl}/${lang}` },
         ...langAlt("/"),
       ],
+      scripts: lang === "zh" ? [{
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: zhFaq.map(([q, a]) => ({
+            "@type": "Question",
+            name: q,
+            acceptedAnswer: { "@type": "Answer", text: a },
+          })),
+        }),
+      }] : undefined,
     };
   },
   component: HomePage,
