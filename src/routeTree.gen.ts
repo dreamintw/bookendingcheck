@@ -13,6 +13,7 @@ import { Route as LangRouteImport } from './routes/$lang'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang.index'
 import { Route as LangPrivacyRouteImport } from './routes/$lang.privacy'
+import { Route as LangDisclaimerRouteImport } from './routes/$lang.disclaimer'
 import { Route as LangContactRouteImport } from './routes/$lang.contact'
 import { Route as LangBooksRouteImport } from './routes/$lang.books'
 import { Route as LangAboutRouteImport } from './routes/$lang.about'
@@ -46,6 +47,11 @@ const LangIndexRoute = LangIndexRouteImport.update({
 const LangPrivacyRoute = LangPrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangDisclaimerRoute = LangDisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
   getParentRoute: () => LangRoute,
 } as any)
 const LangContactRoute = LangContactRouteImport.update({
@@ -125,6 +131,7 @@ export interface FileRoutesByFullPath {
   '/$lang/about': typeof LangAboutRoute
   '/$lang/books': typeof LangBooksRoute
   '/$lang/contact': typeof LangContactRoute
+  '/$lang/disclaimer': typeof LangDisclaimerRoute
   '/$lang/privacy': typeof LangPrivacyRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/authors/$slug': typeof LangAuthorsSlugRoute
@@ -144,6 +151,7 @@ export interface FileRoutesByTo {
   '/$lang/about': typeof LangAboutRoute
   '/$lang/books': typeof LangBooksRoute
   '/$lang/contact': typeof LangContactRoute
+  '/$lang/disclaimer': typeof LangDisclaimerRoute
   '/$lang/privacy': typeof LangPrivacyRoute
   '/$lang': typeof LangIndexRoute
   '/$lang/authors/$slug': typeof LangAuthorsSlugRoute
@@ -165,6 +173,7 @@ export interface FileRoutesById {
   '/$lang/about': typeof LangAboutRoute
   '/$lang/books': typeof LangBooksRoute
   '/$lang/contact': typeof LangContactRoute
+  '/$lang/disclaimer': typeof LangDisclaimerRoute
   '/$lang/privacy': typeof LangPrivacyRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/authors/$slug': typeof LangAuthorsSlugRoute
@@ -187,6 +196,7 @@ export interface FileRouteTypes {
     | '/$lang/about'
     | '/$lang/books'
     | '/$lang/contact'
+    | '/$lang/disclaimer'
     | '/$lang/privacy'
     | '/$lang/'
     | '/$lang/authors/$slug'
@@ -206,6 +216,7 @@ export interface FileRouteTypes {
     | '/$lang/about'
     | '/$lang/books'
     | '/$lang/contact'
+    | '/$lang/disclaimer'
     | '/$lang/privacy'
     | '/$lang'
     | '/$lang/authors/$slug'
@@ -226,6 +237,7 @@ export interface FileRouteTypes {
     | '/$lang/about'
     | '/$lang/books'
     | '/$lang/contact'
+    | '/$lang/disclaimer'
     | '/$lang/privacy'
     | '/$lang/'
     | '/$lang/authors/$slug'
@@ -274,6 +286,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/$lang/privacy'
       preLoaderRoute: typeof LangPrivacyRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/disclaimer': {
+      id: '/$lang/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/$lang/disclaimer'
+      preLoaderRoute: typeof LangDisclaimerRouteImport
       parentRoute: typeof LangRoute
     }
     '/$lang/contact': {
@@ -381,6 +400,7 @@ interface LangRouteChildren {
   LangAboutRoute: typeof LangAboutRoute
   LangBooksRoute: typeof LangBooksRoute
   LangContactRoute: typeof LangContactRoute
+  LangDisclaimerRoute: typeof LangDisclaimerRoute
   LangPrivacyRoute: typeof LangPrivacyRoute
   LangIndexRoute: typeof LangIndexRoute
   LangAuthorsSlugRoute: typeof LangAuthorsSlugRoute
@@ -400,6 +420,7 @@ const LangRouteChildren: LangRouteChildren = {
   LangAboutRoute: LangAboutRoute,
   LangBooksRoute: LangBooksRoute,
   LangContactRoute: LangContactRoute,
+  LangDisclaimerRoute: LangDisclaimerRoute,
   LangPrivacyRoute: LangPrivacyRoute,
   LangIndexRoute: LangIndexRoute,
   LangAuthorsSlugRoute: LangAuthorsSlugRoute,
