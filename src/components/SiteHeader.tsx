@@ -37,9 +37,18 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   const lang = useLang();
+  const labels = lang === "zh"
+    ? { about: "關於", contact: "聯絡我們", privacy: "隱私權", disclaimer: "免責聲明" }
+    : { about: "About", contact: "Contact", privacy: "Privacy", disclaimer: "Disclaimer" };
   return (
     <footer className="border-t border-border mt-16 py-8 text-xs text-muted-foreground">
-      <div className="mx-auto max-w-6xl px-4 space-y-2">
+      <div className="mx-auto max-w-6xl px-4 space-y-3">
+        <nav className="flex flex-wrap gap-x-4 gap-y-2">
+          <Link to="/$lang/about" params={{ lang }} className="hover:text-foreground">{labels.about}</Link>
+          <Link to="/$lang/contact" params={{ lang }} className="hover:text-foreground">{labels.contact}</Link>
+          <Link to="/$lang/privacy" params={{ lang }} className="hover:text-foreground">{labels.privacy}</Link>
+          <Link to="/$lang/disclaimer" params={{ lang }} className="hover:text-foreground">{labels.disclaimer}</Link>
+        </nav>
         <p>{t.noFullText[lang]}</p>
         <p>© {new Date().getFullYear()} {t.siteName[lang]}</p>
       </div>
