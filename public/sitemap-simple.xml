@@ -4,8 +4,14 @@
   <url><loc>https://bookendingcheck.xyz/zh</loc></url>
   <url><loc>https://bookendingcheck.xyz/en/books</loc></url>
   <url><loc>https://bookendingcheck.xyz/zh/books</loc></url>
-  <url><loc>https://bookendingcheck.xyz/en/about</loc></url>
-  <url><loc>https://bookendingcheck.xyz/zh/about</loc></url>
+ <url><loc>https://bookendingcheck.xyz/en/about</loc></url>
+ <url><loc>https://bookendingcheck.xyz/zh/about</loc></url>
+ <url><loc>https://bookendingcheck.xyz/en/contact</loc></url>
+ <url><loc>https://bookendingcheck.xyz/zh/contact</loc></url>
+ <url><loc>https://bookendingcheck.xyz/en/privacy</loc></url>
+ <url><loc>https://bookendingcheck.xyz/zh/privacy</loc></url>
+ <url><loc>https://bookendingcheck.xyz/en/disclaimer</loc></url>
+ <url><loc>https://bookendingcheck.xyz/zh/disclaimer</loc></url>
   <url><loc>https://bookendingcheck.xyz/en/endings</loc></url>
   <url><loc>https://bookendingcheck.xyz/zh/endings</loc></url>
   <url><loc>https://bookendingcheck.xyz/en/warnings</loc></url>
