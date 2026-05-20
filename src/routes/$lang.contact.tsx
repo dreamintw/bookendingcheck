@@ -79,8 +79,14 @@ function Contact() {
         email: CONTACT_EMAIL,
         label: "General contact",
       },
+      {
+        h: "Privacy & data deletion (cookies / access / correction)",
+        p: "If you want to access, correct, or delete data about you, or have questions about our privacy policy or cookie usage, email us.",
+        email: PRIVACY_EMAIL,
+        label: "Send a privacy / data request",
+      },
     ],
-    note: "We do not yet offer an online form — email is the only contact channel. We never use your email for marketing and never sell it to third parties.",
+    note: "We do not yet offer an online form — email is the only contact channel. All addresses are forwarded and reviewed by a human. We never use your email for marketing and never sell it to third parties.",
   };
 
   return (
