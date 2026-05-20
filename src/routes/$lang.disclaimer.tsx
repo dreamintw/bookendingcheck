@@ -75,9 +75,37 @@ function Disclaimer() {
         ))}
       </div>
       <p className="text-xs text-muted-foreground mt-10">
-        <Link to="/$lang/contact" params={{ lang }} className="hover:underline">
-          {lang === "zh" ? "回報錯誤 / 版權聯絡 →" : "Report an error / copyright contact →"}
-        </Link>
+        {lang === "zh" ? (
+          <>
+            回報錯誤：{" "}
+            <a href="mailto:report@bookendingcheck.xyz" className="hover:underline text-accent">
+              report@bookendingcheck.xyz
+            </a>
+            {" "}| 版權聯絡：{" "}
+            <a href="mailto:copyright@bookendingcheck.xyz" className="hover:underline text-accent">
+              copyright@bookendingcheck.xyz
+            </a>
+            {" "}|{" "}
+            <Link to="/$lang/contact" params={{ lang }} className="hover:underline">
+              聯絡頁 →
+            </Link>
+          </>
+        ) : (
+          <>
+            Report an error:{" "}
+            <a href="mailto:report@bookendingcheck.xyz" className="hover:underline text-accent">
+              report@bookendingcheck.xyz
+            </a>
+            {" "}| Copyright contact:{" "}
+            <a href="mailto:copyright@bookendingcheck.xyz" className="hover:underline text-accent">
+              copyright@bookendingcheck.xyz
+            </a>
+            {" "}|{" "}
+            <Link to="/$lang/contact" params={{ lang }} className="hover:underline">
+              Contact page →
+            </Link>
+          </>
+        )}
       </p>
     </main>
   );
