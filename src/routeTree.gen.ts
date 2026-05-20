@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as LangRouteImport } from './routes/$lang'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang.index'
+import { Route as LangContactRouteImport } from './routes/$lang.contact'
 import { Route as LangBooksRouteImport } from './routes/$lang.books'
 import { Route as LangAboutRouteImport } from './routes/$lang.about'
 import { Route as LangWarningsIndexRouteImport } from './routes/$lang.warnings.index'
@@ -39,6 +40,11 @@ const IndexRoute = IndexRouteImport.update({
 const LangIndexRoute = LangIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangContactRoute = LangContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => LangRoute,
 } as any)
 const LangBooksRoute = LangBooksRouteImport.update({
@@ -112,6 +118,7 @@ export interface FileRoutesByFullPath {
   '/$lang': typeof LangRouteWithChildren
   '/$lang/about': typeof LangAboutRoute
   '/$lang/books': typeof LangBooksRoute
+  '/$lang/contact': typeof LangContactRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/authors/$slug': typeof LangAuthorsSlugRoute
   '/$lang/book/$slug': typeof LangBookSlugRoute
@@ -129,6 +136,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$lang/about': typeof LangAboutRoute
   '/$lang/books': typeof LangBooksRoute
+  '/$lang/contact': typeof LangContactRoute
   '/$lang': typeof LangIndexRoute
   '/$lang/authors/$slug': typeof LangAuthorsSlugRoute
   '/$lang/book/$slug': typeof LangBookSlugRoute
@@ -148,6 +156,7 @@ export interface FileRoutesById {
   '/$lang': typeof LangRouteWithChildren
   '/$lang/about': typeof LangAboutRoute
   '/$lang/books': typeof LangBooksRoute
+  '/$lang/contact': typeof LangContactRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/authors/$slug': typeof LangAuthorsSlugRoute
   '/$lang/book/$slug': typeof LangBookSlugRoute
@@ -168,6 +177,7 @@ export interface FileRouteTypes {
     | '/$lang'
     | '/$lang/about'
     | '/$lang/books'
+    | '/$lang/contact'
     | '/$lang/'
     | '/$lang/authors/$slug'
     | '/$lang/book/$slug'
@@ -185,6 +195,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$lang/about'
     | '/$lang/books'
+    | '/$lang/contact'
     | '/$lang'
     | '/$lang/authors/$slug'
     | '/$lang/book/$slug'
@@ -203,6 +214,7 @@ export interface FileRouteTypes {
     | '/$lang'
     | '/$lang/about'
     | '/$lang/books'
+    | '/$lang/contact'
     | '/$lang/'
     | '/$lang/authors/$slug'
     | '/$lang/book/$slug'
@@ -243,6 +255,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/$lang/'
       preLoaderRoute: typeof LangIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/contact': {
+      id: '/$lang/contact'
+      path: '/contact'
+      fullPath: '/$lang/contact'
+      preLoaderRoute: typeof LangContactRouteImport
       parentRoute: typeof LangRoute
     }
     '/$lang/books': {
@@ -342,6 +361,7 @@ declare module '@tanstack/react-router' {
 interface LangRouteChildren {
   LangAboutRoute: typeof LangAboutRoute
   LangBooksRoute: typeof LangBooksRoute
+  LangContactRoute: typeof LangContactRoute
   LangIndexRoute: typeof LangIndexRoute
   LangAuthorsSlugRoute: typeof LangAuthorsSlugRoute
   LangBookSlugRoute: typeof LangBookSlugRoute
@@ -359,6 +379,7 @@ interface LangRouteChildren {
 const LangRouteChildren: LangRouteChildren = {
   LangAboutRoute: LangAboutRoute,
   LangBooksRoute: LangBooksRoute,
+  LangContactRoute: LangContactRoute,
   LangIndexRoute: LangIndexRoute,
   LangAuthorsSlugRoute: LangAuthorsSlugRoute,
   LangBookSlugRoute: LangBookSlugRoute,
