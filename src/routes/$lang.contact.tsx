@@ -49,8 +49,14 @@ function Contact() {
         email: CONTACT_EMAIL,
         label: "一般聯絡",
       },
+      {
+        h: "隱私與資料刪除（Cookies / 查詢 / 更正）",
+        p: "若您想查詢、更正或刪除與您相關的資料，或對本站的隱私權政策與 Cookie 使用有疑問，請來信。",
+        email: PRIVACY_EMAIL,
+        label: "寄送隱私/資料請求",
+      },
     ],
-    note: "本站目前未提供線上表單，僅透過 email 聯絡。我們不會將您的 email 用於行銷，也不會轉售給第三方。",
+    note: "本站目前未提供線上表單，僅透過 email 聯絡。聯絡信箱均已啟用轉寄，所有回報皆會由人工審閱。我們不會將您的 email 用於行銷，也不會轉售給第三方。",
   } : {
     h1: "Contact",
     intro: "We value reader feedback. Pick the address that matches your request below — every email is reviewed by a human, usually within 7 business days.",
