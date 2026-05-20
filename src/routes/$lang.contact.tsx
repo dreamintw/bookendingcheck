@@ -5,6 +5,7 @@ import { siteUrl, langAlt } from "@/lib/seo";
 const CONTACT_EMAIL = "contact@bookendingcheck.xyz";
 const COPYRIGHT_EMAIL = "copyright@bookendingcheck.xyz";
 const REPORT_EMAIL = "report@bookendingcheck.xyz";
+const PRIVACY_EMAIL = "privacy@bookendingcheck.xyz";
 
 export const Route = createFileRoute("/$lang/contact")({
   head: ({ params }) => {
@@ -48,8 +49,14 @@ function Contact() {
         email: CONTACT_EMAIL,
         label: "一般聯絡",
       },
+      {
+        h: "隱私與資料刪除（Cookies / 查詢 / 更正）",
+        p: "若您想查詢、更正或刪除與您相關的資料，或對本站的隱私權政策與 Cookie 使用有疑問，請來信。",
+        email: PRIVACY_EMAIL,
+        label: "寄送隱私/資料請求",
+      },
     ],
-    note: "本站目前未提供線上表單，僅透過 email 聯絡。我們不會將您的 email 用於行銷，也不會轉售給第三方。",
+    note: "本站目前未提供線上表單，僅透過 email 聯絡。聯絡信箱均已啟用轉寄，所有回報皆會由人工審閱。我們不會將您的 email 用於行銷，也不會轉售給第三方。",
   } : {
     h1: "Contact",
     intro: "We value reader feedback. Pick the address that matches your request below — every email is reviewed by a human, usually within 7 business days.",
@@ -72,8 +79,14 @@ function Contact() {
         email: CONTACT_EMAIL,
         label: "General contact",
       },
+      {
+        h: "Privacy & data deletion (cookies / access / correction)",
+        p: "If you want to access, correct, or delete data about you, or have questions about our privacy policy or cookie usage, email us.",
+        email: PRIVACY_EMAIL,
+        label: "Send a privacy / data request",
+      },
     ],
-    note: "We do not yet offer an online form — email is the only contact channel. We never use your email for marketing and never sell it to third parties.",
+    note: "We do not yet offer an online form — email is the only contact channel. All addresses are forwarded and reviewed by a human. We never use your email for marketing and never sell it to third parties.",
   };
 
   return (

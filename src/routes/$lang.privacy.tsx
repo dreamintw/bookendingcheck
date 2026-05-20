@@ -47,7 +47,8 @@ function Privacy() {
         "分析資料依各服務（如 Google Analytics）預設保留期保留。錯誤回報與聯絡信件保留至處理完成後合理期間，最長 24 個月。",
       ],
       ["您的權利與聯絡方式",
-        "您可隨時來信查詢、更正或要求刪除本站持有的、與您相關的資料：privacy@bookendingcheck.xyz。我們會在收到請求後合理時間內處理。",
+        "您可隨時來信查詢、更正或要求刪除本站持有的、與您相關的資料。",
+        "privacy@bookendingcheck.xyz",
       ],
       ["兒童隱私",
         "本站內容面向一般讀者，不主動向 13 歲以下兒童蒐集個人資料。",
@@ -79,7 +80,8 @@ function Privacy() {
         "Analytics data is retained according to each provider's default (e.g. Google Analytics). Error reports and contact emails are kept for a reasonable period after handling, up to 24 months.",
       ],
       ["Your rights & how to contact us",
-        "You may email us at privacy@bookendingcheck.xyz at any time to access, correct, or request deletion of data about you. We will respond within a reasonable timeframe.",
+        "You may email us at any time to access, correct, or request deletion of data about you. We will respond within a reasonable timeframe.",
+        "privacy@bookendingcheck.xyz",
       ],
       ["Children's privacy",
         "This site is intended for general readers and does not knowingly collect data from children under 13.",
@@ -98,10 +100,15 @@ function Privacy() {
       <h1 className="font-display text-4xl font-semibold mb-2">{c.h1}</h1>
       <p className="text-xs text-muted-foreground mb-8">{c.updated}</p>
       <div className="space-y-6">
-        {c.sections.map(([h, p]) => (
+        {c.sections.map(([h, p, email]) => (
           <section key={h}>
             <h2 className="font-display text-xl font-semibold mb-2">{h}</h2>
             <p className="text-sm text-foreground/90 leading-relaxed whitespace-pre-line">{p}</p>
+            {email && (
+              <a href={`mailto:${email}`} className="text-sm text-accent hover:underline mt-1 inline-block">
+                {email} →
+              </a>
+            )}
           </section>
         ))}
       </div>

@@ -111,17 +111,57 @@ function About() {
         ))}
       </ul>
 
-      <div className="mt-10 flex flex-wrap gap-4 text-sm">
-        <Link to="/$lang/contact" params={{ lang }} className="text-accent hover:underline">
-          {lang === "zh" ? "聯絡我們" : "Contact"}
-        </Link>
-        <Link to="/$lang/privacy" params={{ lang }} className="text-accent hover:underline">
-          {lang === "zh" ? "隱私權政策" : "Privacy"}
-        </Link>
-        <Link to="/$lang/disclaimer" params={{ lang }} className="text-accent hover:underline">
-          {lang === "zh" ? "免責聲明" : "Disclaimer"}
-        </Link>
-      </div>
+      <section className="mt-10">
+        <h2 className="font-display text-2xl font-semibold mb-3">
+          {lang === "zh" ? "聯絡方式" : "Contact"}
+        </h2>
+        <p className="text-foreground/90 leading-relaxed mb-3">
+          {lang === "zh"
+            ? "如需回報錯誤、提出版權疑慮、洽談合作或查詢隱私資料，請直接來信："
+            : "To report errors, raise copyright concerns, discuss partnerships, or ask about privacy and data, email us directly:"}
+        </p>
+        <ul className="space-y-2 text-sm">
+          <li>
+            <a href="mailto:report@bookendingcheck.xyz" className="text-accent hover:underline">
+              report@bookendingcheck.xyz
+            </a>
+            {" — "}
+            {lang === "zh" ? "錯誤回報（結局 / 避雷標籤 / 書籍資訊）" : "Error reports (endings / triggers / book info)"}
+          </li>
+          <li>
+            <a href="mailto:copyright@bookendingcheck.xyz" className="text-accent hover:underline">
+              copyright@bookendingcheck.xyz
+            </a>
+            {" — "}
+            {lang === "zh" ? "版權 / 移除請求 / 權利人聯絡" : "Copyright / takedown / rights-holder contact"}
+          </li>
+          <li>
+            <a href="mailto:contact@bookendingcheck.xyz" className="text-accent hover:underline">
+              contact@bookendingcheck.xyz
+            </a>
+            {" — "}
+            {lang === "zh" ? "一般聯絡（合作 / 問題 / 建議）" : "General contact (partnerships / questions / suggestions)"}
+          </li>
+          <li>
+            <a href="mailto:privacy@bookendingcheck.xyz" className="text-accent hover:underline">
+              privacy@bookendingcheck.xyz
+            </a>
+            {" — "}
+            {lang === "zh" ? "隱私 / Cookie / 資料刪除或查詢" : "Privacy / cookies / data deletion or access"}
+          </li>
+        </ul>
+        <div className="mt-4 flex flex-wrap gap-4 text-sm">
+          <Link to="/$lang/contact" params={{ lang }} className="text-accent hover:underline">
+            {lang === "zh" ? "前往聯絡頁 →" : "Go to Contact page →"}
+          </Link>
+          <Link to="/$lang/privacy" params={{ lang }} className="text-accent hover:underline">
+            {lang === "zh" ? "隱私權政策" : "Privacy"}
+          </Link>
+          <Link to="/$lang/disclaimer" params={{ lang }} className="text-accent hover:underline">
+            {lang === "zh" ? "免責聲明" : "Disclaimer"}
+          </Link>
+        </div>
+      </section>
 
       <p className="text-xs text-muted-foreground mt-10">{t.noFullText[lang]}</p>
     </main>
