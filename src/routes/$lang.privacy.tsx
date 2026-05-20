@@ -100,10 +100,15 @@ function Privacy() {
       <h1 className="font-display text-4xl font-semibold mb-2">{c.h1}</h1>
       <p className="text-xs text-muted-foreground mb-8">{c.updated}</p>
       <div className="space-y-6">
-        {c.sections.map(([h, p]) => (
+        {c.sections.map(([h, p, email]) => (
           <section key={h}>
             <h2 className="font-display text-xl font-semibold mb-2">{h}</h2>
             <p className="text-sm text-foreground/90 leading-relaxed whitespace-pre-line">{p}</p>
+            {email && (
+              <a href={`mailto:${email}`} className="text-sm text-accent hover:underline mt-1 inline-block">
+                {email} →
+              </a>
+            )}
           </section>
         ))}
       </div>
