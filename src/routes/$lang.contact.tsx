@@ -5,6 +5,7 @@ import { siteUrl, langAlt } from "@/lib/seo";
 const CONTACT_EMAIL = "contact@bookendingcheck.xyz";
 const COPYRIGHT_EMAIL = "copyright@bookendingcheck.xyz";
 const REPORT_EMAIL = "report@bookendingcheck.xyz";
+const PRIVACY_EMAIL = "privacy@bookendingcheck.xyz";
 
 export const Route = createFileRoute("/$lang/contact")({
   head: ({ params }) => {
