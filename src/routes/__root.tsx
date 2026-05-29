@@ -94,6 +94,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     scripts: [
       {
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3949263106700435",
+        async: true,
+        crossOrigin: "anonymous",
+      },
+      {
         children:
           "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-WS6RG656JC',{send_page_view:false});var __gaLoaded=false;function __loadGA(){if(__gaLoaded)return;__gaLoaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-WS6RG656JC';document.head.appendChild(s);s.onload=function(){gtag('event','page_view');};}function __schedGA(){if('requestIdleCallback' in window){requestIdleCallback(__loadGA,{timeout:5000});}else{setTimeout(__loadGA,3000);}}if(document.readyState==='complete'){__schedGA();}else{window.addEventListener('load',function(){setTimeout(__schedGA,3000);});}['scroll','keydown','mousemove','touchstart','click'].forEach(function(ev){window.addEventListener(ev,__loadGA,{once:true,passive:true});});",
       },
