@@ -335,16 +335,16 @@ export const WARNING_ENRICHMENT: Record<string, CollectionEnrichment> = {
 export const BOOK_ENRICHMENT: Record<string, BookEnrichment> = {
   "the-song-of-achilles": {
     endingTone: {
-      en: "Tender first half, devastating finish. Even readers who know the Iliad report being unprepared for the emotional weight of the last 80 pages — Miller writes the bond so warmly that the foreordained loss lands like a personal grief.",
-      zh: "前半溫柔，後段毀滅性。即使知道伊利亞德故事走向，讀者仍常被最後 80 頁的情緒重量擊倒——米勒把兩人的關係寫得太真實，導致命中注定的失去像是親身經歷。",
+      en: "The Song of Achilles does not have a traditional happy ending. It is best treated as a tragic or bittersweet ending — Madeline Miller follows the Iliad's broad arc, so both leads die and the novel closes on grief. Is The Song of Achilles sad? Yes: tender first half, devastating finish. Even readers who already know the Iliad report being unprepared for the emotional weight of the last 80 pages — Miller writes the bond so warmly that the foreordained loss lands like a personal grief. If you came here asking 'does The Song of Achilles have a happy ending' for a friend or a low-mood night, the honest answer is no.",
+      zh: "《阿基里斯之歌》並沒有傳統意義上的 HE，整體應視為悲劇或苦甜結局——米勒依循伊利亞德主線，雙主角皆亡，全書收於悲痛。會難過嗎？會。前半溫柔，後段毀滅性。即使知道伊利亞德故事走向，讀者仍常被最後 80 頁的情緒重量擊倒——米勒把兩人的關係寫得太真實，導致命中注定的失去像是親身經歷。若你想替朋友或在情緒低落的夜晚找一本書，《阿基里斯之歌》誠實的答案是：不適合。",
     },
     warningsExplained: {
-      en: "Three high-intensity tags: major character death (both leads), war violence (named brutalities including Achilles' rampage), intense grief (sustained for the last quarter). No on-page sexual violence despite the war setting; sex scenes between leads are tender, not explicit.",
-      zh: "三個高強度標籤：主角死亡（雙主角皆亡）、戰爭暴力（含阿基里斯的暴行）、強烈悲痛（最後四分之一持續）。雖為戰爭題材但無正面性暴力描寫；雙主角之間的性場景溫柔且不露骨。",
+      en: "The Song of Achilles trigger warnings: three high-intensity tags — major character death (both leads), war violence (named brutalities including Achilles' rampage), and intense grief sustained for the last quarter of the book. No on-page sexual violence despite the war setting; sex scenes between leads are tender and not explicit. Brief off-page references to sexual violence in the wider war context are present but not depicted.",
+      zh: "《阿基里斯之歌》主要避雷標籤：三個高強度——主角死亡（雙主角皆亡）、戰爭暴力（含阿基里斯的暴行）、強烈悲痛（最後四分之一持續）。雖為戰爭題材但無正面性暴力描寫；雙主角之間的性場景溫柔且不露骨。戰爭背景下對性暴力的指涉存在但屬場外，未正面描寫。",
     },
     verdict: {
-      en: "Read if you're emotionally stable and want a beautifully written queer mythology retelling that earns its tragedy. Skip if you're in a low mood or need a happy ending; this book leaves a mark.",
-      zh: "若你情緒穩定，想看寫得極美、悲劇分量擲地有聲的酷兒神話重述，請讀。若你正情緒低落或需要 HE，請略——這本書會留下痕跡。",
+      en: "Should you read The Song of Achilles if you want a happy ending? No — pick something else. Should you read it at all? Yes, if you're emotionally stable and want a beautifully written queer mythology retelling that earns its tragedy. Skip if you're in a low mood, need a HE, or avoid major character death; this book leaves a mark.",
+      zh: "如果你想看 HE，要不要讀《阿基里斯之歌》？不要——請挑別本。那到底值不值得讀？值得，如果你情緒穩定、想看寫得極美、悲劇分量擲地有聲的酷兒神話重述。若你正情緒低落、需要 HE、或迴避主角死亡：請略——這本書會留下痕跡。",
     },
     similarByEnding: ["no-longer-human", "anna-karenina", "madame-bovary"],
     similarByWarning: ["anna-karenina", "no-longer-human", "circe"],
