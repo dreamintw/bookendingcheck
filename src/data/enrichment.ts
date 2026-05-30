@@ -627,7 +627,6 @@ export const BOOK_ENRICHMENT: Record<string, BookEnrichment> = {
       { q: { en: "Why is the labyrinth in Piranesi so important?", zh: "《皮拉內西》中的迷宮（The House）為什麼這麼重要？" }, a: { en: "The labyrinth is not just a setting — it is the book's argument: that a world can be both a prison and a home, both alien and beloved. The narrator's relationship with the labyrinth is the emotional spine, which is why the ending refuses to either condemn or celebrate it.", zh: "迷宮（The House）不只是場景，更是全書的論點：一個世界可以同時是監獄也是家、既陌生又被深愛。主角與迷宮的關係是情緒主軸，這也是結局拒絕對它做出單一評判的原因。" } },
     ],
   },
-  },
 };
 // ---------------------------------------------------------------------------
 
