@@ -55,20 +55,11 @@ export const Route = createFileRoute("/$lang/warnings/$code")({
             { name: label, url: `${siteUrl}/${lang}/warnings/${params.code}` },
           ])),
         },
-        ...(WARNING_ENRICHMENT[params.code]?.faq?.length
-          ? [{
-              type: "application/ld+json",
-              children: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                mainEntity: WARNING_ENRICHMENT[params.code].faq.map((f) => ({
-                  "@type": "Question",
-                  name: f.q[lang],
-                  acceptedAnswer: { "@type": "Answer", text: f.a[lang] },
-                })),
-              }),
-            }]
-          : []),
+        // FAQPage JSON-LD intentionally omitted here: the same FAQ content is
+        // hosted on the corresponding /collections/{slug}-warning page (canonical
+        // FAQPage source). Emitting it on both URLs triggers GSC
+        // "duplicate field" warnings for FAQPage rich results.
+
       ],
     };
   },

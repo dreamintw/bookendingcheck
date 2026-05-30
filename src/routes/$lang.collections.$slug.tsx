@@ -18,14 +18,28 @@ const GENERIC_FAQ_EN = [
   { q: "What does a low confidence score mean?", a: "It means the data is not fully verified yet — treat it as Unknown / Low confidence and cross-check before deciding." },
 ];
 
+function normalizeQ(q: string) {
+  return q.trim().toLowerCase().replace(/\s+/g, " ").replace(/[？?。.！!]+$/g, "");
+}
+function dedupeFaq(list: { q: string; a: string }[]) {
+  const seen = new Set<string>();
+  const out: { q: string; a: string }[] = [];
+  for (const item of list) {
+    const key = normalizeQ(item.q);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    out.push(item);
+  }
+  return out;
+}
 function faqWithFallback(c: Collection, lang: Lang) {
   const own = (c.faq ?? []).map((f) => ({ q: f.q[lang], a: f.a[lang] }));
   const enrich = COLLECTION_ENRICHMENT[c.slug];
   const enrichFaq = enrich ? enrich.faq.map((f) => ({ q: f.q[lang], a: f.a[lang] })) : [];
-  const merged = [...own, ...enrichFaq];
+  const merged = dedupeFaq([...own, ...enrichFaq]);
   if (merged.length >= 4) return merged;
   const generic = lang === "zh" ? GENERIC_FAQ_ZH : GENERIC_FAQ_EN;
-  return [...merged, ...generic.slice(0, 4 - merged.length)];
+  return dedupeFaq([...merged, ...generic.slice(0, 4 - merged.length)]);
 }
 
 export const Route = createFileRoute("/$lang/collections/$slug")({
