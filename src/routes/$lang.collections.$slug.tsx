@@ -201,6 +201,35 @@ function CollectionPage() {
         </section>
       )}
 
+      {EXTRA_RELATED[collection.slug] && lang === "en" && (
+        <section aria-labelledby="extra-related" className="mb-10 grid md:grid-cols-2 gap-6">
+          {EXTRA_RELATED[collection.slug].warnings && (
+            <div>
+              <h2 id="extra-related" className="font-display text-lg font-semibold mb-3">Related warnings</h2>
+              <ul className="space-y-1.5 text-sm">
+                {EXTRA_RELATED[collection.slug].warnings!.map((w) => (
+                  <li key={w.slug}>
+                    <a href={`/en/warnings/${w.slug}`} className="text-accent hover:underline">{w.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {EXTRA_RELATED[collection.slug].collections && (
+            <div>
+              <h2 className="font-display text-lg font-semibold mb-3">Related collections</h2>
+              <ul className="space-y-1.5 text-sm">
+                {EXTRA_RELATED[collection.slug].collections!.map((c) => (
+                  <li key={c.slug}>
+                    <a href={`/en/collections/${c.slug}`} className="text-accent hover:underline">{c.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </section>
+      )}
+
       {enrich && (
         <section aria-labelledby="what-it-means" className="mb-10 grid md:grid-cols-2 gap-4">
           <div className="rounded-xl border border-border bg-card p-6">
