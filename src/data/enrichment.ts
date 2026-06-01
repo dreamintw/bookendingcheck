@@ -664,6 +664,9 @@ export const AUTHOR_ENRICHMENT: Record<string, AuthorEnrichment> = {
       { q: { en: "Where to start with Huxley if not Brave New World?", zh: "不從《美麗新世界》開始的話該選哪本？" }, a: { en: "Try Point Counter Point for his social-novel mode, or The Doors of Perception for the late essayist.", zh: "想看社會小說模式可選《針鋒相對》；想看晚期散文可選《知覺之門》。" } },
       { q: { en: "Are his books safe for high-school readers?", zh: "適合高中生嗎？" }, a: { en: "Brave New World is widely taught at 16+; the sexual-coding is restrained but adult.", zh: "《美麗新世界》在 16 歲以上廣為教學使用；性方面的暗碼克制但屬成人主題。" } },
       { q: { en: "Did he write any HE?", zh: "他有寫過 HE 嗎？" }, a: { en: "Not in the major novels. Hope when it appears is qualified, not affirmed.", zh: "主要長篇沒有。即使出現希望，也是有條件的，不是肯定的。" } },
+      { q: { en: "What content warnings should readers expect from Aldous Huxley?", zh: "讀赫胥黎要預期哪些內容警告？" }, a: { en: "Expect institutional dehumanisation, eugenics, drug use as state control, suicide, off-page sexual coercion encoded into the imagined society, and bleak or ambiguous endings. Sexual content is referenced rather than explicit.", zh: "預期會出現機構性去人性化、優生學、藥物作為國家控制工具、自殺、被嵌入虛構社會的場外性脅迫，以及陰鬱或開放式結局。性內容多為提及而非露骨。" } },
+      { q: { en: "Does this site provide the full text of Brave New World or other Huxley novels?", zh: "本站會提供《美麗新世界》或其他赫胥黎作品的全文嗎？" }, a: { en: "No. We only publish pre-read decision data — ending tone, trigger warnings, spoiler-safe summaries, and read-or-skip verdicts. We do not host full text and do not link to pirated copies.", zh: "不會。我們只提供讀前決策資料——結局調性、避雷標籤、免雷摘要與讀或略決策。我們不提供全文，也不連結盜版。" } },
+      { q: { en: "Can I report missing or incorrect Huxley book data?", zh: "可以回報赫胥黎作品資料錯誤或缺漏嗎？" }, a: { en: "Yes — email report@bookendingcheck.xyz with the book title and the issue. Reader corrections are how we keep this database accurate.", zh: "可以——請寄信至 report@bookendingcheck.xyz 附上書名與問題。讀者回報是本站準確度的主要來源。" } },
     ],
   },
 

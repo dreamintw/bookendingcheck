@@ -5,6 +5,23 @@ import { BookCard } from "@/components/BookCard";
 import { siteUrl, langAlt, breadcrumbJsonLd } from "@/lib/seo";
 import { COLLECTION_ENRICHMENT } from "@/data/enrichment";
 
+const EXTRA_RELATED: Record<string, { warnings?: { slug: string; label: string }[]; collections?: { slug: string; label: string }[] }> = {
+  "pet-death-warning": {
+    warnings: [
+      { slug: "pet-death", label: "Pet death" },
+      { slug: "violence", label: "Violence" },
+      { slug: "major-character-death", label: "Major character death" },
+      { slug: "grief", label: "Grief" },
+    ],
+    collections: [
+      { slug: "read-or-skip", label: "Read or skip picks" },
+      { slug: "ya-trigger-warnings", label: "YA trigger warnings" },
+      { slug: "sad-ending-books", label: "Sad ending books" },
+      { slug: "bittersweet-ending-books", label: "Bittersweet ending books" },
+    ],
+  },
+};
+
 const GENERIC_FAQ_ZH = [
   { q: "這個清單多久更新一次？", a: "每週新增書目，避雷標籤會根據讀者回饋持續修訂。" },
   { q: "結局類型 HE / BE / OE / Bittersweet 怎麼判斷？", a: "我們以主角生死、核心關係結果與目標達成情況為主要判準，並標示信心分數。" },
@@ -181,6 +198,35 @@ function CollectionPage() {
               </a>
             ))}
           </div>
+        </section>
+      )}
+
+      {EXTRA_RELATED[collection.slug] && lang === "en" && (
+        <section aria-labelledby="extra-related" className="mb-10 grid md:grid-cols-2 gap-6">
+          {EXTRA_RELATED[collection.slug].warnings && (
+            <div>
+              <h2 id="extra-related" className="font-display text-lg font-semibold mb-3">Related warnings</h2>
+              <ul className="space-y-1.5 text-sm">
+                {EXTRA_RELATED[collection.slug].warnings!.map((w) => (
+                  <li key={w.slug}>
+                    <a href={`/en/warnings/${w.slug}`} className="text-accent hover:underline">{w.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {EXTRA_RELATED[collection.slug].collections && (
+            <div>
+              <h2 className="font-display text-lg font-semibold mb-3">Related collections</h2>
+              <ul className="space-y-1.5 text-sm">
+                {EXTRA_RELATED[collection.slug].collections!.map((c) => (
+                  <li key={c.slug}>
+                    <a href={`/en/collections/${c.slug}`} className="text-accent hover:underline">{c.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </section>
       )}
 
