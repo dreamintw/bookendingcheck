@@ -21,6 +21,7 @@ const paths = [
   "",
   "/books",
   "/about",
+  "/editorial-policy",
   "/endings",
   "/warnings",
   "/genres",

@@ -37,6 +37,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/about"/>
   </url>
   <url>
+    <loc>https://bookendingcheck.xyz/zh/editorial-policy</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/editorial-policy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/editorial-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/editorial-policy"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/editorial-policy</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/editorial-policy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/editorial-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/editorial-policy"/>
+  </url>
+  <url>
     <loc>https://bookendingcheck.xyz/zh/endings</loc>
     <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/endings"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/endings"/>

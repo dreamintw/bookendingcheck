@@ -13,6 +13,7 @@ import { Route as LangRouteImport } from './routes/$lang'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang.index'
 import { Route as LangPrivacyRouteImport } from './routes/$lang.privacy'
+import { Route as LangEditorialPolicyRouteImport } from './routes/$lang.editorial-policy'
 import { Route as LangDisclaimerRouteImport } from './routes/$lang.disclaimer'
 import { Route as LangContactRouteImport } from './routes/$lang.contact'
 import { Route as LangBooksRouteImport } from './routes/$lang.books'
@@ -47,6 +48,11 @@ const LangIndexRoute = LangIndexRouteImport.update({
 const LangPrivacyRoute = LangPrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangEditorialPolicyRoute = LangEditorialPolicyRouteImport.update({
+  id: '/editorial-policy',
+  path: '/editorial-policy',
   getParentRoute: () => LangRoute,
 } as any)
 const LangDisclaimerRoute = LangDisclaimerRouteImport.update({
@@ -132,6 +138,7 @@ export interface FileRoutesByFullPath {
   '/$lang/books': typeof LangBooksRoute
   '/$lang/contact': typeof LangContactRoute
   '/$lang/disclaimer': typeof LangDisclaimerRoute
+  '/$lang/editorial-policy': typeof LangEditorialPolicyRoute
   '/$lang/privacy': typeof LangPrivacyRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/authors/$slug': typeof LangAuthorsSlugRoute
@@ -152,6 +159,7 @@ export interface FileRoutesByTo {
   '/$lang/books': typeof LangBooksRoute
   '/$lang/contact': typeof LangContactRoute
   '/$lang/disclaimer': typeof LangDisclaimerRoute
+  '/$lang/editorial-policy': typeof LangEditorialPolicyRoute
   '/$lang/privacy': typeof LangPrivacyRoute
   '/$lang': typeof LangIndexRoute
   '/$lang/authors/$slug': typeof LangAuthorsSlugRoute
@@ -174,6 +182,7 @@ export interface FileRoutesById {
   '/$lang/books': typeof LangBooksRoute
   '/$lang/contact': typeof LangContactRoute
   '/$lang/disclaimer': typeof LangDisclaimerRoute
+  '/$lang/editorial-policy': typeof LangEditorialPolicyRoute
   '/$lang/privacy': typeof LangPrivacyRoute
   '/$lang/': typeof LangIndexRoute
   '/$lang/authors/$slug': typeof LangAuthorsSlugRoute
@@ -197,6 +206,7 @@ export interface FileRouteTypes {
     | '/$lang/books'
     | '/$lang/contact'
     | '/$lang/disclaimer'
+    | '/$lang/editorial-policy'
     | '/$lang/privacy'
     | '/$lang/'
     | '/$lang/authors/$slug'
@@ -217,6 +227,7 @@ export interface FileRouteTypes {
     | '/$lang/books'
     | '/$lang/contact'
     | '/$lang/disclaimer'
+    | '/$lang/editorial-policy'
     | '/$lang/privacy'
     | '/$lang'
     | '/$lang/authors/$slug'
@@ -238,6 +249,7 @@ export interface FileRouteTypes {
     | '/$lang/books'
     | '/$lang/contact'
     | '/$lang/disclaimer'
+    | '/$lang/editorial-policy'
     | '/$lang/privacy'
     | '/$lang/'
     | '/$lang/authors/$slug'
@@ -286,6 +298,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/$lang/privacy'
       preLoaderRoute: typeof LangPrivacyRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/editorial-policy': {
+      id: '/$lang/editorial-policy'
+      path: '/editorial-policy'
+      fullPath: '/$lang/editorial-policy'
+      preLoaderRoute: typeof LangEditorialPolicyRouteImport
       parentRoute: typeof LangRoute
     }
     '/$lang/disclaimer': {
@@ -401,6 +420,7 @@ interface LangRouteChildren {
   LangBooksRoute: typeof LangBooksRoute
   LangContactRoute: typeof LangContactRoute
   LangDisclaimerRoute: typeof LangDisclaimerRoute
+  LangEditorialPolicyRoute: typeof LangEditorialPolicyRoute
   LangPrivacyRoute: typeof LangPrivacyRoute
   LangIndexRoute: typeof LangIndexRoute
   LangAuthorsSlugRoute: typeof LangAuthorsSlugRoute
@@ -421,6 +441,7 @@ const LangRouteChildren: LangRouteChildren = {
   LangBooksRoute: LangBooksRoute,
   LangContactRoute: LangContactRoute,
   LangDisclaimerRoute: LangDisclaimerRoute,
+  LangEditorialPolicyRoute: LangEditorialPolicyRoute,
   LangPrivacyRoute: LangPrivacyRoute,
   LangIndexRoute: LangIndexRoute,
   LangAuthorsSlugRoute: LangAuthorsSlugRoute,
@@ -445,13 +466,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
