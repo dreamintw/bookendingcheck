@@ -1,0 +1,1 @@
+export default function Test() { return <div>editorial policy placeholder</div>; }
