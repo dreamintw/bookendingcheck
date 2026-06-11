@@ -114,10 +114,30 @@ function NotFound() {
   );
 }
 
+const CTR_HERO: Record<string, { en?: { h1: string; intro: string }; zh?: { h1: string; intro: string } }> = {
+  "the-song-of-achilles": {
+    en: {
+      h1: "Does The Song of Achilles Have a Happy Ending?",
+      intro: "Short answer: no — The Song of Achilles does not have a happy ending. Madeline Miller's retelling closes on a tragic, bittersweet note rather than a HE. Below you'll find a spoiler-safe summary, the ending tone at a glance, and trigger warnings. Full spoilers are folded by default — open them only if you've decided you want the details.",
+    },
+  },
+  "piranesi": {
+    en: {
+      h1: "Piranesi Ending Explained",
+      intro: "This page explains the ending of Susanna Clarke's Piranesi in spoiler layers. We start spoiler-free with the ending tone and a safe summary, then offer mild spoilers about direction, and finally full spoilers behind a click. Full spoilers are folded by default, so you can stop at the layer that suits you.",
+    },
+    zh: {
+      h1: "《皮拉內西》結局解析",
+      intro: "本頁以分層方式說明《皮拉內西》的結局。先提供無雷摘要與結局氛圍，再給出微雷走向，最後才是完整劇透。完整劇透預設折疊，你可以停在任一層級，依自己的需求決定要不要繼續往下看。下方同時附上避雷標籤與閱讀建議。",
+    },
+  },
+};
+
 function BookDetail() {
   const { book } = Route.useLoaderData();
   const lang = useLang();
   const related = books.filter((b) => b.slug !== book.slug && b.ending === book.ending).slice(0, 3);
+  const hero = CTR_HERO[book.slug]?.[lang];
 
   return (
     <main className="mx-auto max-w-4xl w-full px-4 py-10 flex-1">
@@ -137,7 +157,7 @@ function BookDetail() {
           {book.isbn && <span className="text-xs text-muted-foreground">ISBN {book.isbn}</span>}
         </div>
         <h1 className="font-display text-4xl md:text-5xl font-semibold leading-tight mb-2">
-          {book.title[lang]}
+          {hero?.h1 ?? book.title[lang]}
         </h1>
         <p className="text-lg text-muted-foreground">
           {t.by[lang]}{" "}
