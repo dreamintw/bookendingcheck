@@ -172,6 +172,14 @@ function BookDetail() {
         </p>
       </header>
 
+      {hero?.intro && (
+        <section className="mb-8 rounded-xl border border-border bg-card p-5">
+          <p className="text-base leading-relaxed text-foreground/90">{hero.intro}</p>
+        </section>
+      )}
+
+
+
       <div className="rounded-2xl border border-border bg-card p-6 mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <p className="text-xs uppercase tracking-wide text-muted-foreground mb-1">{t.decision[lang]}</p>
