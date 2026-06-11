@@ -19,12 +19,32 @@ export const Route = createFileRoute("/$lang/book/$slug")({
     const b = loaderData?.book;
     const lang = (params.lang as Lang) ?? "zh";
     if (!b) return { meta: [{ title: "Not found" }] };
-    const title = lang === "zh"
+    // Per-slug CTR overrides for high-impression pages
+    const ctrOverrides: Record<string, { en?: { title: string; desc: string }; zh?: { title: string; desc: string } }> = {
+      "the-song-of-achilles": {
+        en: {
+          title: "Does The Song of Achilles Have a Happy Ending? Ending & Spoilers | NovelCheck",
+          desc: "Wondering if The Song of Achilles has a happy ending? Check the ending tone, spoiler-safe summary, trigger warnings, and full spoilers only if you choose to open them.",
+        },
+      },
+      "piranesi": {
+        en: {
+          title: "Piranesi Ending Explained — Spoiler-Safe Summary & Full Spoilers | NovelCheck",
+          desc: "Piranesi ending explained in spoiler layers: start with a spoiler-safe summary and ending tone, then open full spoilers only if you choose. Trigger warnings included.",
+        },
+        zh: {
+          title: "《皮拉內西》結局解析｜無雷摘要、劇透分層與閱讀建議 | NovelCheck",
+          desc: "《皮拉內西》結局解析：先看無雷摘要與結局氛圍，再依需求展開劇透分層，完整劇透預設折疊，並附避雷標籤與閱讀建議。",
+        },
+      },
+    };
+    const override = ctrOverrides[b.slug]?.[lang];
+    const title = override?.title ?? (lang === "zh"
       ? `《${b.title.zh}》結局與避雷標籤｜${b.author.zh} | 讀前決策站`
-      : `${b.title.en} — Ending, Trigger Warnings & Verdict | NovelCheck`;
-    const desc = lang === "zh"
+      : `${b.title.en} — Ending, Trigger Warnings & Verdict | NovelCheck`);
+    const desc = override?.desc ?? (lang === "zh"
       ? `${b.title.zh}（${b.author.zh}）：結局類型 ${b.ending}，${b.triggers.length} 項避雷標籤，含讀 or 略決策卡。${b.summary.zh}`.slice(0, 280)
-      : `${b.title.en} by ${b.author.en}: ending type ${b.ending}, ${b.triggers.length} trigger warnings, and a Read-or-Skip verdict. ${b.summary.en}`.slice(0, 280);
+      : `${b.title.en} by ${b.author.en}: ending type ${b.ending}, ${b.triggers.length} trigger warnings, and a Read-or-Skip verdict. ${b.summary.en}`.slice(0, 280));
 
     return {
       meta: [
@@ -94,10 +114,30 @@ function NotFound() {
   );
 }
 
+const CTR_HERO: Record<string, { en?: { h1: string; intro: string }; zh?: { h1: string; intro: string } }> = {
+  "the-song-of-achilles": {
+    en: {
+      h1: "Does The Song of Achilles Have a Happy Ending?",
+      intro: "Short answer: no — The Song of Achilles does not have a happy ending. Madeline Miller's retelling closes on a tragic, bittersweet note rather than a HE. Below you'll find a spoiler-safe summary, the ending tone at a glance, and trigger warnings. Full spoilers are folded by default — open them only if you've decided you want the details.",
+    },
+  },
+  "piranesi": {
+    en: {
+      h1: "Piranesi Ending Explained",
+      intro: "This page explains the ending of Susanna Clarke's Piranesi in spoiler layers. We start spoiler-free with the ending tone and a safe summary, then offer mild spoilers about direction, and finally full spoilers behind a click. Full spoilers are folded by default, so you can stop at the layer that suits you.",
+    },
+    zh: {
+      h1: "《皮拉內西》結局解析",
+      intro: "本頁以分層方式說明《皮拉內西》的結局。先提供無雷摘要與結局氛圍，再給出微雷走向，最後才是完整劇透。完整劇透預設折疊，你可以停在任一層級，依自己的需求決定要不要繼續往下看。下方同時附上避雷標籤與閱讀建議。",
+    },
+  },
+};
+
 function BookDetail() {
   const { book } = Route.useLoaderData();
   const lang = useLang();
   const related = books.filter((b) => b.slug !== book.slug && b.ending === book.ending).slice(0, 3);
+  const hero = CTR_HERO[book.slug]?.[lang];
 
   return (
     <main className="mx-auto max-w-4xl w-full px-4 py-10 flex-1">
@@ -117,7 +157,7 @@ function BookDetail() {
           {book.isbn && <span className="text-xs text-muted-foreground">ISBN {book.isbn}</span>}
         </div>
         <h1 className="font-display text-4xl md:text-5xl font-semibold leading-tight mb-2">
-          {book.title[lang]}
+          {hero?.h1 ?? book.title[lang]}
         </h1>
         <p className="text-lg text-muted-foreground">
           {t.by[lang]}{" "}
@@ -131,6 +171,14 @@ function BookDetail() {
           {lang === "zh" && <span className="text-sm ml-2">／ {book.title.en}</span>}
         </p>
       </header>
+
+      {hero?.intro && (
+        <section className="mb-8 rounded-xl border border-border bg-card p-5">
+          <p className="text-base leading-relaxed text-foreground/90">{hero.intro}</p>
+        </section>
+      )}
+
+
 
       <div className="rounded-2xl border border-border bg-card p-6 mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
