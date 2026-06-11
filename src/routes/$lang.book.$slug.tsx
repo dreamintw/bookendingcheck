@@ -19,12 +19,32 @@ export const Route = createFileRoute("/$lang/book/$slug")({
     const b = loaderData?.book;
     const lang = (params.lang as Lang) ?? "zh";
     if (!b) return { meta: [{ title: "Not found" }] };
-    const title = lang === "zh"
+    // Per-slug CTR overrides for high-impression pages
+    const ctrOverrides: Record<string, { en?: { title: string; desc: string }; zh?: { title: string; desc: string } }> = {
+      "the-song-of-achilles": {
+        en: {
+          title: "Does The Song of Achilles Have a Happy Ending? Ending & Spoilers | NovelCheck",
+          desc: "Wondering if The Song of Achilles has a happy ending? Check the ending tone, spoiler-safe summary, trigger warnings, and full spoilers only if you choose to open them.",
+        },
+      },
+      "piranesi": {
+        en: {
+          title: "Piranesi Ending Explained — Spoiler-Safe Summary & Full Spoilers | NovelCheck",
+          desc: "Piranesi ending explained in spoiler layers: start with a spoiler-safe summary and ending tone, then open full spoilers only if you choose. Trigger warnings included.",
+        },
+        zh: {
+          title: "《皮拉內西》結局解析｜無雷摘要、劇透分層與閱讀建議 | NovelCheck",
+          desc: "《皮拉內西》結局解析：先看無雷摘要與結局氛圍，再依需求展開劇透分層，完整劇透預設折疊，並附避雷標籤與閱讀建議。",
+        },
+      },
+    };
+    const override = ctrOverrides[b.slug]?.[lang];
+    const title = override?.title ?? (lang === "zh"
       ? `《${b.title.zh}》結局與避雷標籤｜${b.author.zh} | 讀前決策站`
-      : `${b.title.en} — Ending, Trigger Warnings & Verdict | NovelCheck`;
-    const desc = lang === "zh"
+      : `${b.title.en} — Ending, Trigger Warnings & Verdict | NovelCheck`);
+    const desc = override?.desc ?? (lang === "zh"
       ? `${b.title.zh}（${b.author.zh}）：結局類型 ${b.ending}，${b.triggers.length} 項避雷標籤，含讀 or 略決策卡。${b.summary.zh}`.slice(0, 280)
-      : `${b.title.en} by ${b.author.en}: ending type ${b.ending}, ${b.triggers.length} trigger warnings, and a Read-or-Skip verdict. ${b.summary.en}`.slice(0, 280);
+      : `${b.title.en} by ${b.author.en}: ending type ${b.ending}, ${b.triggers.length} trigger warnings, and a Read-or-Skip verdict. ${b.summary.en}`.slice(0, 280));
 
     return {
       meta: [
