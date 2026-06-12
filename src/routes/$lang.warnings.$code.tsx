@@ -3,6 +3,7 @@ import { books, getWarning } from "@/data/books";
 import { useLang, t, type Lang } from "@/lib/i18n";
 import { BookCard } from "@/components/BookCard";
 import { siteUrl, langAlt, breadcrumbJsonLd } from "@/lib/seo";
+import { NOINDEX_META } from "@/lib/index-allowlist";
 import { WARNING_ENRICHMENT } from "@/data/enrichment";
 
 const CUSTOM_META: Record<string, { title: { zh: string; en: string }; desc: { zh: string; en: string }; h1: { zh: string; en: string } }> = {
@@ -41,6 +42,7 @@ export const Route = createFileRoute("/$lang/warnings/$code")({
         { name: "description", content: desc },
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
+        NOINDEX_META,
       ],
       links: [
         { rel: "canonical", href: `${siteUrl}/${lang}/warnings/${params.code}` },

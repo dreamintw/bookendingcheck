@@ -3,13 +3,14 @@ import { ENDINGS, books } from "@/data/books";
 import { useLang, t, type Lang } from "@/lib/i18n";
 import { EndingBadge } from "@/components/EndingBadge";
 import { siteUrl, langAlt } from "@/lib/seo";
+import { NOINDEX_META } from "@/lib/index-allowlist";
 
 export const Route = createFileRoute("/$lang/endings/")({
   head: ({ params }) => {
     const lang = (params.lang as Lang) ?? "zh";
     const title = lang === "zh" ? "依結局類型瀏覽小說 | 讀前決策站" : "Browse Novels by Ending Type | NovelCheck";
     const desc = lang === "zh" ? "依 HE / BE / OE / Bittersweet / Ambiguous 等結局類型瀏覽全部小說。" : "Browse all novels by ending: HE, BE, OE, Bittersweet, Ambiguous.";
-    return { meta: [{ title }, { name: "description", content: desc }], links: [{ rel: "canonical", href: `${siteUrl}/${lang}/endings` }, ...langAlt("/endings")] };
+    return { meta: [{ title }, { name: "description", content: desc }, NOINDEX_META], links: [{ rel: "canonical", href: `${siteUrl}/${lang}/endings` }, ...langAlt("/endings")] };
   },
   component: EndingsIndex,
 });

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { collections } from "@/data/collections";
 import { useLang, t, type Lang } from "@/lib/i18n";
 import { siteUrl, langAlt } from "@/lib/seo";
+import { NOINDEX_META } from "@/lib/index-allowlist";
 
 export const Route = createFileRoute("/$lang/collections/")({
   head: ({ params }) => {
@@ -16,6 +17,7 @@ export const Route = createFileRoute("/$lang/collections/")({
         { name: "description", content: desc },
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
+        NOINDEX_META,
       ],
       links: [{ rel: "canonical", href: `${siteUrl}/${lang}/collections` }, ...langAlt("/collections")],
     };

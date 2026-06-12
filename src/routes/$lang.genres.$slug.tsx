@@ -3,6 +3,7 @@ import { books, getAllGenres, slugify } from "@/data/books";
 import { useLang, t, type Lang } from "@/lib/i18n";
 import { BookCard } from "@/components/BookCard";
 import { siteUrl, langAlt } from "@/lib/seo";
+import { NOINDEX_META } from "@/lib/index-allowlist";
 
 export const Route = createFileRoute("/$lang/genres/$slug")({
   loader: ({ params }) => {
@@ -15,7 +16,7 @@ export const Route = createFileRoute("/$lang/genres/$slug")({
     const g = loaderData?.genre;
     const label = g ? g[lang] : params.slug;
     const title = lang === "zh" ? `${label} 類型小說 | 讀前決策站` : `${label} Novels | NovelCheck`;
-    return { meta: [{ title }], links: [{ rel: "canonical", href: `${siteUrl}/${lang}/genres/${params.slug}` }, ...langAlt(`/genres/${params.slug}`)] };
+    return { meta: [{ title }, NOINDEX_META], links: [{ rel: "canonical", href: `${siteUrl}/${lang}/genres/${params.slug}` }, ...langAlt(`/genres/${params.slug}`)] };
   },
   component: GenreDetail,
 });

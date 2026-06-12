@@ -8,6 +8,7 @@ import { TriggerMatrix } from "@/components/TriggerMatrix";
 import { ChevronLeft, Check, X } from "lucide-react";
 import { siteUrl, langAlt, breadcrumbJsonLd } from "@/lib/seo";
 import { BOOK_ENRICHMENT } from "@/data/enrichment";
+import { BOOK_ALLOW, NOINDEX_META } from "@/lib/index-allowlist";
 
 export const Route = createFileRoute("/$lang/book/$slug")({
   loader: ({ params }) => {
@@ -46,11 +47,13 @@ export const Route = createFileRoute("/$lang/book/$slug")({
       ? `${b.title.zh}（${b.author.zh}）：結局類型 ${b.ending}，${b.triggers.length} 項避雷標籤，含讀 or 略決策卡。${b.summary.zh}`.slice(0, 280)
       : `${b.title.en} by ${b.author.en}: ending type ${b.ending}, ${b.triggers.length} trigger warnings, and a Read-or-Skip verdict. ${b.summary.en}`.slice(0, 280));
 
+    const indexable = BOOK_ALLOW.has(b.slug);
     return {
       meta: [
         { title }, { name: "description", content: desc },
         { property: "og:title", content: title }, { property: "og:description", content: desc },
         { property: "og:type", content: "book" },
+        ...(indexable ? [] : [NOINDEX_META]),
       ],
       links: [
         { rel: "canonical", href: `${siteUrl}/${lang}/book/${b.slug}` },
