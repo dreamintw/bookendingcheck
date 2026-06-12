@@ -4,6 +4,7 @@ import { useLang, t, type Lang } from "@/lib/i18n";
 import { BookCard } from "@/components/BookCard";
 import { siteUrl, langAlt, breadcrumbJsonLd } from "@/lib/seo";
 import { AUTHOR_ENRICHMENT } from "@/data/enrichment";
+import { AUTHOR_ALLOW, NOINDEX_META } from "@/lib/index-allowlist";
 import { Check, X } from "lucide-react";
 
 export const Route = createFileRoute("/$lang/authors/$slug")({
@@ -64,12 +65,14 @@ export const Route = createFileRoute("/$lang/authors/$slug")({
         : []),
     ];
 
+    const indexable = AUTHOR_ALLOW.has(params.slug);
     return {
       meta: [
         { title },
         { name: "description", content: desc.slice(0, 280) },
         { property: "og:title", content: title },
         { property: "og:description", content: desc.slice(0, 280) },
+        ...(indexable ? [] : [NOINDEX_META]),
       ],
       links: [{ rel: "canonical", href: canonical }, ...langAlt(`/authors/${params.slug}`)],
       scripts,

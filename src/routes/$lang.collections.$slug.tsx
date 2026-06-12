@@ -4,6 +4,7 @@ import { useLang, t, type Lang } from "@/lib/i18n";
 import { BookCard } from "@/components/BookCard";
 import { siteUrl, langAlt, breadcrumbJsonLd } from "@/lib/seo";
 import { COLLECTION_ENRICHMENT } from "@/data/enrichment";
+import { COLLECTION_ALLOW, NOINDEX_META } from "@/lib/index-allowlist";
 
 const EXTRA_RELATED: Record<string, { warnings?: { slug: string; label: string }[]; collections?: { slug: string; label: string }[] }> = {
   "pet-death-warning": {
@@ -74,6 +75,7 @@ export const Route = createFileRoute("/$lang/collections/$slug")({
     const title = c.title[lang];
     const desc = c.description[lang];
     const path = `/collections/${c.slug}`;
+    const indexable = COLLECTION_ALLOW.has(c.slug);
     return {
       meta: [
         { title },
@@ -81,6 +83,7 @@ export const Route = createFileRoute("/$lang/collections/$slug")({
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
         { property: "og:type", content: "website" },
+        ...(indexable ? [] : [NOINDEX_META]),
       ],
       links: [{ rel: "canonical", href: `${siteUrl}/${lang}${path}` }, ...langAlt(path)],
       scripts: [

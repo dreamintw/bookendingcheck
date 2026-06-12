@@ -4,6 +4,7 @@ import { useLang, t, type Lang } from "@/lib/i18n";
 import { BookCard } from "@/components/BookCard";
 import { EndingBadge } from "@/components/EndingBadge";
 import { siteUrl, langAlt } from "@/lib/seo";
+import { NOINDEX_META } from "@/lib/index-allowlist";
 
 export const Route = createFileRoute("/$lang/endings/$ending")({
   loader: ({ params }) => {
@@ -15,7 +16,7 @@ export const Route = createFileRoute("/$lang/endings/$ending")({
     const e = loaderData?.ending ?? "HE";
     const title = lang === "zh" ? `${e} 結局小說一覽 | 讀前決策站` : `${e} Ending Novels | NovelCheck`;
     const desc = lang === "zh" ? `所有結局類型為 ${e} 的小說，含避雷標籤與讀前決策。` : `All novels with ${e} endings, with trigger warnings and a Read-or-Skip card.`;
-    return { meta: [{ title }, { name: "description", content: desc }], links: [{ rel: "canonical", href: `${siteUrl}/${lang}/endings/${e}` }, ...langAlt(`/endings/${e}`)] };
+    return { meta: [{ title }, { name: "description", content: desc }, NOINDEX_META], links: [{ rel: "canonical", href: `${siteUrl}/${lang}/endings/${e}` }, ...langAlt(`/endings/${e}`)] };
   },
   component: EndingDetail,
 });

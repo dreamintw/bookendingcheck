@@ -2,12 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { books, getAllGenres, slugify } from "@/data/books";
 import { useLang, t, type Lang } from "@/lib/i18n";
 import { siteUrl, langAlt } from "@/lib/seo";
+import { NOINDEX_META } from "@/lib/index-allowlist";
 
 export const Route = createFileRoute("/$lang/genres/")({
   head: ({ params }) => {
     const lang = (params.lang as Lang) ?? "zh";
     const title = lang === "zh" ? "依類型瀏覽小說 | 讀前決策站" : "Browse Novels by Genre | NovelCheck";
-    return { meta: [{ title }], links: [{ rel: "canonical", href: `${siteUrl}/${lang}/genres` }, ...langAlt("/genres")] };
+    return { meta: [{ title }, NOINDEX_META], links: [{ rel: "canonical", href: `${siteUrl}/${lang}/genres` }, ...langAlt("/genres")] };
   },
   component: GenresIndex,
 });
