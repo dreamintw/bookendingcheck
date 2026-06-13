@@ -15,6 +15,12 @@ export const HUB_PATHS = [
   "/privacy",
   "/disclaimer",
   "/editorial-policy",
+  // Phase 2 — thickened tag-cloud hubs now have intros, FAQs, JSON-LD,
+  // and curated internal links. Detail pages under each remain noindex.
+  "/authors",
+  "/collections",
+  "/genres",
+  "/endings",
 ] as const;
 
 export const COLLECTION_ALLOW = new Set<string>([
