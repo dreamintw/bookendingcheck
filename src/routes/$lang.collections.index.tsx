@@ -101,7 +101,7 @@ function CollectionsIndex() {
       )}
 
       <h2 className="font-display text-xl font-semibold mb-3">
-        {lang === "zh" ? "目前精選 collection" : "Featured collections"}
+        {lang === "zh" ? "目前精選主題清單" : "Featured collections"}
       </h2>
       <ul className="grid gap-3 sm:grid-cols-2 mb-10">
         {featured.map((c) => (
