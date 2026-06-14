@@ -12,17 +12,17 @@ const FEATURED_AUTHORS = [
 
 const FAQ_EN = [
   { q: "What does the authors hub do?", a: "It groups every author NovelCheck has researched in depth so you can see their ending tendencies, common trigger warnings, and reader decision notes in one place — without spoiling the book." },
-  { q: "Why are only a few authors listed?", a: "We only surface authors whose pages already carry an editorial overview, FAQ, and curated book list. Thin author stubs are intentionally hidden until we can give them the same depth." },
+  { q: "Why are only a few authors listed?", a: "For now, we only surface authors whose pages already carry a full editorial overview, FAQ, and curated book list. Other author pages are still being expanded and will return once they meet the same editorial standard." },
   { q: "Do you publish full biographies?", a: "No. We summarize what a reader needs to decide whether to pick up the next book — tone, recurring themes, ending profile, content warnings — not encyclopedia-style life stories." },
-  { q: "Where does the data come from?", a: "Editorial review of the books we cover, publicly available metadata, and reader feedback. See our Editorial Policy for the full data-source breakdown." },
+  { q: "Where does the data come from?", a: "Editorial review of the books we cover, publicly available book metadata, and reader feedback. See our Editorial Policy for the full data-source breakdown." },
   { q: "Do you provide the full text of any novel?", a: "No. NovelCheck does not host or link to pirated downloads, full chapters, or large plot retellings. We provide spoiler-safe summaries and layered spoiler blocks only." },
   { q: "How do I report an error on an author page?", a: "Email report@bookendingcheck.xyz with the URL and the correction. Copyright concerns go to copyright@bookendingcheck.xyz." },
 ];
 const FAQ_ZH = [
   { q: "作者入口頁的用途是什麼？", a: "把本站深度整理過的作者集中起來，讓你一次看到他們的結局傾向、常見避雷標籤與閱讀建議，不會劇透內容。" },
-  { q: "為什麼只列出少數作者？", a: "我們只露出已經寫過編輯導讀、FAQ 與精選書單的作者。內容尚未補齊的作者頁會暫時隱藏，等深度補上後再開放。" },
+  { q: "為什麼只列出少數作者？", a: "目前只公開已經寫好完整編輯導讀、FAQ 與精選書單的作者。其他作者的詳細頁仍在補充內容，完成後會逐步開放。" },
   { q: "你們會寫完整傳記嗎？", a: "不會。我們只整理「決定要不要讀下一本」會用到的資訊：寫作語調、反覆出現的主題、結局走向、避雷內容，不做百科式生平。" },
-  { q: "資料來源是什麼？", a: "本站作品的編輯整理、公開可得的書籍 metadata，以及讀者回報。完整來源請看編輯政策頁。" },
+  { q: "資料來源是什麼？", a: "本站作品的編輯整理、公開可得的書籍資訊，以及讀者回報。完整來源請看編輯政策頁。" },
   { q: "本站會提供小說全文嗎？", a: "不會。本站不提供小說全文、不提供盜版下載、不大段複述原作情節，只提供無雷摘要與分層劇透。" },
   { q: "發現作者頁有錯誤怎麼回報？", a: "請寄信至 report@bookendingcheck.xyz，附上頁面網址與更正內容。版權問題請寄 copyright@bookendingcheck.xyz。" },
 ];
@@ -79,7 +79,7 @@ function AuthorsIndex() {
       {lang === "zh" ? (
         <div className="prose prose-sm dark:prose-invert max-w-none mb-8 text-foreground/90 leading-relaxed">
           <p>NovelCheck 的作者入口頁不是百科。我們不抄傳記、不大段複述情節，只整理讀者決定「要不要讀下一本」會用到的資訊：作者反覆出現的主題、結局傾向（HE / BE / 開放 / 苦甜）、最常被回報的避雷標籤，以及和哪些作者氣質相近。每位上架作者都附有編輯導讀、本站收錄作品清單、無雷摘要連結與分層劇透頁。</p>
-          <p>本站目前優先深耕少數作者，而不是堆出大量薄頁。在審核與品質補齊期間，只有已經寫好完整導讀的作者會出現在這個入口；其他作者的頁面仍然存在但暫時不被搜尋引擎索引，等內容補齊後再依序開放。</p>
+          <p>本站目前優先深耕少數作者，而不是一次推出大量未完成的頁面。這個入口頁只列出已經寫好完整導讀的作者；其他作者的詳細頁仍在補充導讀與 FAQ，完成後會逐步開放。</p>
           <h2 className="font-display text-xl font-semibold mt-6">如何使用本頁</h2>
           <ol>
             <li>下方列出本站目前已富化的作者。點進去可以看到該作者在本站收錄的書、常見讀者顧慮、結局與避雷輪廓，以及相近作者推薦。</li>
@@ -93,7 +93,7 @@ function AuthorsIndex() {
       ) : (
         <div className="prose prose-sm dark:prose-invert max-w-none mb-8 text-foreground/90 leading-relaxed">
           <p>NovelCheck's authors hub is not an encyclopedia. We don't copy biographies and we don't retell plots in long form. We organize the things a reader actually needs before picking up the next book by a given author: recurring themes, ending tendencies (happy, sad, open, bittersweet), the trigger warnings readers report most often, and which other authors feel adjacent in tone.</p>
-          <p>While AdSense review is in progress we are deliberately surfacing only the authors whose pages already carry a full editorial overview, a curated book list, common reader concerns, an ending and warning profile, and an FAQ. Thinner author stubs still exist but are temporarily kept out of search until we can give them the same depth.</p>
+          <p>For now we only surface authors whose pages already carry a full editorial overview, a curated book list, common reader concerns, an ending and warning profile, and an FAQ. Other author pages are still being expanded and will return once they meet the same editorial standard.</p>
           <h2 className="font-display text-xl font-semibold mt-6">How to use this page</h2>
           <ol>
             <li>Pick an author below to see the books we cover, common reader concerns, the author's ending and warning profile, and related-author suggestions.</li>
@@ -107,7 +107,7 @@ function AuthorsIndex() {
       )}
 
       <h2 className="font-display text-xl font-semibold mb-3">
-        {lang === "zh" ? "目前已深度整理的作者" : "Authors we've fully written up"}
+        {lang === "zh" ? "目前已完成深度整理的作者" : "Authors we've fully written up"}
       </h2>
       <ul className="grid gap-2 sm:grid-cols-2 mb-10">
         {featured.map((a) => (
