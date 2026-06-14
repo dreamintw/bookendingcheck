@@ -30,7 +30,7 @@ const ENDING_TYPES = [
   },
   {
     code: "UNKNOWN",
-    en: { name: "Unknown / Not yet classified", body: "Conceptual category only — used when a book hasn't been fully classified yet. We don't currently surface 'Unknown' pages as a destination." },
+    en: { name: "Unknown / Not yet classified", body: "Conceptual category only — used when a book hasn't been fully classified yet. We don't currently surface 'Unknown' as a destination." },
     zh: { name: "Unknown（尚未分類）", body: "僅為概念分類，代表該書尚未完成結局分類。本站目前不把 Unknown 當成獨立入口推。" },
   },
 ];
@@ -39,16 +39,16 @@ const FAQ_EN = [
   { q: "How do you decide which ending type a book is?", a: "Editorial review of the actual ending plus reader feedback. We map to one of HE / BE / OE / Bittersweet / Ambiguous; ambiguous and bittersweet aren't synonyms — see definitions above." },
   { q: "Is HE always 'and they lived happily ever after'?", a: "No. HE means the main arc resolves positively and the central characters are in a stable place. Some loss along the way is normal." },
   { q: "What's the difference between bittersweet and ambiguous?", a: "Bittersweet has a clear outcome that mixes gain and loss. Ambiguous means the outcome itself isn't clear — the text deliberately leaves it open to interpretation." },
-  { q: "Why isn't 'Unknown' a real entry point?", a: "Unknown is a holding bucket for books we haven't classified yet. Treating it as a destination would push readers to thin pages, which isn't useful." },
-  { q: "Will the per-ending detail pages come back?", a: "Yes, in a later phase. We're rebuilding each one with a proper intro, FAQ, picks, and reader-decision guidance before reopening them to search." },
+  { q: "Why isn't 'Unknown' a real entry point?", a: "Unknown is a holding bucket for books we haven't classified yet. Treating it as a destination would push readers to pages that aren't ready, which isn't useful." },
+  { q: "Will the per-ending detail pages come back?", a: "Yes, in a later phase. We're rebuilding each one with a proper intro, FAQ, picks, and reader-decision guidance before reopening them." },
   { q: "Do you spoil the ending on this page?", a: "No. This page only defines the categories. Individual book pages keep full spoilers folded behind an explicit click." },
 ];
 const FAQ_ZH = [
   { q: "結局類型是怎麼判定的？", a: "由編輯實際讀完結局並參考讀者回報，對應到 HE / BE / OE / 苦甜 / 曖昧。其中苦甜和曖昧不是同義詞，定義請看上方說明。" },
   { q: "HE 一定是「從此過著幸福快樂的日子」嗎？", a: "不一定。HE 指主線正向收束、主要角色落在穩定位置，過程中有失去仍然算正常。" },
   { q: "苦甜（Bittersweet）和曖昧（Ambiguous）差在哪？", a: "苦甜是結局明確，但同時包含得與失。曖昧是結局本身就不明確，文本刻意留給讀者解讀。" },
-  { q: "為什麼 Unknown 不是入口？", a: "Unknown 只是「尚未分類」的暫存桶。把它當成入口會把使用者帶到薄頁，沒有實際價值。" },
-  { q: "個別結局的 detail 頁未來會回來嗎？", a: "會。每一個結局類型 detail 頁會在後續階段重建好導讀、FAQ、精選與閱讀建議後，再重新開放索引。" },
+  { q: "為什麼 Unknown 不是入口？", a: "Unknown 只是「尚未分類」的暫存桶。把它當成入口會把讀者帶到尚未寫好的頁面，沒有實際價值。" },
+  { q: "個別結局類型的詳細頁未來會回來嗎？", a: "會。每一個結局類型的詳細頁會在後續階段重建好導讀、FAQ、精選與閱讀建議後，再重新開放。" },
   { q: "本頁會劇透書的結局嗎？", a: "不會。本頁只定義結局類別。個別書的完整劇透一律折疊，需要主動點擊才會展開。" },
 ];
 
@@ -102,7 +102,7 @@ function EndingsIndex() {
 
       {lang === "zh" ? (
         <div className="prose prose-sm dark:prose-invert max-w-none mb-8 text-foreground/90 leading-relaxed">
-          <p>NovelCheck 把小說結局分成五個實用類別：HE（圓滿）、BE（悲傷或失去）、OE（開放）、苦甜（同時得失）、曖昧（結局本身不明確）。另外保留一個 Unknown 桶，代表本站還沒做完該書的分類；它只是運作中的暫存，不會被當成入口推給讀者。</p>
+          <p>NovelCheck 把小說結局分成五個實用類別：HE（圓滿）、BE（悲傷或失去）、OE（開放）、苦甜（同時得失）、曖昧（結局本身不明確）。另外保留一個 Unknown 桶，代表本站還沒完成該書的分類；它只是運作中的暫存，不會被當成入口推給讀者。</p>
           <p>會這樣分，是因為大部分讀者真正在意的不是「這本書是奇幻還是文學」，而是「我今天能不能承受 BE」「我需要一個明確答案還是可以接受開放」。這頁不會告訴你哪一本書屬於哪一類——那是每一本書的詳細頁要做的事——而是先幫你把詞彙對齊。</p>
           <h2 className="font-display text-xl font-semibold mt-6">如何使用本頁</h2>
           <ol>
