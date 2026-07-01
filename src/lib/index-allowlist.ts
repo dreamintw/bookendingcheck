@@ -59,7 +59,15 @@ export const AUTHOR_ALLOW = new Set<string>([
 
 // During AdSense review all warning / ending / genre detail pages are noindex.
 export const WARNING_ALLOW: Set<string> = new Set();
-export const ENDING_ALLOW: Set<string> = new Set();
+// Phase 3 — five ending detail pages have unique long-form guides,
+// FAQs, spoiler-safe curation, and internal linking. Unknown stays noindex.
+export const ENDING_ALLOW: Set<string> = new Set([
+  "HE",
+  "BE",
+  "OE",
+  "Bittersweet",
+  "Ambiguous",
+]);
 export const GENRE_ALLOW: Set<string> = new Set();
 
 // Index/list hubs for warnings / endings / authors / collections / genres are
