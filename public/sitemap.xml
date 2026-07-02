@@ -444,4 +444,64 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/authors/aldous-huxley"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/authors/aldous-huxley"/>
   </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/endings/HE</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/endings/HE"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/endings/HE"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/endings/HE"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/endings/HE</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/endings/HE"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/endings/HE"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/endings/HE"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/endings/BE</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/endings/BE"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/endings/BE"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/endings/BE"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/endings/BE</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/endings/BE"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/endings/BE"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/endings/BE"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/endings/OE</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/endings/OE"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/endings/OE"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/endings/OE"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/endings/OE</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/endings/OE"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/endings/OE"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/endings/OE"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/endings/Bittersweet</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/endings/Bittersweet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/endings/Bittersweet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/endings/Bittersweet"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/endings/Bittersweet</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/endings/Bittersweet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/endings/Bittersweet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/endings/Bittersweet"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/endings/Ambiguous</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/endings/Ambiguous"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/endings/Ambiguous"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/endings/Ambiguous"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/endings/Ambiguous</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/endings/Ambiguous"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/endings/Ambiguous"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/endings/Ambiguous"/>
+  </url>
 </urlset>
