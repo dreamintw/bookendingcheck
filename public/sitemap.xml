@@ -504,4 +504,76 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/endings/Ambiguous"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/endings/Ambiguous"/>
   </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/warnings/pet-death</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/pet-death"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/pet-death"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/pet-death"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/warnings/pet-death</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/pet-death"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/pet-death"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/pet-death"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/warnings/death</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/death"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/death"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/death"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/warnings/death</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/death"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/death"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/death"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/warnings/suicide</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/suicide"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/suicide"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/suicide"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/warnings/suicide</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/suicide"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/suicide"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/suicide"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/warnings/self-harm</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/self-harm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/self-harm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/self-harm"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/warnings/self-harm</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/self-harm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/self-harm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/self-harm"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/warnings/sexual-violence</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/sexual-violence"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/sexual-violence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/sexual-violence"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/warnings/sexual-violence</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/sexual-violence"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/sexual-violence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/sexual-violence"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/warnings/cheating</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/cheating"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/cheating"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/cheating"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/warnings/cheating</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/warnings/cheating"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/warnings/cheating"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/warnings/cheating"/>
+  </url>
 </urlset>

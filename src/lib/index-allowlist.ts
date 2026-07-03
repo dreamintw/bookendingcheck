@@ -57,8 +57,17 @@ export const AUTHOR_ALLOW = new Set<string>([
   "haruki-murakami",
 ]);
 
-// During AdSense review all warning / ending / genre detail pages are noindex.
-export const WARNING_ALLOW: Set<string> = new Set();
+// Phase 4 — six high-demand warning detail pages have unique long-form
+// guides, FAQs, spoiler-layered notes, and safety-aware copy. All other
+// warning detail pages remain noindex,follow.
+export const WARNING_ALLOW: Set<string> = new Set([
+  "pet-death",
+  "self-harm",
+  "sexual-violence",
+  "suicide",
+  "cheating",
+  "death",
+]);
 // Phase 3 — five ending detail pages have unique long-form guides,
 // FAQs, spoiler-safe curation, and internal linking. Unknown stays noindex.
 export const ENDING_ALLOW: Set<string> = new Set([
