@@ -802,45 +802,46 @@ export const WARNING_CONTENT: Record<string, WarningContent> = {
   // the loss of a partner, family member, or close friend within that scope.
   death: {
     en: {
-      title: "Death of a Loved One in Books — Content Warning Guide | NovelCheck",
+      title: "Major Character Death in Books — Spoiler-Safe Warning Guide | NovelCheck",
       metaDescription:
-        "Check whether a novel involves the death of a partner, family member, or close friend before reading. Spoiler-safe warning guide with no full plot detail.",
-      h1: "Death of a Loved One in Books",
+        "Check whether a novel kills off a major character before you read it. Spoiler-safe warning guide — no names, no scene detail, no full plot reveal.",
+      h1: "Major Character Death in Books",
       intro: [
-        "This warning is for readers who want to know, before opening a book, whether it will ask them to sit with the loss of a partner, a family member, or a close friend. In our catalog this content lives under a single code alongside major character death, because in fiction the two categories overlap almost completely — a beloved figure lost by a POV character is what makes a death feel like a personal loss to the reader.",
+        "This warning is for readers who want to know, before opening a book, whether a major character dies in it. In our catalog the code covers the death of a protagonist, a central point-of-view character, or a core figure whose loss meaningfully reshapes the story — not background mortality and not distant historical deaths.",
         "The tag does not tell you who dies, when in the arc it happens, or whether the death is shown on the page. It only tells you the loss is there. Everything more specific lives in the mild-spoiler note or in the collapsed full-spoiler block on the individual book page.",
-        "Grief without a specific death is tracked separately — a book can be tagged as heavy on grief without qualifying for this tag, and vice versa. If both matter to you, check both.",
+        "This is a broader label than tighter categories like death of a partner, death of a family member, or grief. A major character is not always close to the protagonist, and a protagonist is not always someone's loved one. If a narrower relationship matters to you, check the book page for the extra notes.",
       ],
       whatCounts: {
         yes: [
-          "A partner, spouse, or committed romantic figure dies within the story or is confirmed dead by the text before it starts.",
-          "A parent, sibling, child, or family member close to a POV character dies, on-page or off.",
-          "A close friend whose bond with the protagonist is established as central dies within the story.",
-          "A pre-book loss that the narrative continues to process and treat as material to the arc.",
+          "The protagonist dies within the story, or is confirmed dead by the text before it starts.",
+          "A central point-of-view character dies, on-page or off.",
+          "A core supporting character whose absence reshapes the remainder of the story dies.",
+          "A pre-book death of a major figure that the narrative continues to treat as material to the arc.",
         ],
         no: [
-          "General mortality in the world of the story (background deaths, distant historical events).",
-          "Grief without a specific named loss inside the book — that is tracked under the grief tag.",
+          "Background or minor characters dying with no lasting effect on the arc.",
+          "General mortality in the world of the story (crowd deaths, distant historical events).",
           "Ambiguous or off-screen disappearances that the text does not confirm as death.",
+          "Grief without a specific major-character death — that lives under a separate tag.",
           "Pet death, which lives under its own tag.",
         ],
-        note: "If a book contains both a major character death and additional loved-one losses, both will be reflected in the book-page notes.",
+        note: "Whether the character is close to the protagonist, and whether the death happens on the page, in memory, or before the story begins, is recorded on each book page rather than on this hub.",
       },
       spoilerLevels: {
         free:
-          "The tag alone confirms a loved one dies inside or shortly before the book. It does not name who, when, or how.",
+          "The tag alone confirms a major character dies inside or shortly before the book. It does not name who, when, or how.",
         mild:
-          "The mild-spoiler note tells you the relationship type (partner, family, friend), whether the death is on-page or off, and where in the arc it lands.",
+          "The mild-spoiler note tells you the role type (protagonist, POV, core support), whether the death is on-page, off-page, or in memory, and roughly where in the arc it lands.",
         full:
           "Who dies and any surrounding scene detail sit inside the collapsed spoiler block on the individual book page.",
       },
       severity:
-        "Severity reflects how much of the book takes place inside the loss — the more of the story is spent grieving, the higher the mark. An early death that shapes the entire arc is graded higher than a late death that closes the book neatly. Confidence is separate and marks Confirmed, Likely, or Limited data.",
+        "Severity reflects how much of the book is shaped by the death — how central the character is, and how much page-time the story spends inside the fallout. Confidence is separate and marks Confirmed, Likely, or Limited data, depending on how firmly we can verify the tag from the text.",
       readerGuidance: [
-        "Recent bereavement: default to skip anything tagged Confirmed high; consider grief-focused nonfiction or gentler bittersweet reads instead.",
-        "If you can read past-tense loss but not on-page death, use the mild-spoiler note that marks 'off-page' or 'referenced only'.",
-        "An HE tag does not neutralise this warning. Books can pair a loving central relationship with a devastating loss elsewhere.",
-        "If the loss is what draws you to a book (many literary readers seek this), sort by severity high and confidence Confirmed.",
+        "If you avoid protagonist death specifically, check the mild-spoiler note before starting — this tag covers both protagonists and non-protagonist major characters.",
+        "If you can read a past-tense loss but not an on-page death scene, use the mild-spoiler note that marks 'off-page' or 'referenced only'.",
+        "A happy ending tag does not neutralise this warning. A book can pair a hopeful close with the death of a major figure earlier in the story.",
+        "If a major character death is exactly the kind of story you want, sort by severity high and confidence Confirmed.",
       ],
       related: [
         { label: "Sad ending books", href: "/en/collections/sad-ending-books" },
@@ -850,69 +851,70 @@ export const WARNING_CONTENT: Record<string, WarningContent> = {
       picksIntro:
         "Books currently confirmed as carrying this warning with full editorial notes:",
       picksEmpty:
-        "We do not yet have three or more fully-enriched books at the required confidence level to feature. New titles are added as review completes.",
+        "We are currently reviewing books for this warning. Only titles with fully checked warning notes will appear here.",
       faq: [
         {
           q: "Does a death that happens before the story begins count?",
-          a: "Yes, when the text continues to process the loss and it materially shapes a POV character.",
+          a: "Yes, when the character was a major figure in the world of the book and the text continues to treat the loss as central to the remaining arc.",
         },
         {
-          q: "Are close friends included?",
-          a: "Yes, when the bond with the protagonist is established as central. Casual acquaintances are not enough.",
+          q: "Is this the same as death of a loved one?",
+          a: "No. This tag is about the character's importance in the story, not their relationship to the protagonist. A major character can be an ally, a rival, or a mentor, and does not have to be someone the protagonist loves.",
         },
         {
-          q: "Is this the same as 'major character death'?",
-          a: "Very close. In this catalog they share a single code because the emotional impact on the reader is what the tag is trying to measure.",
+          q: "Does the death have to happen on the page?",
+          a: "No. On-page, off-page, in memory, and pre-book deaths all qualify if the character is major. The mild-spoiler note distinguishes them.",
         },
         {
-          q: "Can I check whether the death happens on page?",
-          a: "Yes. The mild-spoiler note marks on-page, off-page, or referenced-only, without naming the character.",
+          q: "Will this tell me who dies?",
+          a: "No. This hub never names the character. That information stays inside the collapsed full-spoiler block on each book page.",
         },
         {
           q: "Does grief alone trigger this warning?",
-          a: "No. Grief without a named death inside the book is tracked under the separate grief tag.",
+          a: "No. Grief without a major-character death inside the book is tracked under a separate grief tag.",
         },
       ],
       policyNote:
-        "We do not host book text or unofficial downloads, and we do not reveal who dies on this hub. Full spoilers stay collapsed on the book pages.",
+        "We do not host book text or unofficial downloads, and we do not reveal who dies on this hub. Full spoilers stay collapsed on each book page.",
     },
     zh: {
-      title: "小說中的摯愛死亡：失去親友情節避雷指南 | NovelCheck",
+      title: "小說中的主要角色死亡：免雷避雷指南 | NovelCheck",
       metaDescription:
-        "確認小說是否含伴侶、家人或摯友的死亡情節。本頁採用免雷分層，不透露角色與細節。",
-      h1: "小說中的摯愛死亡",
+        "確認小說是否讓主要角色死亡，再決定是否閱讀。本頁採用免雷分層，不透露角色姓名與場景細節。",
+      h1: "小說中的主要角色死亡",
       intro: [
-        "這個避雷標是給想在開讀前先確認「這本書會不會要求我陪一段伴侶、家人或摯友的失去」的讀者。在本站分類中，這類內容與「主角死亡」共用同一個代碼，因為在小說裡兩者幾乎完全重疊——讓一場死亡對讀者變成「摯愛的失去」的，往往正是 POV 角色與這個人的關係。",
-        "標籤本身不會告訴你是誰死、何時死、是否場內。它只告訴你這份失去存在。更具體的資訊會出現在該書頁的輕度劇透註記，或收在完整劇透摺疊區。",
-        "「哀痛」本身有獨立標籤——一本書可能因哀痛沉重被標，但不符合這個標；反之亦然。若兩者你都在意，請同時查。",
+        "這個避雷標是給想在開讀前先確認「這本書裡是否有主要角色死亡」的讀者。本站分類中，這個代碼涵蓋主角、核心 POV 角色，或缺席後會實質改寫故事走向的重要角色的死亡，不包含背景群眾或遠距歷史事件裡的死亡。",
+        "標籤本身不會告訴你是誰死、何時死、是否在場內演出。它只告訴你這場死亡存在。更具體的資訊會出現在該書頁的輕度劇透註記，或收在完整劇透摺疊區。",
+        "這是一個較廣的分類，與「伴侶死亡」「家人死亡」「哀痛」等較窄標籤不同。主要角色不一定是主角的親友，主角本身也不一定是誰的親人。若你在意特定關係，請另外查看該書頁的補充註記。",
       ],
       whatCounts: {
         yes: [
-          "伴侶、配偶或明確的承諾對象在故事中死亡，或在故事開始前已被文本確認死亡。",
-          "與 POV 角色親近的父母、手足、子女或家人死亡，場內或場外皆算。",
-          "被故事建立為主線核心的摯友在故事中死亡。",
-          "在書開始前已發生、但敘事持續回望並實質推動角色線的失去。",
+          "主角在故事中死亡，或在故事開始前已被文本確認死亡。",
+          "核心 POV 角色死亡，場內或場外皆算。",
+          "缺席後會實質改寫故事走向的重要配角死亡。",
+          "故事開始前已發生、但敘事持續回望並實質推動主線的重要角色死亡。",
         ],
         no: [
-          "故事世界中的一般死亡（背景死亡、遠距歷史事件等）。",
-          "沒有具體對象的哀痛，屬於獨立的 grief 標籤。",
+          "對主線幾乎沒有後續影響的背景角色或次要角色死亡。",
+          "故事世界中的一般死亡（群眾傷亡、遠距歷史事件等）。",
           "文本未確認為死亡的曖昧失蹤或離場。",
+          "沒有具體對象的哀痛，屬於獨立標籤。",
           "寵物死亡另有獨立標籤。",
         ],
-        note: "若書中同時有主角死亡與其他摯愛的失去，書頁註記會同時呈現。",
+        note: "該角色是否與主角親近、死亡發生在場內／回憶／故事開始前，都會另外記錄在該書頁的註記，本頁不做逐書描述。",
       },
       spoilerLevels: {
-        free: "標籤本身只確認書中或書前有摯愛死亡，不透露角色、時機或方式。",
-        mild: "輕度劇透註記會標關係類型（伴侶／家人／摯友）、是場內或場外、以及發生在主線的哪一段。",
+        free: "標籤本身只確認書中或書前有主要角色死亡，不透露角色、時機或方式。",
+        mild: "輕度劇透註記會標角色類型（主角／POV／核心配角）、發生位置（場內／場外／回憶），以及大約落在主線的哪一段。",
         full: "是誰死、周邊場景細節收在該書頁的摺疊劇透區。",
       },
       severity:
-        "嚴重程度反映書中「處於失去中」的比重——後續哀悼佔比越大，等級越高。以早段死亡為軸心貫穿全書，等級高於在末段收束的死亡。可信度另有獨立分軸：Confirmed／Likely／Limited data。",
+        "嚴重程度反映死亡對整本書的塑形力——角色越核心、後續處理佔比越大，等級越高。可信度另有獨立分軸：Confirmed／Likely／Limited data，視資料驗證程度而定。",
       readerGuidance: [
-        "近期喪親：預設跳過任何 Confirmed 高強度的書；可考慮以哀悼為主的非虛構或較溫和的苦甜作品。",
-        "若你可以承受過去式失去但無法承受場內死亡，請優先選標為「場外」或「僅提及」的書。",
-        "HE 標不會抵銷這個避雷標。書中可以同時有恩愛主線與沉重的失去。",
-        "若「失去」正是你想讀的核心（許多文學讀者會主動選這類），請以嚴重程度 high、可信度 Confirmed 排序。",
+        "若你特別想避免主角死亡，請在開讀前先看輕度劇透註記；本標同時涵蓋主角與非主角的重要角色死亡。",
+        "若你能承受過去式失去但無法承受場內死亡場景，請優先選標為「場外」或「僅提及」的書。",
+        "快樂結局標不會抵銷這個避雷標。一本書可以在前段有重要角色死亡，卻仍以較希望的收尾作結。",
+        "若「主要角色死亡」正是你想讀的核心題材，請以嚴重程度 high、可信度 Confirmed 排序。",
       ],
       related: [
         { label: "悲劇結局小說", href: "/zh/collections/sad-ending-books" },
@@ -921,33 +923,34 @@ export const WARNING_CONTENT: Record<string, WarningContent> = {
       ],
       picksIntro: "目前已完成資料確認、確實包含此避雷標籤的作品：",
       picksEmpty:
-        "目前完整編輯註記且符合可信度的書仍不足以展開列表。新書會隨核對完成陸續加入。",
+        "目前正在整理符合這個避雷標籤的作品；只有完成資料確認的書籍才會列在這裡。",
       faq: [
         {
           q: "故事開始前就發生的死亡也算嗎？",
-          a: "算，只要敘事持續處理這份失去、且它實質形塑 POV 角色。",
+          a: "算，只要該角色在書中世界屬於重要角色，且敘事持續把這份失去當作後續主線的核心。",
         },
         {
-          q: "摯友算在內嗎？",
-          a: "算，只要文本建立這段情誼為主線核心。點頭之交不算。",
+          q: "這個標和「摯愛死亡」是同一件事嗎？",
+          a: "不是。這個標衡量的是角色在故事裡的重要性，不是他與主角的關係。主要角色可以是盟友、對手或導師，不一定是主角所愛的人。",
         },
         {
-          q: "這個標和「主角死亡」是同一件事嗎？",
-          a: "非常接近。本站分類共用同一代碼，因為這個標真正衡量的是讀者感受到的情感衝擊。",
+          q: "死亡一定要發生在場內嗎？",
+          a: "不用。場內、場外、回憶、故事開始前的死亡，只要角色屬於主要角色都算。輕度劇透註記會分辨這些情況。",
         },
         {
-          q: "可以確認死亡是否發生在頁面上嗎？",
-          a: "可以。輕度劇透註記會標「場內」「場外」或「僅提及」，不會透露角色名。",
+          q: "會告訴我是誰死嗎？",
+          a: "不會。本頁不會透露角色姓名，這類資訊會收在該書頁的完整劇透摺疊區。",
         },
         {
           q: "只有哀痛沒有死亡也會觸發這個標嗎？",
-          a: "不會。沒有具體對象的哀痛屬於 grief 獨立標籤。",
+          a: "不會。沒有主要角色實際死亡的哀痛，屬於獨立的 grief 標籤。",
         },
       ],
       policyNote:
-        "本站不提供全文與盜版下載，本頁也不透露是誰死。完整劇透維持在書頁的摺疊區。",
+        "本站不提供全文與盜版下載，本頁也不透露是誰死。完整劇透維持在各書頁的摺疊區。",
     },
   },
+
 };
 
 export const ENRICHED_WARNINGS = Object.keys(WARNING_CONTENT);
