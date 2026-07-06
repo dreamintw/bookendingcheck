@@ -426,23 +426,26 @@ export const BOOK_ENRICHMENT: Record<string, BookEnrichment> = {
 
   "the-great-gatsby": {
     endingTone: {
-      en: "Bittersweet leaning tragic — short, lyrical, and deliberately deflating. The famous final paragraph reframes everything that came before as nostalgia rather than triumph.",
-      zh: "苦多於甘，篇幅短、抒情、結尾刻意洩氣。著名的最後一段把全書重新定調為「鄉愁」而非「勝利」。",
+      en: "BE, and specifically the kind of BE that reveals itself slowly. The final chapters compress a murder, a suicide, a hit-and-run, and the collapse of Gatsby's entire self-invention project into a short span. Fitzgerald keeps the prose lyrical rather than lurid, which is why first-time readers sometimes underestimate the ending until the famous closing paragraph reframes everything they just read as elegy. Do not treat this as a love story with a sad ending. It is a novel about the failure of self-reinvention where the love plot is one of the ways that failure gets demonstrated. Readers looking for karmic justice will not find it here — the two most culpable characters walk away undamaged, and that is one of the book's actual points.",
+      zh: "BE，且是慢慢揭露自身的那種 BE。最後幾章把一場謀殺、一場自殺、一場肇事逃逸、以及 Gatsby 全部自我塑造工程的崩塌壓縮在短短篇幅中。費茲傑羅的文字維持抒情而非渲染，這也是為什麼初讀者常常低估結局——直到那段著名的最後一段把讀者剛看完的一切重新定調為輓歌。請不要把這本書當成「有悲劇結局的愛情故事」。它是一本關於「自我重塑失敗」的小說，愛情情節只是這個失敗被展示的其中一種方式。想要業報正義的讀者不會在這裡找到——書中兩位最該負責的角色毫髮無傷全身而退，而這正是這本書要說的其中一件事。",
     },
     warningsExplained: {
-      en: "On-page deaths (including a murder and a vehicular fatality), infidelity, alcohol abuse pervasive in the period setting. Sexual content is suggestive rather than explicit.",
-      zh: "正面死亡（含一場謀殺與一場車禍致死）、出軌、時代背景下普遍酒精濫用。性內容暗示為主，非露骨。",
+      en: "Four tags apply and they interlock: cheating and infidelity refer to the same web of affairs between Tom, Daisy, Gatsby and Myrtle — we tag both because different readers search for different terms, but they mark one relationship complex, not two separate ones. Death (high) covers the on-page vehicular fatality and the on-page murder. Suicide (mid confidence) covers Wilson's death, which some editions and readings frame as immediate suicide following the shooting; we tag it mid because the on-page treatment is brief and the character is a minor one. Alcohol is pervasive as period texture; there is no on-page sexual violence and sexual content is suggestive rather than explicit. Nothing in this book qualifies for pet-death, self-harm, or graphic-torture tags.",
+      zh: "四個標籤且互相纏繞：cheating 與 infidelity 指的是 Tom、Daisy、Gatsby、Myrtle 之間的同一組多角外遇網——本站兩者都標記是因為不同讀者搜尋詞不同，但它們代表同一組關係，不是兩件不同事件。death（高強度）涵蓋一場正面描寫的車禍致死與一場正面描寫的謀殺。suicide（中信心）指 Wilson 之死——部分版本與解讀認為那是槍擊後的立即自殺；本站標為中，是因為正面描寫篇幅短、且角色為配角。酒精濫用作為時代背景大量出現；無正面性暴力，性內容為暗示而非露骨。本書任何內容都不符合寵物死亡、自傷或血腥酷刑標籤。",
     },
     verdict: {
-      en: "Read for compact prose mastery and an American canon entry that earns its reputation. Skip only if you want a happy ending or actively dislike unreliable narrators.",
-      zh: "想讀精煉文筆、美國文學經典中當之無愧的一本：請讀。若你執意要 HE 或無法接受不可靠敘述者：略。",
+      en: "Read for readers of American canon, students working through a set text, or anyone who wants a short, lyrically compact tragedy about self-invention. Read with caution if layered infidelity or the specific 'the worst people escape' framing is currently hard for you. Skip only if you need a happy ending or refuse unreliable narrators.",
+      zh: "美國經典讀者、正在讀指定教材的學生、或想讀一部篇幅短、文字精煉的自我塑造悲劇：推薦。若多角外遇或「最糟的人毫髮無傷」這個具體框架目前對你困難，請「謹慎閱讀」。只有需要 HE、或拒絕不可靠敘述者的讀者才建議跳過。",
     },
     similarByEnding: ["madame-bovary", "anna-karenina", "the-remains-of-the-day"],
-    similarByWarning: ["the-paper-palace", "anna-karenina"],
+    similarByWarning: ["gone-girl", "daisy-jones-and-the-six"],
     faq: [
-      { q: { en: "Is it a love story?", zh: "這是愛情故事嗎？" }, a: { en: "More accurately a story about the idea of love and self-invention. Treating it as romance leads to disappointment.", zh: "更準確地說，是關於「愛情這個概念」和自我塑造的故事。當作言情看會失望。" } },
-      { q: { en: "Can a teenager read this?", zh: "青少年可以讀嗎？" }, a: { en: "Yes — it's a common school text. Themes are adult but content is restrained.", zh: "可以——常見校園必讀。主題成熟但內容克制。" } },
-      { q: { en: "Why is Nick the narrator?", zh: "為什麼選 Nick 當敘述者？" }, a: { en: "Because Gatsby's pursuit only works at one remove — through an admirer who is also implicated.", zh: "因為 Gatsby 的追尋只有透過旁觀者敘述才成立——而這個旁觀者本身也涉入其中。" } },
+      { q: { en: "Does The Great Gatsby have a happy ending?", zh: "《大亨小傳》是 HE 嗎？" }, a: { en: "No. It is BE — multiple on-page deaths and the collapse of the protagonist's central project.", zh: "不是。是 BE——多場正面死亡與主角核心計畫的崩塌。" } },
+      { q: { en: "Is it a love story?", zh: "這是愛情故事嗎？" }, a: { en: "It is often taught as one but it functions better read as a story about the idea of love and self-invention. Reading it strictly as romance leads to disappointment.", zh: "常被當作愛情故事教授，但作為「關於愛情這個概念與自我塑造」的故事來讀更成立。純以言情角度閱讀會失望。" } },
+      { q: { en: "Are the cheating and infidelity tags counted twice?", zh: "cheating 和 infidelity 是重複計算嗎？" }, a: { en: "No. Both tags point at the same multi-way affair; we mark both because search terms differ.", zh: "不是。兩個標籤指同一組多角外遇；標兩個只因搜尋詞不同。" } },
+      { q: { en: "Is Wilson's death really a suicide?", zh: "Wilson 之死算是自殺嗎？" }, a: { en: "That is the most common reading. The scene is brief, which is why we mark the tag at mid confidence rather than high.", zh: "這是最主流的解讀。場景篇幅短，因此本站將該標籤設為中信心而非高。" } },
+      { q: { en: "Can a teenager read this?", zh: "青少年可以讀嗎？" }, a: { en: "Yes — it is a common school text. Themes are adult but content is restrained and no explicit sexual violence.", zh: "可以——常見校園必讀。主題成熟但內容克制，無正面性暴力。" } },
+      { q: { en: "Why is Nick the narrator?", zh: "為什麼選 Nick 當敘述者？" }, a: { en: "Because Gatsby's pursuit only works one step removed — through an admirer who is also implicated. Direct narration would destroy the elegy.", zh: "因為 Gatsby 的追尋只有透過旁觀者敘述才成立——而這個旁觀者本身也涉入其中。直接敘述會破壞輓歌感。" } },
     ],
   },
 
