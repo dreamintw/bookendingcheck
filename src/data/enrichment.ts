@@ -360,23 +360,26 @@ export const BOOK_ENRICHMENT: Record<string, BookEnrichment> = {
 
   "gone-girl": {
     endingTone: {
-      en: "Cold, controlled, and morally bleak. The finish is technically resolved (no cliffhanger) but emotionally airless — Flynn deliberately denies the reader any catharsis or punishment.",
-      zh: "冷靜、克制、道德層面陰沉。結局技術上已收（無斷頭），但情緒上沒有出口——作者刻意拒絕給讀者任何宣洩或懲罰感。",
+      en: "Ambiguous, and morally so. The plot is technically resolved — nobody is missing, the police case is closed, the marriage is intact — but every emotional and ethical question the book raised is left deliberately unsettled. Gillian Flynn engineers a finish where the reader knows more than any character does and is denied the catharsis of seeing that knowledge produce consequences. This is why we tag it Ambiguous rather than BE: the ending is not sad in a conventional way, it is airless. Do not read the closing chapters expecting punishment, revelation, or a clean twist to override what came before. The last third is the twist working itself all the way through to a stable, chilling equilibrium. If you go in wanting the worse person to lose, you will be reading the wrong book.",
+      zh: "Ambiguous，而且是道德意義上的曖昧。劇情技術上已經收束——沒有失蹤者、警方結案、婚姻完整——但這本書提出的所有情感與倫理問題都被刻意懸置。吉莉安・弗琳精密設計了一個「讀者比任何角色都知道更多、卻被拒絕看到這些知識產生後果」的結局。這也是本站標為 Ambiguous 而非 BE 的原因：這個結局不是傳統意義上的悲，而是沒有出口。閱讀最後幾章時請不要期待懲罰、揭露或翻盤——最後三分之一是那個反轉一路徹底完成、走到一個穩定且令人發冷的平衡點。若你希望「比較壞的人輸」，這不是你的書。",
     },
     warningsExplained: {
-      en: "Heavy on psychological abuse, manipulation, and a graphic on-page murder. Cheating is a major plot driver. False-accusation of sexual assault is depicted and central — sensitive readers should weigh carefully. Pregnancy used as coercion.",
-      zh: "心理虐待、操控與一場具體描寫的謀殺戲為主。出軌是劇情核心。書中正面描寫並圍繞「假性侵控告」展開，敏感讀者請慎重。懷孕被當作脅迫工具使用。",
+      en: "Four interlocking tags: cheating and infidelity mark the same story line (Nick's affair) — different search terms, same event, not double-counted as separate incidents. Domestic-abuse (high) covers extensive on-page psychological and emotional abuse; the tag is the load-bearing one for many readers because the abuse is central rather than incidental. Violence (mid) covers one graphic on-page killing and pervasive threat throughout the back half. A false-accusation-of-sexual-assault subplot is depicted and central — this is a specific reader-sensitivity concern and we call it out here even though it does not have its own tag in this book's row. Pregnancy is used as a coercion device. This page does not describe method or the killing scene beyond confirming the tag.",
+      zh: "四個相互纏繞的標籤：cheating 與 infidelity 標記的是同一條故事線（Nick 的外遇）——不同搜尋詞，同一事件，並不重複計算為兩個不同事件。domestic-abuse（高）涵蓋書中大量正面描寫的心理與情感虐待；對許多讀者這是主要承重標籤，因為虐待是核心而非枝節。violence（中）涵蓋一場正面且具體的殺人場景，以及後半段瀰漫的威脅感。書中還有一條「假性侵控告」的支線且屬核心——這是特定讀者敏感關注點，本頁在此標出，即使該書資料列並沒有為它獨立設標籤。懷孕被作為脅迫工具使用。本頁不描述殺人場景或方法，僅確認標籤存在。",
     },
     verdict: {
-      en: "Read if you want a precisely engineered marriage thriller and can stomach an ending where the worse person wins. Skip if you need narrative justice, or if false-accusation tropes are off-limits for you.",
-      zh: "想看精密如鐘錶的婚姻驚悚、能接受「壞的人贏」的結局：請讀。若你需要敘事正義，或不能接受假性侵控告題材：請略。",
+      en: "Read for readers who want a precisely engineered marriage thriller and can stomach an ending where the worse person wins and stays winning. Read with caution if either extensive intimate-partner emotional abuse or the false-accusation trope is currently hard for you. Skip if you need narrative justice or if you are looking for a thriller whose antagonist is punished by the plot.",
+      zh: "想讀一部精密如鐘錶的婚姻驚悚、能接受「較糟的人贏且持續贏」的結局：推薦。若大量正面描寫的親密關係情感虐待，或「假性侵控告」題材目前對你困難，請「謹慎閱讀」。若你需要敘事正義、或想讀一部反派會被劇情懲罰的驚悚小說：跳過。",
     },
     similarByEnding: ["the-paper-palace", "anna-karenina"],
-    similarByWarning: ["the-paper-palace", "madame-bovary"],
+    similarByWarning: ["conversations-with-friends", "the-great-gatsby", "daisy-jones-and-the-six"],
     faq: [
-      { q: { en: "Is the film a faithful adaptation?", zh: "電影忠於原著嗎？" }, a: { en: "Mostly — Flynn wrote the screenplay. The novel goes deeper into both POVs.", zh: "大致是——劇本由作者本人撰寫。小說對雙方 POV 挖得更深。" } },
-      { q: { en: "Why is the ending so divisive?", zh: "為什麼結局爭議這麼大？" }, a: { en: "Because the antagonist suffers no consequences and the protagonist chooses to stay. Many readers want a punishment beat the book refuses to deliver.", zh: "因為反派毫無懲罰，主角選擇留下。很多讀者期待懲罰節奏，而本書拒絕提供。" } },
-      { q: { en: "Is this safer than the marketing suggests?", zh: "比行銷文宣安全嗎？" }, a: { en: "No. The marketing actually undersells the psychological darkness.", zh: "不。行銷其實低估了心理層面的黑暗程度。" } },
+      { q: { en: "Does Gone Girl have a happy ending?", zh: "《控制》是 HE 嗎？" }, a: { en: "No. It resolves without catharsis — technically closed, morally airless. We tag it Ambiguous rather than BE.", zh: "不是。技術上收束但情緒上沒有出口。本站標為 Ambiguous，而非 BE。" } },
+      { q: { en: "Are cheating and infidelity two separate events?", zh: "cheating 和 infidelity 是兩件不同事件嗎？" }, a: { en: "No — same story line, tagged twice because readers search under different words.", zh: "不是——同一條故事線，因為讀者搜尋詞不同才標兩次。" } },
+      { q: { en: "Is the false-accusation subplot on-page?", zh: "假控訴支線是正面描寫嗎？" }, a: { en: "Yes and central. If that trope is a hard pass for you, this is not the book.", zh: "是且屬核心。若這個 trope 是你的硬底線，不建議閱讀。" } },
+      { q: { en: "Is the film faithful?", zh: "電影忠於原著嗎？" }, a: { en: "Mostly — Flynn wrote the screenplay. The novel goes deeper into both POVs and is colder.", zh: "大致是——劇本由作者本人撰寫。小說對雙方 POV 挖得更深，也更冷。" } },
+      { q: { en: "Why is the ending so divisive?", zh: "為什麼結局爭議這麼大？" }, a: { en: "Because the antagonist suffers no consequences and the protagonist chooses to stay. Many readers expect a punishment beat the book refuses to provide.", zh: "因為反派毫無懲罰，主角選擇留下。很多讀者期待懲罰節奏，而本書拒絕提供。" } },
+      { q: { en: "Is this safer than the marketing suggests?", zh: "比行銷文宣安全嗎？" }, a: { en: "No. The marketing actually undersells the psychological darkness and the abuse tag.", zh: "不。行銷實際上低估了心理黑暗與家暴標籤的份量。" } },
     ],
   },
 
