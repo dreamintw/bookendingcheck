@@ -30,16 +30,24 @@ export interface WarningContent {
 // the book's triggers must actually include the warning code. The route
 // double-checks this at render time.
 export const CURATED_BY_WARNING: Record<string, string[]> = {
-  "pet-death": [],
-  "self-harm": [],
-  "sexual-violence": [],
-  suicide: ["no-longer-human", "norwegian-wood"],
-  cheating: [],
+  "pet-death": ["marley-and-me", "the-art-of-racing-in-the-rain"],
+  "self-harm": ["a-little-life", "conversations-with-friends"],
+  "sexual-violence": ["lessons-in-chemistry", "the-handmaids-tale"],
+  suicide: ["no-longer-human", "norwegian-wood", "a-little-life", "the-great-gatsby"],
+  cheating: [
+    "gone-girl",
+    "the-great-gatsby",
+    "daisy-jones-and-the-six",
+    "conversations-with-friends",
+  ],
   death: [
     "the-song-of-achilles",
     "me-before-you",
     "the-fault-in-our-stars",
     "the-time-travelers-wife",
+    "the-seven-husbands-of-evelyn-hugo",
+    "lessons-in-chemistry",
+    "the-great-gatsby",
   ],
 };
 
