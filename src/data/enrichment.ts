@@ -579,28 +579,6 @@ export const BOOK_ENRICHMENT: Record<string, BookEnrichment> = {
     ],
   },
 
-  "conversations-with-friends": {
-    endingTone: {
-      en: "Quietly open. The famous final line ('come and get me') is not a HEA — it is Frances making a choice without resolving the marriage, the friendship, or her own self-understanding. Rooney leaves you mid-breath on purpose.",
-      zh: "安靜的開放結局。著名的最後一句「come and get me」並非 HEA——而是 Frances 在沒有解決婚姻、友誼或自我認識的前提下做出選擇。Rooney 刻意把你停在半口氣的位置。",
-    },
-    warningsExplained: {
-      en: "On-page infidelity from the protagonist's POV (high — sustained, not a single mistake), self-harm depicted with literary distance but specifically, endometriosis pain handled with medical detail, emotional distance played as the texture of every relationship. Sex is on-page and frank but written cool, not erotic.",
-      zh: "從主角 POV 描寫的正面外遇（high——是持續性的，不是一次錯誤）、自傷以文學距離但具體呈現、子宮內膜異位症的疼痛有醫學細節、情緒疏離是所有關係的底色。性場景正面且直接，但筆法冷感、非情色。",
-    },
-    verdict: {
-      en: "Read if you want a precise, cool-voiced novel about young people navigating an affair without easy moral framing. Skip if cheating from the protagonist's POV is a hard pass, or if you need narrative warmth.",
-      zh: "想讀一本筆觸精準、語氣冷靜，描寫年輕人面對外遇而不給道德便利答案的小說：請讀。若主角 POV 出軌是硬底線、或你需要敘事溫度：請略。",
-    },
-    similarByEnding: ["the-name-of-the-wind"],
-    similarByWarning: ["gone-girl", "the-paper-palace", "madame-bovary"],
-    faq: [
-      { q: { en: "Is this the same vibe as Normal People?", zh: "和《正常人》氛圍一樣嗎？" }, a: { en: "Adjacent but cooler and more group-dynamics-driven; Normal People is two-handed, this is four-handed.", zh: "相鄰但更冷、更注重群體動力學；《正常人》是雙人戲，本書是四人戲。" } },
-      { q: { en: "Is the cheating handled critically?", zh: "外遇有被批判性處理嗎？" }, a: { en: "Examined rather than judged. Readers who need the text to condemn the affair will be frustrated.", zh: "是被審視而非被審判。需要文本明確譴責外遇的讀者會挫折。" } },
-      { q: { en: "How explicit is the sex?", zh: "性描寫多露骨？" }, a: { en: "Frank but not erotic — described, not staged.", zh: "直接但非情色——是描述，而非上演。" } },
-      { q: { en: "Should I watch the show first?", zh: "要先看影集嗎？" }, a: { en: "No. The novel's interiority is the point and the show flattens it.", zh: "不要。小說的內心戲是核心，影集會把它壓平。" } },
-    ],
-  },
 
   "piranesi": {
     endingTone: {
