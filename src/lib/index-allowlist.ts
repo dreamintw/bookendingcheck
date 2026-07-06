@@ -48,6 +48,17 @@ export const BOOK_ALLOW = new Set<string>([
   "it-ends-with-us",
   "the-time-travelers-wife",
   "red-white-and-royal-blue",
+  // Phase 5B — 10 deeply enriched additions
+  "a-little-life",
+  "the-seven-husbands-of-evelyn-hugo",
+  "lessons-in-chemistry",
+  "gone-girl",
+  "the-great-gatsby",
+  "daisy-jones-and-the-six",
+  "marley-and-me",
+  "the-art-of-racing-in-the-rain",
+  "the-handmaids-tale",
+  "conversations-with-friends",
 ]);
 
 export const AUTHOR_ALLOW = new Set<string>([
