@@ -627,6 +627,212 @@ export const BOOK_ENRICHMENT: Record<string, BookEnrichment> = {
       { q: { en: "Why is the labyrinth in Piranesi so important?", zh: "《皮拉內西》中的迷宮（The House）為什麼這麼重要？" }, a: { en: "The labyrinth is not just a setting — it is the book's argument: that a world can be both a prison and a home, both alien and beloved. The narrator's relationship with the labyrinth is the emotional spine, which is why the ending refuses to either condemn or celebrate it.", zh: "迷宮（The House）不只是場景，更是全書的論點：一個世界可以同時是監獄也是家、既陌生又被深愛。主角與迷宮的關係是情緒主軸，這也是結局拒絕對它做出單一評判的原因。" } },
     ],
   },
+
+  // ============================================================ Phase 5B ==
+  // Ten hand-authored enrichments recovered for BOOK_ALLOW. Each entry is
+  // written independently — no shared template. Sensitive topics (self-harm,
+  // suicide, sexual violence, pet death) intentionally avoid methods, tools,
+  // locations, and graphic detail.
+
+  "a-little-life": {
+    endingTone: {
+      en: "A Little Life ends on the most severe BE we tag in our catalog. Hanya Yanagihara does not build toward catharsis; she builds toward attrition. By the final quarter Jude's decades of trauma have accumulated to the point where the ending is not a twist but a weight the novel has been carrying since page one. Readers who have already noticed how narrowly the book keeps him alive in the middle sections should treat the last 100 pages as the arrival of what the prose has been warning about all along. The ending is not gratuitous — it is the logical endpoint of the character study — but it is unrelieved. There is no epilogue softening, no found-family miracle, no time-skip that recovers him. If you have picked this book up because the friendship-across-decades premise sounded warm, please recalibrate now.",
+      zh: "《渺小一生》的結局是本站標記中最沉重的 BE。柳原漢雅並不是把讀者引向宣洩，而是引向消耗。當你讀到最後四分之一，Jude 累積數十年的創傷已經到了無法再承接的位置——這個結局不是反轉，而是全書從第一頁就在承受的重量終於落地。如果你在中段就已經注意到作者是多麼勉強才讓他活下來，那麼最後 100 頁請當作前面所有預警的兌現。這個結局並非為了衝擊而衝擊，而是整部人物研究的邏輯終點，但它沒有任何緩衝，沒有後記式的釋懷，沒有「新家人」奇蹟，也沒有任何時間跳躍把他救回來。如果你因為「四位大學好友跨數十年友情」的簡介而拿起這本書，請在這裡先重新校準期待。",
+    },
+    warningsExplained: {
+      en: "The three high-intensity tags on this book — csa, self-harm, and suicide — are not moments but a continuous texture. csa is a background history that shapes every present-day scene; the novel returns to it in progressively less obscured layers, so a reader who was fine at page 200 can be blindsided at page 500. Self-harm is depicted repeatedly on-page over years of story-time; it is not framed as recovery arc, and there is no point at which the tag stops applying. This site does not describe method, instrument, or clinical detail for any of these categories, and neither does this page. If you are currently in a period where any of these tags applies to your own life, the honest recommendation is not to read this novel now; it is not a book to test yourself with. Adjacent milder content (chronic pain, disordered eating, abusive adult relationships) is also present and sustained. Note: csa is tracked separately from sexual-violence in our data model and we do not auto-map one to the other.",
+      zh: "本書三個高強度標籤——csa、自傷、自殺——不是單一片段，而是連續的底色。csa 是形塑所有現在時線的背景史，作者以層層剝開的方式反覆回訪，因此在 200 頁時還撐得住的讀者，可能在 500 頁時被擊倒。自傷在故事橫跨數年的時間線裡反覆正面出現，並沒有被框架為「復原歷程」，也沒有任何一刻這個標籤停止適用。本站對這三類主題不描述方法、工具或臨床細節，本頁也一樣。若你目前生活中正處於任何一個標籤的狀態，誠實的建議是現在不要讀這本書——它不是可以拿來自我試煉的作品。相關的較輕內容（慢性疼痛、飲食失調、成年後的受虐關係）也持續存在。註：本站資料模型中 csa 與 sexual-violence 分開追蹤，不會自動視為等價。",
+    },
+    verdict: {
+      en: "Skip for now for most readers, especially first-time readers of Yanagihara. Read only if you are emotionally stable, want an ambitious, deliberately punishing character study, and are already familiar with fiction that refuses to redeem its protagonist. There is no middle setting. This is not a book to read on a whim, on holiday, or during a difficult month.",
+      zh: "對絕大多數讀者，尤其是初次接觸柳原漢雅的讀者，建議「暫緩」。只有在情緒穩定、想閱讀一部宏大且刻意殘酷的人物研究、且已經熟悉「拒絕救贖主角」這類小說的讀者，才建議讀。沒有折衷選項。這不是一本可以隨手拿起、假期閱讀、或在辛苦的月份裡挑戰自己的書。",
+    },
+    similarByEnding: ["no-longer-human", "the-song-of-achilles"],
+    similarByWarning: ["no-longer-human"],
+    faq: [
+      { q: { en: "Does A Little Life have a happy ending?", zh: "《渺小一生》是 HE 嗎？" }, a: { en: "No. It is tagged BE with our highest confidence. The novel resolves toward loss, not recovery.", zh: "不是。本書標為 BE 且信心分數是本站最高等級。全書導向失去，而非復原。" } },
+      { q: { en: "Is A Little Life as heavy as people say?", zh: "《渺小一生》真的像大家說的那麼沉重嗎？" }, a: { en: "Yes, and it is heavy in a sustained way rather than in isolated scenes — that is why so many readers report they had to stop mid-book.", zh: "是，而且是持續性的沉重，不是零星幾段——這也是為什麼很多讀者反映他們讀到中途就放下了。" } },
+      { q: { en: "Should I read this if I have my own trauma history?", zh: "如果我自己有相關創傷經歷，該讀嗎？" }, a: { en: "We do not recommend it in that case. This is a novel to read when you are stable, not one to read as a mirror.", zh: "在這種情況下我們不建議閱讀。這本書適合在你狀態穩定時閱讀，不適合當作照映自身經歷的鏡子。" } },
+      { q: { en: "Are the hardest scenes described in detail?", zh: "最沉重的段落是否具體描寫？" }, a: { en: "Some are on-page and specific; others are handled with distance. The layering is part of why the book lands so hard by the end. This page does not describe those scenes.", zh: "部分場景是正面且具體的，部分以距離呈現。這種分層正是本書後段特別沉重的原因。本頁不描述這些場景。" } },
+      { q: { en: "Is this the same tone as her earlier work?", zh: "本書調性和她較早的作品一樣嗎？" }, a: { en: "No — The People in the Trees is dark but structurally colder; A Little Life is dark and emotionally close.", zh: "不一樣——《林中祕族》黑暗但結構上冷距，《渺小一生》黑暗且情感貼近讀者。" } },
+      { q: { en: "Can I check the ending without reading the whole book?", zh: "可以在不讀完整本書的情況下先看結局嗎？" }, a: { en: "Yes — use the hard spoiler block on this page. It is folded by default and you have to click to reveal.", zh: "可以——請用本頁的完整劇透區塊，預設折疊，需要主動點擊才會展開。" } },
+    ],
+  },
+
+  "the-seven-husbands-of-evelyn-hugo": {
+    endingTone: {
+      en: "Bittersweet, and unusually clean about it. Taylor Jenkins Reid uses the frame narrative — an aging star dictating her memoir to a journalist — to hold two truths in the same hand at once: Evelyn's love story with Celia was real and lasting, and both women die by the end of the novel. Neither fact is used to cancel the other. The ending is not sad in the way a shock-ending is sad; it is sad in the way a completed life is sad, with all the wins still counted. If you go in expecting a HE, you will be disappointed. If you go in expecting a modern take on an old-Hollywood scandal memoir with a genuine queer love story at its center, the ending lands exactly where the book has been aiming.",
+      zh: "苦甜，而且對「苦」與「甜」的界線異常清楚。泰勒・珍金斯・里德以「老明星向記者口述回憶錄」的框架，同時把兩個事實放在同一隻手中：Evelyn 與 Celia 的愛情是真實而持久的；兩位女性最終都死去。這兩個事實並不互相取消。這本書的悲不是驚嚇式的悲，而是「一段完整人生走到終點」的那種悲——所有得到的仍然算數。若你期待 HE 會失望；若你期待一本以真實酷兒愛情為核心、帶有復古好萊塢醜聞回憶錄氣質的作品，這個結局正是它一直朝向的地方。",
+    },
+    warningsExplained: {
+      en: "Three tags apply: domestic-abuse (on-page physical and financial abuse within one of Evelyn's marriages, sustained across several chapters), death (a partner dies of illness on-page, and Evelyn herself dies inside the frame story), and outing / closeting pressure (mid-intensity but present throughout — an era-specific structural threat rather than a scene). The domestic abuse is not extended for shock, but it is not offstage either; readers who are sensitive to physical intimate-partner violence should know it is depicted rather than referenced. There is on-page sex but nothing we would tag as sexual-violence. The overall register stays glamorous even when the content is hard, which some readers find soothing and others find dissonant.",
+      zh: "三個標籤適用：domestic-abuse（Evelyn 其中一段婚姻裡有正面描寫的肢體與經濟虐待，橫跨數章持續存在）、death（伴侶因病於書中死亡，Evelyn 本人在框架故事中也死去）、outing／closeting pressure（強度中等但貫穿全書——這是那個年代的結構性威脅，不是單一場景）。家暴內容並非為了衝擊而拉長，但也並非場外處理；對親密關係暴力敏感的讀者請注意這是正面描寫、非僅提及。書中有正面性場景，但沒有可標為 sexual-violence 的內容。整體語氣即使在沉重內容時仍維持華麗調性——這對部分讀者是撫慰，對另一部分讀者則感到違和。",
+    },
+    verdict: {
+      en: "Read for most readers, with one caveat: know before you start that this is a bittersweet love story with domestic-abuse content, not a glossy Hollywood romp. Read with caution if either intimate-partner violence or the loss of a queer partner to illness is currently a hard topic for you. Skip only if you actively refuse bittersweet endings.",
+      zh: "對絕大多數讀者「推薦閱讀」，但有一項提醒：進場前請理解這是一部含家暴內容的苦甜愛情故事，不是明亮的好萊塢輕鬆讀物。若親密關係暴力或酷兒伴侶因病離世目前是你的難以承受題材，請「謹慎閱讀」。只有堅決拒絕苦甜結局的讀者才建議「跳過」。",
+    },
+    similarByEnding: ["daisy-jones-and-the-six", "the-remains-of-the-day", "norwegian-wood"],
+    similarByWarning: ["daisy-jones-and-the-six"],
+    faq: [
+      { q: { en: "Is Evelyn Hugo a happy ending?", zh: "《伊芙琳・雨果的七個丈夫》是 HE 嗎？" }, a: { en: "No. It is bittersweet — the central love is fulfilled and honored, but both women die before the book closes.", zh: "不是。是苦甜結局——核心愛情被實現且被鄭重承認，但兩位女性都在結局前死去。" } },
+      { q: { en: "Is this a queer love story?", zh: "這是酷兒愛情故事嗎？" }, a: { en: "Yes. Despite the framing around seven husbands, the one great love of Evelyn's life is a woman named Celia St. James.", zh: "是。儘管敘事框架圍繞著七段婚姻，Evelyn 一生真正的愛人是女性 Celia St. James。" } },
+      { q: { en: "How graphic is the domestic abuse?", zh: "書中家暴描寫多具體？" }, a: { en: "It is on-page and physical, but not lingered on for shock. Readers who avoid intimate-partner violence should still treat this as a heavy tag.", zh: "屬正面描寫且涉及肢體，但並未為了衝擊而拉長。避免親密關係暴力題材的讀者仍應視為重標籤。" } },
+      { q: { en: "Is there on-page sex?", zh: "有正面性場景嗎？" }, a: { en: "Yes but restrained — sensual rather than explicit. No sexual-violence tag applies.", zh: "有，但克制——感官為主，不算露骨。無 sexual-violence 標籤適用。" } },
+      { q: { en: "Do I need to read Daisy Jones first?", zh: "需要先讀《黛西・瓊斯》嗎？" }, a: { en: "No. There is a small crossover reference but each novel stands alone.", zh: "不用。兩本之間有輕微交叉提及，但各自可獨立閱讀。" } },
+      { q: { en: "Will this book make me cry?", zh: "這本會讓我哭嗎？" }, a: { en: "Many readers do cry in the final chapters. The tone is elegiac rather than punishing.", zh: "很多讀者在最後幾章會哭。整體調性是輓歌式的，而非折磨式的。" } },
+    ],
+  },
+
+  "lessons-in-chemistry": {
+    endingTone: {
+      en: "Bittersweet, and structurally split. The novel loses its second protagonist — Calvin — very early, and the rest of the book is Elizabeth Zott rebuilding a life around that absence. By the final chapters she has recovered a scientific identity, a community that supports her, and public recognition, but the loss is never treated as a plot obstacle that gets overcome; it stays a shape she works around. The tone is warm and often funny even while it is grief-processing, which is unusual and part of why the ending works. This is not a HE because the primary romance is permanently over by page 100. It is not a BE because the protagonist ends the book with more agency than she started with. Bittersweet is the accurate label.",
+      zh: "苦甜，且結構上一分為二。本書很早就失去第二位主角 Calvin，其餘篇幅是 Elizabeth Zott 圍繞著這個缺席重建人生。最後幾章她已找回科學身分、擁有支持她的社群、獲得公眾肯定，但失去從未被當作可以被克服的劇情障礙，而是被作為她繞行的形狀留下來。整體調性即使在處理悲傷時仍溫暖且時常幽默——這在同類作品中不常見，也是這個結局能成立的關鍵。這不是 HE，因為主要愛情關係在 100 頁前就永遠結束了；也不是 BE，因為主角在書末擁有比開頭更多的自主權。苦甜是最準確的分類。",
+    },
+    warningsExplained: {
+      en: "Three tags: sexual-violence (an on-page assault occurs early in the book and is a formative event for the protagonist; it is depicted rather than merely referenced, though the prose is restrained), death (Calvin dies early — this is not a spoiler, most readers hit it in the first quarter), and grief (sustained across the majority of the novel). The tone often reads as satire, which is not the same as being lightweight; several readers report being caught off-guard by how heavy the underlying content is. Period-typical misogyny is present throughout as texture. There is no on-page pet death despite an important dog character.",
+      zh: "三個標籤：sexual-violence（性侵事件於前段正面出現，是主角人生的形塑性事件；屬正面描寫而非僅提及，但筆法克制）、death（Calvin 早逝——這不算劇透，多數讀者在前四分之一就會遇到）、grief（貫穿本書大部分篇幅）。整體調性常常帶有諷刺喜劇感，但這不等於內容輕薄；有不少讀者反映他們被「表層幽默、底層沉重」的落差打了措手不及。時代性別歧視作為底色貫穿全書。書中有一隻重要的狗，但沒有正面寵物死亡描寫。",
+    },
+    verdict: {
+      en: "Read for most readers who go in knowing that a) the primary love story ends early and b) sexual-violence is on-page. Read with caution if you specifically avoid SA content, even when handled with restraint. Skip if you were looking for a light TV-tie-in comfort read; the show softens edges the novel keeps.",
+      zh: "對多數讀者「推薦」，前提是理解：一、主要愛情故事很早結束；二、性侵屬正面描寫。若你明確避免 SA 題材，即使筆法克制也建議「謹慎閱讀」。如果你想找的是輕鬆的影集延伸療癒讀物，建議「跳過」——影集淡化了小說保留的鋒利邊角。",
+    },
+    similarByEnding: ["the-seven-husbands-of-evelyn-hugo", "daisy-jones-and-the-six"],
+    similarByWarning: ["the-handmaids-tale"],
+    faq: [
+      { q: { en: "Is Lessons in Chemistry a happy ending?", zh: "《化學課》是 HE 嗎？" }, a: { en: "No — it is bittersweet. The romance ends early; the protagonist's professional and community arc lands well.", zh: "不是——是苦甜。愛情線很早結束，主角的職業與社群線收得不錯。" } },
+      { q: { en: "How graphic is the sexual assault?", zh: "性侵場景多具體？" }, a: { en: "It is on-page and specific enough to warrant the high-intensity tag, but the prose is not lingered or lurid. Readers avoiding SA content should still skip.", zh: "屬正面描寫，具體程度足以標為高強度，但筆法並不停留或渲染。避免 SA 題材的讀者仍應跳過。" } },
+      { q: { en: "Is the book the same as the Apple TV show?", zh: "這本書和 Apple TV 影集內容一樣嗎？" }, a: { en: "The plot is similar but the show softens several of the heaviest beats. If you liked the show, expect the book to be more direct.", zh: "劇情相似，但影集淡化了幾個最沉重的段落。若你喜歡影集，請預期書比較直接。" } },
+      { q: { en: "Does the dog die?", zh: "狗會死嗎？" }, a: { en: "No pet-death tag applies for this book. The dog is important throughout.", zh: "本書不適用 pet-death 標籤。狗全書都很重要。" } },
+      { q: { en: "Is this a romance novel?", zh: "這是言情小說嗎？" }, a: { en: "No. It uses a doomed romance as a springboard for a feminist workplace-and-motherhood novel.", zh: "不是。它以一段注定不圓滿的愛情作為跳板，實際上是女性主義的職場與母職小說。" } },
+      { q: { en: "Do I need to know 1960s chemistry?", zh: "需要懂 1960 年代化學嗎？" }, a: { en: "No — the chemistry is used as voice and metaphor, not as puzzle content.", zh: "不用——化學在書中是語調與比喻，不是解謎內容。" } },
+    ],
+  },
+
+  "daisy-jones-and-the-six": {
+    endingTone: {
+      en: "Bittersweet in a very specific way: the band does not survive, the tour does not survive, but the marriage at the center of the emotional tension does survive, and the two people whose chemistry drove the crisis both end the book alive and, eventually, well. Taylor Jenkins Reid uses the oral-history format to keep the ending honest — every character narrates their own version, and the version you finish on depends on which voice you trust. If you came for the will-they-won't-they, you get a real answer. If you came for a rock-and-roll ending where the band gets back together, you do not.",
+      zh: "本書的苦甜有非常具體的走向：樂團沒有存活，巡演沒有存活，但情感張力核心的那段婚姻存活了，而讓危機發生的兩個人在書末都活著，且最終過得還可以。作者用口述史的形式讓結局保持誠實——每個角色講自己的版本，你讀到最後停在哪個版本，取決於你相信誰的聲音。若你為了那段「會不會在一起」的張力而來，你會得到明確答案；若你想看的是「樂團重組、皆大歡喜」的搖滾式結局，那本書不會給你。",
+    },
+    warningsExplained: {
+      en: "Three tags: cheating and infidelity (treated here as the same relationship line, not two separate events — emotional-affair tension is sustained across the second half; whether it crosses into physical infidelity is deliberately handled with narrative ambiguity that the format supports), and addiction (drug and alcohol dependency in multiple band members, on-page and specific, including one long relapse sequence). The addiction arc includes recovery for one character but is not framed as an easy or complete recovery. No sexual violence. The 1970s music-industry setting includes sexism and objectification as texture.",
+      zh: "三個標籤：cheating 與 infidelity（在本書處理上是同一條感情線的兩個標記，不是兩件不同事件——情感外遇張力貫穿後半段，是否跨越到肢體外遇，作者刻意以「口述史格式支持的敘事模糊性」處理），以及 addiction（多位團員的藥物與酒精依賴，屬正面描寫且具體，包含一段較長的復發過程）。成癮線包含一位角色的復原，但作者並未把它寫成容易或完整的復原。無性暴力。1970 年代音樂產業背景中，性別歧視與物化作為底色存在。",
+    },
+    verdict: {
+      en: "Read for readers who enjoy the oral-history format, character-driven ensemble drama, or music-industry period pieces, and who are OK with sustained cheating tension even if you generally dislike the trope. Read with caution if addiction relapse content is currently hard. Skip if you strictly avoid any cheating story or need a HE for both leads.",
+      zh: "喜歡口述史敘事、角色驅動的群戲、或音樂產業年代題材，並且能接受持續性的出軌張力（即使你平常不喜歡這個 trope）：推薦。若成癮復發題材目前對你困難，請「謹慎閱讀」。若你嚴格避免任何出軌故事、或需要雙主角 HE：建議跳過。",
+    },
+    similarByEnding: ["the-seven-husbands-of-evelyn-hugo", "lessons-in-chemistry"],
+    similarByWarning: ["conversations-with-friends", "gone-girl"],
+    faq: [
+      { q: { en: "Do Daisy and Billy end up together?", zh: "Daisy 和 Billy 最後在一起嗎？" }, a: { en: "No. That is the point the whole book is built around. Full spoilers are in the folded block on this page.", zh: "沒有。這正是全書結構圍繞的核心答案。完整劇透在本頁折疊區。" } },
+      { q: { en: "Is the cheating on-page?", zh: "出軌是正面描寫嗎？" }, a: { en: "The emotional affair is on-page and sustained. Whether it becomes physical is left deliberately ambiguous — different narrators give different versions.", zh: "情感外遇是正面且持續的描寫。是否演變為肢體外遇則刻意保留模糊，不同敘述者給出不同版本。" } },
+      { q: { en: "Is the show the same as the book?", zh: "影集和書一樣嗎？" }, a: { en: "The show resolves the ambiguity in one specific direction and adds scenes. The book is cooler and less definitive.", zh: "影集把模糊部份朝特定方向定調，並增加了場景。書更冷、更不下定論。" } },
+      { q: { en: "How heavy is the addiction content?", zh: "成癮內容多沉重？" }, a: { en: "Heavy but not gratuitous. There is a long relapse sequence and an on-page overdose scare. Recovery is shown but not sentimentalized.", zh: "沉重但不濫用。有一段較長的復發過程與一場正面的用藥過量驚險場景。復原有被呈現，但未被過度感傷化。" } },
+      { q: { en: "Do I need to read Evelyn Hugo first?", zh: "需要先讀《伊芙琳・雨果》嗎？" }, a: { en: "No — the crossover is a single reference. Either book stands alone.", zh: "不用——交叉只是單一提及。兩本書皆可獨立閱讀。" } },
+      { q: { en: "Is the music real?", zh: "書中的音樂是真的嗎？" }, a: { en: "The lyrics are printed in the back matter; the band and songs are fictional but the industry beats are based on documented rock history.", zh: "歌詞印在書末附錄；樂團與歌曲是虛構的，但產業節奏取材自可考證的搖滾史。" } },
+    ],
+  },
+
+  "marley-and-me": {
+    endingTone: {
+      en: "Bittersweet — pet-death bittersweet, specifically. This memoir is exactly what the title suggests: John Grogan and his family live with a very difficult dog for the entire dog's natural life. The ending is the ending you already fear when you pick the book up. Marley dies in old age of causes appropriate to his size and breed; the family is with him. The book does not treat the death as a twist or as a punishment for anything; it treats it as the reason the memoir exists. If you have very recently lost a companion animal, this is not the read to pick up; if you are further out from a loss and want to sit with a warm-hearted, funny book that also honors an ending, it is one of the cleanest reads in the pet-memoir category.",
+      zh: "苦甜——具體來說是「寵物死亡」意義下的苦甜。這本回憶錄就是書名所暗示的內容：葛羅根一家陪一隻非常難搞的狗走完牠自然的一生。結局就是你拿起這本書時已經預感的結局。Marley 在年老時因合乎品種與體型的原因離世，家人陪伴著。書中並沒有把牠的死亡當作反轉或懲罰，而是把它當作這本回憶錄之所以存在的理由。若你剛失去陪伴動物，請不要現在讀這本書；若你距離失去已有一段時間，願意與一本溫暖、幽默、且鄭重對待結局的書共處，這本是寵物回憶錄類中最清爽的選擇之一。",
+    },
+    warningsExplained: {
+      en: "Two tags: pet-death (high-intensity, on-page in the final chapter — this is the whole reason people search for pet-death warnings on this book) and grief (mid-intensity, present after the death and briefly across earlier moments where illness is anticipated). This page confirms the tag exists but does not describe the death scene or its timing beyond what the marketing already reveals. No animal cruelty tag; Marley's chaotic behavior causes household damage, not harm. No content that would qualify for the sexual-violence, self-harm, or suicide tags.",
+      zh: "兩個標籤：pet-death（高強度，正面描寫於最後一章——這正是大家搜尋這本書寵物避雷的原因）、grief（中強度，於死亡之後與早段幾個預示疾病的時刻出現）。本頁只確認標籤存在，不描述死亡場景或其發生時機，除了行銷文宣本身已透露的內容之外。無動物虐待標籤；Marley 的混亂行為造成的是家中器物損壞，不是傷害。無任何內容適用性暴力、自傷或自殺標籤。",
+    },
+    verdict: {
+      en: "Read for readers who love dogs and want a warm, funny memoir that ends the way real dog stories end. Read with caution if a pet in your life is elderly right now — the book is honest about aging. Skip if you have very recently lost a companion animal, or if you strictly avoid pet-death in fiction and memoir.",
+      zh: "喜歡狗、想讀一本溫暖幽默、並以真實狗故事的方式收尾的回憶錄：推薦。若你家中目前有一隻年長的寵物，請「謹慎閱讀」——書對衰老的處理很誠實。若你剛失去陪伴動物，或嚴格避免虛構與回憶錄中的寵物死亡：跳過。",
+    },
+    similarByEnding: ["the-art-of-racing-in-the-rain"],
+    similarByWarning: ["the-art-of-racing-in-the-rain"],
+    faq: [
+      { q: { en: "Does Marley die at the end?", zh: "Marley 最後會死嗎？" }, a: { en: "Yes. The memoir covers his full life, and he dies of age-related causes near the end. It is not framed as a twist.", zh: "會。回憶錄涵蓋牠完整的一生，末段因年老相關原因離世。這並非以反轉方式呈現。" } },
+      { q: { en: "Is the death scene detailed?", zh: "死亡場景描寫具體嗎？" }, a: { en: "It is on-page and emotional, but the medical detail is restrained. This page does not describe it further.", zh: "屬正面描寫且情感濃厚，但醫療細節克制。本頁不再進一步描述。" } },
+      { q: { en: "Is the book like the film?", zh: "書和電影像嗎？" }, a: { en: "The film is faithful to the shape of the book. The book has more granular detail about the family's life around the dog.", zh: "電影對書的整體形狀是忠實的。書對家庭日常的描寫更細。" } },
+      { q: { en: "Is there any other pet in the book?", zh: "書中還有其他寵物嗎？" }, a: { en: "The focus is on Marley. Later dogs are mentioned briefly at the very end and are not the emotional load.", zh: "焦點在 Marley 身上。書末簡短提及後來的狗，但不是情感重量所在。" } },
+      { q: { en: "Should I read this after losing a pet?", zh: "剛失去寵物可以讀嗎？" }, a: { en: "We do not recommend it within the first few months of a loss. It is a book for later.", zh: "失去寵物後最初幾個月不建議閱讀。這是一本適合稍晚再讀的書。" } },
+      { q: { en: "Is it appropriate for children?", zh: "適合兒童閱讀嗎？" }, a: { en: "Older children can read it, but expect real conversations about pet mortality afterward.", zh: "較大的兒童可以閱讀，但請預期讀後會需要與孩子談論寵物死亡的真實對話。" } },
+    ],
+  },
+
+  "the-art-of-racing-in-the-rain": {
+    endingTone: {
+      en: "Bittersweet. Garth Stein tells the story from the dog's point of view, and the dog is dying across the entire novel; the closing chapters are the completion of a life the narrator has known from page one is ending. What lifts this out of straightforward tragedy is the book's central conceit — Enzo believes he will be reborn human — so the ending is written as a departure rather than a finish. Whether that framing helps or hurts is very personal: some readers find it comforting, others find it makes the peaceful death land harder. On our scale it is Bittersweet, not BE, because Denny's own arc resolves and the dog's death is presented as a peaceful crossing rather than as a punishment.",
+      zh: "苦甜。加思・斯坦以狗的視角敘述，而這隻狗在整本書中都在走向死亡；最後幾章是敘事者從第一頁就知道即將完成的一段生命的收尾。讓本書不落入純粹悲劇的關鍵，是它的中心設定——Enzo 相信自己會轉世為人——所以結局被寫成一場「離去」，而非「結束」。這種框架對你是撫慰還是加重打擊，非常個人：有些讀者覺得舒緩，有些讀者反而覺得那場平靜的死亡更加重。本站標為 Bittersweet 而非 BE，原因是 Denny 自身的線收得完整，狗的死亡也被呈現為平和的離別而非懲罰。",
+    },
+    warningsExplained: {
+      en: "Two tags: pet-death (high, on-page but written as a peaceful end-of-life rather than an accident or cruelty scene — this is the load-bearing tag for most readers) and domestic-abuse (mid, framed here as family-conflict; a custody dispute involves manipulation and controlling behavior toward Denny by his in-laws, and includes a false accusation subplot). The two tags are distinct concerns and should be weighed separately — a reader who is fine with a peaceful pet death may still be uncomfortable with the manipulative-family subplot, and vice versa. Not every animal-narrated novel gets a pet-death tag by default; we only tag it when the animal death is on-page or centrally referenced.",
+      zh: "兩個標籤：pet-death（高強度，正面描寫但被寫成平和的善終，不是意外或虐待場景——對多數讀者這是主要承重標籤）、domestic-abuse（中強度，在本書中呈現為家庭衝突；一場撫養權爭議涉及對 Denny 的操控與控制行為，還有一條假控訴的支線）。這兩個標籤是不同性質的顧慮，應分別衡量——能接受平和寵物離世的讀者，未必能接受操控式家庭支線，反之亦然。並非所有以動物視角敘事的小說都自動獲得 pet-death 標籤，本站只在動物死亡屬正面描寫或核心提及時才標記。",
+    },
+    verdict: {
+      en: "Read for readers who want a dog-narrated novel with philosophical weight and can handle a peaceful on-page pet death. Read with caution if either recent pet loss or a difficult custody / in-law situation applies to you personally. Skip if you cannot sit with pet death in fiction under any framing.",
+      zh: "想讀一本以狗視角、帶哲思厚度的小說，且能接受一場平和且正面的寵物死亡：推薦。若你近期失去寵物、或自身正處於困難的撫養權／姻親情境，請「謹慎閱讀」。若無論框架如何都無法接受虛構中的寵物死亡：跳過。",
+    },
+    similarByEnding: ["marley-and-me"],
+    similarByWarning: ["marley-and-me"],
+    faq: [
+      { q: { en: "Does the dog die?", zh: "狗會死嗎？" }, a: { en: "Yes, at the end and on-page, written as a peaceful crossing. This page does not describe the scene.", zh: "會，於結局處正面描寫，寫成平和的離別。本頁不描述具體場景。" } },
+      { q: { en: "Is this the same as the film?", zh: "和電影一樣嗎？" }, a: { en: "The film keeps the shape but softens the custody-conflict subplot. The novel is more critical of the in-laws.", zh: "電影保留整體結構但淡化撫養權支線。小說對姻親角色的批判更明顯。" } },
+      { q: { en: "Why is domestic-abuse tagged?", zh: "為什麼標了 domestic-abuse？" }, a: { en: "The custody subplot involves controlling behavior and a false accusation. It is not intimate-partner violence in the usual sense; the tag captures the coercive-family pattern.", zh: "撫養權支線涉及控制行為與假控訴。這不是一般意義上的親密關係暴力，該標籤是為了標記強制性家庭模式。" } },
+      { q: { en: "Is the dog's voice cloying?", zh: "狗的敘述會過度煽情嗎？" }, a: { en: "It leans philosophical rather than cutesy. Reader reactions split on whether it works for them.", zh: "偏哲思而非賣萌。讀者反應兩極，取決於個人是否買帳。" } },
+      { q: { en: "Is this heavier or lighter than Marley & Me?", zh: "這本比《馬利與我》重還是輕？" }, a: { en: "Structurally lighter around the death itself but heavier around family conflict. Different weight profile, similar final emotion.", zh: "在死亡本身的結構處理上較輕，但在家庭衝突上較重。承重分佈不同，最後情緒相近。" } },
+      { q: { en: "Should I read this after losing a pet?", zh: "剛失去寵物可以讀嗎？" }, a: { en: "We suggest waiting. The animal POV amplifies the loss for many recent-bereavement readers.", zh: "建議稍候。動物視角會放大剛失去寵物讀者的悲傷。" } },
+    ],
+  },
+
+  "the-handmaids-tale": {
+    endingTone: {
+      en: "Open ending, deliberately. Atwood ends Offred's own narrative with her stepping into a van — she does not know whether her captors or the resistance sent it, and neither do we. The Historical Notes appendix reframes the entire novel as recovered testimony read at an academic conference in a distant future, which strongly implies the regime eventually fell but tells us nothing definitive about Offred herself. This is textbook OE, not Ambiguous: the world's shape is answered, the individual's fate is not. Readers who came from the television series should know that the novel ends where the show's first season ends and does not continue.",
+      zh: "刻意的開放結局。愛特伍讓 Offred 的敘述在她走進一輛車時中止——她不知道車是被捕她的一方派來、還是抵抗組織派來，我們也不知道。書末〈歷史記註〉將整部小說重新框架為「遙遠未來一場學術會議上被讀出的、被搶救下來的口述證言」，這強烈暗示極權政體最終瓦解，但對 Offred 本人的命運未提供任何定論。這是教科書級的 OE，而不是 Ambiguous：世界的形狀被回答了，個人的命運沒有。從影集入坑的讀者請注意，小說結束在影集第一季結束的位置，之後沒有續集內容。",
+    },
+    warningsExplained: {
+      en: "Two central tags: sexual-violence (the ritualized 'Ceremony' is central to the world of the book and is depicted on-page; the prose is deliberately clinical rather than explicit, but the tag firmly applies) and control (theocratic authoritarian control saturates every page — restrictions on reading, movement, speech, dress, and reproduction). This page does not describe the Ceremony scene beyond confirming the tag. Adjacent content includes references to punishments (public hangings, off-page torture), forced labor, and forced surrogacy. Offred's inner voice is dry and controlled; the horror of the setting lands through juxtaposition rather than through graphic detail. The novel takes a specific political and religious system as its target — it is fiction, not medical, legal, or personal-safety advice.",
+      zh: "兩個核心標籤：sexual-violence（儀式化的「典禮」是這個世界的核心，屬正面描寫；筆法刻意採用臨床冷距而非露骨風格，但該標籤明確適用）、control（神權極權控制滲透每一頁——閱讀、行動、言論、衣著、生育均受限）。本頁不描述「典禮」場景，只確認標籤存在。相關內容包含刑罰（公開絞刑、場外酷刑）、強迫勞動與強迫代孕的提及。Offred 的內在聲音乾燥而克制，恐怖是透過並置而非血腥細節傳達。本書針對特定政治與宗教制度作為批判對象——它是小說，不是醫療、法律或個人安全建議。",
+    },
+    verdict: {
+      en: "Read for readers who want foundational dystopian fiction and can sit with an open ending that refuses closure on the individual. Read with caution if sexual-violence content or authoritarian imagery is currently hard for you — the clinical prose does not soften it. Skip if you strictly need resolved endings, or are looking for the show's continued arcs.",
+      zh: "想讀奠基級反烏托邦小說、且能接受「拒絕給個人結局」的開放結局：推薦。若性暴力題材或極權意象目前對你困難，請「謹慎閱讀」——臨床冷距的筆法並不會讓它變得比較容易承受。若你嚴格需要明確收束的結局，或想接續影集後段劇情：跳過。",
+    },
+    similarByEnding: ["conversations-with-friends", "the-remains-of-the-day"],
+    similarByWarning: ["lessons-in-chemistry"],
+    faq: [
+      { q: { en: "Does The Handmaid's Tale have a happy ending?", zh: "《使女的故事》是 HE 嗎？" }, a: { en: "No — it is an open ending. Offred's fate is deliberately unresolved; the Historical Notes suggest the regime later fell but do not confirm what happened to her.", zh: "不是——是開放結局。Offred 本人的命運刻意未解，〈歷史記註〉暗示政體後來瓦解，但未確認她的下場。" } },
+      { q: { en: "How graphic is the Ceremony scene?", zh: "「典禮」場景多具體？" }, a: { en: "It is on-page and unambiguous but written clinically rather than explicitly. Readers who avoid sexual-violence content should still skip.", zh: "屬正面且明確描寫，但筆法臨床而非露骨。避免性暴力題材的讀者仍應跳過。" } },
+      { q: { en: "Do I need to read this to watch the show?", zh: "為了看影集需要先讀嗎？" }, a: { en: "No. The novel is denser and colder; the show extends the world well beyond it.", zh: "不需要。小說更密、更冷；影集把世界延伸到小說之外。" } },
+      { q: { en: "Is The Testaments a direct sequel?", zh: "《證詞》是直接續集嗎？" }, a: { en: "Yes, published decades later. It gives more resolution than the original but is a distinct book.", zh: "是，數十年後才出版。它比原著提供更多收束，但屬獨立作品。" } },
+      { q: { en: "Is the setting realistic?", zh: "書中的世界寫實嗎？" }, a: { en: "Atwood has said every practice in the novel has a real historical antecedent. It is not prophecy, but it is not invented in a vacuum.", zh: "愛特伍表示書中每一項做法都有真實歷史前例。它不是預言，但也不是無中生有。" } },
+      { q: { en: "Is this suitable for younger readers?", zh: "適合較年輕的讀者嗎？" }, a: { en: "It is often taught in later high school; content is heavy enough that we would suggest 16+.", zh: "常於高中後段課堂教授；內容分量建議 16 歲以上閱讀。" } },
+    ],
+  },
+
+  "conversations-with-friends": {
+    endingTone: {
+      en: "Open ending, and quietly so. Sally Rooney closes on Frances telling Nick 'come and get me' — a decision, but not a resolution. The affair is not concluded, the marriage is not concluded, Frances's relationship with Bobbi is not concluded, and Frances's own self-understanding is not concluded. This is a textbook OE in our system, not Ambiguous — the reader is not being asked to decide what happened; the reader is being handed the shape of a choice that Frances has made without being told what the choice means for anyone else. If you liked the show for its warmth, know that the novel is colder. If you liked Normal People for its intimacy, know that this book keeps more distance.",
+      zh: "開放結局，且語氣安靜。莎莉・魯尼把結局停在 Frances 對 Nick 說「come and get me」——這是一個決定，但不是一個結束。外遇未收束、婚姻未收束、Frances 與 Bobbi 的關係未收束、Frances 對自己的理解也未收束。這在本站是教科書式的 OE，而不是 Ambiguous——讀者不是被要求判斷「發生了什麼」，而是被交付一個 Frances 已經做出、但作者未告訴我們對其他人意味著什麼的選擇。若你因為影集的溫度喜歡它，請知道小說更冷；若你因為《正常人》的親密感喜歡魯尼，請知道本書保留更多距離。",
+    },
+    warningsExplained: {
+      en: "Three tags, treated as one relationship line where applicable: cheating and infidelity refer to the same story — Frances's affair with a married man from her own POV — and should not be read as two separate events. Sexual content is on-page and frank but written cool rather than erotic. Self-harm is depicted with literary distance and specificity; this page does not describe method. Adjacent content includes chronic pain (endometriosis is a real thread with medical detail), family dysfunction, and the emotional temperature of a Rooney novel, which some readers find alienating in itself. No pet-death, no on-page violence.",
+      zh: "三個標籤，且在適用時視為同一條感情線：cheating 與 infidelity 指的是同一個故事——Frances 從自身 POV 描寫的與已婚男人的外遇——不應被讀作兩件不同事件。性場景屬正面且直接的描寫，但筆法冷感、非情色。自傷以文學距離加上具體性呈現；本頁不描述方法。相關內容包含慢性疼痛（子宮內膜異位症是一條真實且有醫療細節的線）、家庭失能，以及魯尼小說本身的情緒溫度——這對部分讀者本身就是難以承受的疏離感。無寵物死亡、無正面暴力。",
+    },
+    verdict: {
+      en: "Read for readers who want a cool, precise novel about young people making bad decisions without being punished by the text. Read with caution if either protagonist-POV cheating or self-harm content is currently difficult. Skip if you require narrative warmth or a resolved ending.",
+      zh: "想讀一本冷靜、精準、描寫年輕人做出糟糕決定但文本不予懲罰的小說：推薦。若「主角視角出軌」或自傷內容目前對你困難，請「謹慎閱讀」。若你需要敘事溫度或明確收束的結局：跳過。",
+    },
+    similarByEnding: ["the-handmaids-tale", "piranesi"],
+    similarByWarning: ["gone-girl", "daisy-jones-and-the-six"],
+    faq: [
+      { q: { en: "Is Conversations with Friends a happy ending?", zh: "《聊天紀錄》是 HE 嗎？" }, a: { en: "No — it is an open ending. Frances makes a choice on the final page, but nothing around her is resolved.", zh: "不是——是開放結局。Frances 在最後一頁做出一個選擇，但周圍所有關係都未收束。" } },
+      { q: { en: "Is the cheating the same as the infidelity tag?", zh: "cheating 和 infidelity 是同一件事嗎？" }, a: { en: "In this book, yes — both tags mark the same relationship line. We do not double-count it as two separate events.", zh: "在這本書裡是的——兩個標籤指同一條感情線。本站不重複計算為兩件事。" } },
+      { q: { en: "How graphic is the self-harm?", zh: "自傷描寫多具體？" }, a: { en: "On-page with literary distance and specific enough for the tag. This page does not describe method.", zh: "屬正面描寫且以文學距離處理，具體程度足以標記。本頁不描述方法。" } },
+      { q: { en: "Is this Rooney's best book to start with?", zh: "這是入門魯尼的最佳選擇嗎？" }, a: { en: "Normal People is a warmer entry point. Start with Conversations if you want the coldest register first.", zh: "《正常人》是溫度較高的入門選擇。想先體驗最冷語氣，才從《聊天紀錄》開始。" } },
+      { q: { en: "Is the show a faithful adaptation?", zh: "影集忠於原著嗎？" }, a: { en: "It follows the plot but adds warmth the novel deliberately withholds.", zh: "劇情上大致照做，但增加了小說刻意不給的溫度。" } },
+      { q: { en: "Should I read this if I am currently in a difficult relationship?", zh: "如果我目前正處於困難的關係中，該讀嗎？" }, a: { en: "It is not a comforting mirror. Come back to it when you have distance from your own situation.", zh: "它不是一面能給你安慰的鏡子。等你與自身處境有距離之後再讀較好。" } },
+    ],
+  },
 };
 // ---------------------------------------------------------------------------
 
