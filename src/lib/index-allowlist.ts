@@ -59,6 +59,10 @@ export const BOOK_ALLOW = new Set<string>([
   "the-art-of-racing-in-the-rain",
   "the-handmaids-tale",
   "conversations-with-friends",
+  // Phase 5D — 3 enriched additions
+  "looking-for-alaska",
+  "the-end-of-the-affair",
+  "scythe",
 ]);
 
 export const AUTHOR_ALLOW = new Set<string>([
