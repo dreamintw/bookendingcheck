@@ -469,6 +469,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-great-gatsby"/>
   </url>
   <url>
+    <loc>https://bookendingcheck.xyz/zh/book/the-end-of-the-affair</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-end-of-the-affair"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-end-of-the-affair"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-end-of-the-affair"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/the-end-of-the-affair</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-end-of-the-affair"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-end-of-the-affair"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-end-of-the-affair"/>
+  </url>
+  <url>
     <loc>https://bookendingcheck.xyz/zh/book/conversations-with-friends</loc>
     <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/conversations-with-friends"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/conversations-with-friends"/>
@@ -515,6 +527,30 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-seven-husbands-of-evelyn-hugo"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-seven-husbands-of-evelyn-hugo"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-seven-husbands-of-evelyn-hugo"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/looking-for-alaska</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/looking-for-alaska"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/looking-for-alaska"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/looking-for-alaska"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/looking-for-alaska</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/looking-for-alaska"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/looking-for-alaska"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/looking-for-alaska"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/scythe</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/scythe"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/scythe"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/scythe"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/scythe</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/scythe"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/scythe"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/scythe"/>
   </url>
   <url>
     <loc>https://bookendingcheck.xyz/zh/authors/madeline-miller</loc>

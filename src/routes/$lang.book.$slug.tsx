@@ -273,6 +273,22 @@ function BookDetail() {
                 ))}
               </dl>
             </section>
+            {(en.relatedLinks?.length ?? 0) > 0 && (
+              <section className="mb-10 rounded-xl border border-border bg-card p-5">
+                <h2 className="font-display text-lg font-semibold mb-3">
+                  {lang === "zh" ? "延伸閱讀清單" : "Where to go next"}
+                </h2>
+                <ul className="space-y-2 text-sm">
+                  {en.relatedLinks!.map((rl) => (
+                    <li key={rl.path}>
+                      <a href={`/${lang}${rl.path}`} className="text-accent hover:underline">
+                        {rl.label[lang]}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
           </>
         );
       })()}

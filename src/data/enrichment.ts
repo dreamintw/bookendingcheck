@@ -21,6 +21,10 @@ export interface BookEnrichment {
   similarByEnding?: string[];
   similarByWarning?: string[];
   faq: BiFaq;
+  // Optional curated internal links. `path` is language-agnostic (no /en or /zh
+  // prefix); the route prepends the active language. Only point these at pages
+  // that are currently indexable.
+  relatedLinks?: { path: string; label: Bi }[];
 }
 
 export interface AuthorEnrichment {
@@ -815,6 +819,99 @@ export const BOOK_ENRICHMENT: Record<string, BookEnrichment> = {
       { q: { en: "Is this Rooney's best book to start with?", zh: "這是入門魯尼的最佳選擇嗎？" }, a: { en: "Normal People is a warmer entry point. Start with Conversations if you want the coldest register first.", zh: "《正常人》是溫度較高的入門選擇。想先體驗最冷語氣，才從《聊天紀錄》開始。" } },
       { q: { en: "Is the show a faithful adaptation?", zh: "影集忠於原著嗎？" }, a: { en: "It follows the plot but adds warmth the novel deliberately withholds.", zh: "劇情上大致照做，但增加了小說刻意不給的溫度。" } },
       { q: { en: "Should I read this if I am currently in a difficult relationship?", zh: "如果我目前正處於困難的關係中，該讀嗎？" }, a: { en: "It is not a comforting mirror. Come back to it when you have distance from your own situation.", zh: "它不是一面能給你安慰的鏡子。等你與自身處境有距離之後再讀較好。" } },
+    ],
+  },
+
+  // -------------------------------------------------------------------------
+  // Phase 5D
+  // -------------------------------------------------------------------------
+
+  "looking-for-alaska": {
+    endingTone: {
+      en: "Looking for Alaska is tagged Bittersweet rather than BE because the novel spends its entire second half refusing to convert grief into an answer. The structure itself is the warning: the book counts down toward a single event and then counts forward away from it, so the reading experience is split into a funny, restless before and a quieter, heavier after. What makes the finish bittersweet rather than simply sad is that the narrator does arrive somewhere — a position he can live with — but that position is acceptance without explanation. The novel deliberately leaves one central question unresolved, and it does so as an argument, not as an oversight: John Green's point is that people who leave do not always leave a reason behind. Readers who need a final chapter that names what happened will feel short-changed; readers who can sit with an ending that offers consolation instead of clarity usually find it the most durable thing about the book. Our confidence of 86 reflects that split — the emotional resolution is unambiguous, the factual one is not.",
+      zh: "《尋找阿拉斯加》被標為 Bittersweet 而不是 BE，是因為整部小說的後半始終拒絕把悲傷換算成一個答案。它的結構本身就是預警：全書先倒數走向某個事件，再從那個事件正數離開，因此閱讀體驗被切成兩半——前半詼諧、躁動，後半安靜而沉。讓結局算「苦甜」而非單純悲劇的原因在於，敘事者最後確實抵達了某個位置，一個他能夠帶著繼續生活下去的位置，但那是「接受」，不是「解釋」。書中最核心的那個疑問被刻意留白，而這是作者的立場而非疏漏：離開的人不一定會留下理由。需要最後一章把事情講清楚的讀者，讀完會覺得被欠了一個交代；能夠與「給你安慰但不給你答案」的結尾共處的讀者，通常會認為那正是本書最耐讀的部分。信心 86 分反映的就是這個落差——情緒上的收束是明確的，事實層面的收束不是。",
+    },
+    warningsExplained: {
+      en: "Three tags apply. Death (high) is the axis of the book: a significant character death occurs and the remaining chapters are entirely about living beside it, so this is not a warning you can read around. Suicide (high) is tagged because whether the death was self-inflicted is a live question the characters investigate and the novel never settles; the possibility is discussed by teenagers who are grieving, in emotional rather than clinical terms. This site does not describe method, means, or any detail of that kind, and neither does the book's framing lean on it — but if unresolved suicide questions are difficult for you right now, be aware that the discussion is sustained across many chapters rather than confined to one scene. Addiction (mid) covers heavy underage drinking and smoking presented as ordinary boarding-school behaviour; it is not glamourised, but it is also not moralised about, and it is directly entangled with the events of the plot. Adjacent content includes grief, guilt, reckless behaviour by minors, and teenage sexual content handled briefly and awkwardly by design. If you are a parent screening this for a younger reader, the drinking and the unresolved suicide question are the two things worth deciding on in advance.",
+      zh: "本書適用三個標籤。死亡（高強度）是全書的軸心：一位重要角色死亡，之後所有章節都在處理「與這件事並存」這件事，因此這個標籤無法迴避。自殺（高強度）之所以標記，是因為「那是不是自殺」在書中是一個角色持續追查、而小說始終不定案的問題；相關討論出自正在哀悼的青少年之口，語氣是情緒性的而非臨床的。本站不描述方法、工具或任何此類細節，書中的敘事框架也不依賴這些——但如果「懸而未決的自殺疑問」目前對你來說困難，請注意這段討論橫跨許多章節，而不是集中在單一場景。成癮（中強度）指的是大量未成年飲酒與抽菸，被呈現為寄宿學校的日常行為；作者沒有美化，但也沒有說教，而且這些行為與情節直接綁在一起。相關內容還包括哀悼、罪疚感、未成年人的魯莽行為，以及刻意寫得笨拙短促的青少年性描寫。若你是替年紀較小的讀者把關的家長，飲酒與那個未解的自殺疑問，是最值得事先決定的兩件事。",
+    },
+    verdict: {
+      en: "Caution — recommended for most YA readers, but only when you have decided in advance that you are willing to sit with an unresolved death. Read it if you want a short, sharply written coming-of-age novel that treats teenage grief seriously and does not tidy it up. Skip it, or postpone it, if suicidal ideation is currently close to your own life, if you are grieving a recent loss, or if you need an ending that tells you what really happened.",
+      zh: "謹慎閱讀——對多數 YA 讀者仍然推薦，但前提是你事先決定好：你願意與一個沒有定論的死亡共處。如果你想讀一本篇幅不長、文字銳利、認真對待青少年哀傷且不加以整理美化的成長小說，這本值得讀。如果自殺意念目前貼近你自己的生活、你正在經歷新近的失去，或你需要一個明確告訴你「到底發生了什麼」的結局，建議跳過或延後。",
+    },
+    similarByEnding: ["norwegian-wood", "the-fault-in-our-stars"],
+    similarByWarning: ["the-fault-in-our-stars", "norwegian-wood"],
+    relatedLinks: [
+      { path: "/endings/Bittersweet", label: { en: "More bittersweet endings", zh: "更多苦甜結局的書" } },
+      { path: "/warnings/suicide", label: { en: "Books with suicide content warnings", zh: "含自殺內容的避雷清單" } },
+      { path: "/warnings/death", label: { en: "Books with major character death", zh: "含主要角色死亡的避雷清單" } },
+    ],
+    faq: [
+      { q: { en: "Does Looking for Alaska have a happy ending?", zh: "《尋找阿拉斯加》是 HE 嗎？" }, a: { en: "No. We tag it Bittersweet with 86 confidence — the narrator reaches a workable peace, but a major loss is permanent and is never softened.", zh: "不是。本站標為 Bittersweet，信心 86 分——敘事者最後找到可以繼續生活的位置，但重大的失去是永久的，全書也沒有淡化它。" } },
+      { q: { en: "Is Looking for Alaska sad?", zh: "《尋找阿拉斯加》會很難過嗎？" }, a: { en: "The first half is genuinely funny; the second half is sad in a slow, ordinary way rather than a dramatic one. Most readers report the after-section, not the event itself, is what stays with them.", zh: "前半是真的好笑；後半的難過是緩慢日常式的，而不是戲劇性的。多數讀者反映留在心裡的是「之後」那一段，而不是事件本身。" } },
+      { q: { en: "Is the ending ambiguous?", zh: "結局算開放式嗎？" }, a: { en: "Emotionally it resolves; factually it does not. One central question about the death is deliberately left open, which is why we classify it Bittersweet rather than Ambiguous — the reader's feelings are given closure even though the facts are not.", zh: "情緒上有收束，事實上沒有。關於那場死亡的核心疑問被刻意留白，這也是我們歸為 Bittersweet 而非 Ambiguous 的原因——讀者的情緒被安置了，事實則沒有。" } },
+      { q: { en: "Is suicide a major content warning in this book?", zh: "自殺是本書的主要避雷項目嗎？" }, a: { en: "Yes, and it is tagged high intensity. The possibility of suicide is discussed repeatedly and never confirmed or ruled out. No method or means is described in the book's framing or on this page.", zh: "是，且標為高強度。書中反覆討論自殺的可能性，卻始終沒有確認或排除。書中框架與本頁都不描述方法或工具。" } },
+      { q: { en: "What are the main content warnings?", zh: "主要的避雷標籤有哪些？" }, a: { en: "Death of a close friend (high), possible suicide (high), and underage drinking and smoking (mid). Grief and guilt run throughout, and there is brief teenage sexual content.", zh: "摯友死亡（高）、可能的自殺（高）、未成年飲酒與抽菸（中）。哀傷與罪疚感貫穿全書，另有簡短的青少年性描寫。" } },
+      { q: { en: "Is it suitable for a younger teen reader?", zh: "適合年紀較小的青少年讀嗎？" }, a: { en: "It is written for a teen audience, but the drinking, the sexual content, and the unresolved suicide question are the three points a parent or teacher should decide on before handing it over. We tag the book caution rather than read for exactly these reasons.", zh: "本書就是為青少年讀者寫的，但飲酒、性描寫，以及那個未解的自殺疑問，是家長或老師在給書之前該先決定的三件事。本站把它標為 caution 而非 read，正是基於這些原因。" } },
+    ],
+  },
+
+  "the-end-of-the-affair": {
+    endingTone: {
+      en: "The Bittersweet label here is doing unusual work. This is not a novel that trades a loss for a consolation prize; it ends by converting a private catastrophe into a question the narrator cannot put down. What readers should expect is a finish that is emotionally cold on the surface and unsettled underneath — the narrating voice is bitter, articulate and unwilling to be comforted, and Greene lets him stay that way rather than granting a late softening. The 'sweet' half of the tag comes from meaning, not from happiness: by the last pages the affair has been reinterpreted into something the narrator finds larger than himself, whether or not he wants that reading. Its 88 confidence is high because the tonal outcome is not in dispute, only how much weight each reader gives to the religious frame. If you expect a romance that either reunites or cleanly destroys its couple, this will feel like neither.",
+      zh: "這裡的 Bittersweet 標籤運作方式相當特別。這不是一本用某種安慰獎去交換失去的小說；它的結尾是把一場私人的災難，轉換成敘事者放不下的一個問題。讀者可以預期的是：表層冷、底層未定的收束——敘事者的聲音怨懟、能言善辯，而且拒絕被安慰，格林也就讓他維持那個狀態，沒有在後段給他任何和解式的柔化。標籤裡「甜」的那一半來自意義，而不是幸福：到最後幾頁，那段戀情已經被重新詮釋成某種比敘事者本人更大的東西，無論他願不願意這樣讀。信心 88 分之所以偏高，是因為結局的調性沒有爭議，有爭議的只是每位讀者要給宗教框架多少重量。如果你期待一段愛情故事要嘛重聚、要嘛乾脆毀滅，這本兩者都不是。",
+    },
+    warningsExplained: {
+      en: "Our data carries both an infidelity tag and a cheating tag for this title, but they describe the same storyline, not two separate betrayals: the extramarital relationship at the centre of the book, narrated from the participant's own point of view. Treat them as one high-intensity relationship warning and do not read the two codes as two events. What makes it heavy is not explicitness — the physical side is mostly handled off-page by mid-century convention — but proximity: you spend the whole novel inside the jealousy, surveillance and self-justification of someone conducting an affair with a friend's spouse, and the text does not offer you an outside vantage point from which to judge it comfortably. The death tag (high) refers to a major character dying of illness rather than violence; it is not sudden shock but a decline the reader sees coming, and it is the hinge the last section turns on. Adjacent content includes wartime bombing and its casualties, sustained jealousy and possessiveness, and an extended religious argument that some readers experience as its own kind of pressure. There is no sexual violence and no graphic on-page death.",
+      zh: "本站資料同時給這本書標了 infidelity 與 cheating，但兩者描述的是同一條故事線，不是兩次不同的背叛：全書核心那段婚外關係，且由當事人自己的視角敘述。請把它視為單一的高強度關係類警示，不要把兩個代碼讀成兩件事。它之所以沉重不是因為露骨——生理層面大多依二十世紀中葉的慣例留在幕後——而是因為距離太近：整本書你都待在一個與友人配偶發生婚外情者的嫉妒、監視與自我合理化之中，文本也不打算給你一個可以舒服地下判斷的外部位置。死亡標籤（高強度）指的是一位主要角色因病去世，而非暴力致死；那不是突如其來的衝擊，而是讀者看得見逼近的衰弱，並且是最後一段的轉軸。相關內容還包括戰時轟炸與其傷亡、持續的嫉妒與佔有慾，以及一段冗長的宗教辯論——部分讀者會覺得那本身就是一種壓力。全書無性暴力，也無血腥的正面死亡描寫。",
+    },
+    verdict: {
+      en: "Caution, leaning read for literary readers. Read it if you want a short, formally sharp postwar novel about jealousy and belief, and if a first-person account of an affair does not put you off on principle. Read with caution if religious argument in fiction irritates you, since the last third commits to it fully. Skip it if relationship betrayal is currently a live subject in your own life — the narration gives you no distance from it at all.",
+      zh: "謹慎閱讀，對文學向讀者則偏向推薦。若你想讀一本篇幅精簡、形式銳利、談嫉妒與信念的戰後英國小說，而且不排斥第一人稱視角的外遇敘述，這本值得讀。如果你反感小說裡的宗教辯論，請謹慎——最後三分之一完全投入其中。若「關係背叛」目前正是你自己生活中的現實議題，建議跳過：這種敘述方式不會給你任何距離。",
+    },
+    similarByEnding: ["norwegian-wood", "the-remains-of-the-day"],
+    similarByWarning: ["conversations-with-friends", "gone-girl"],
+    relatedLinks: [
+      { path: "/endings/Bittersweet", label: { en: "More bittersweet endings", zh: "更多苦甜結局的書" } },
+      { path: "/warnings/cheating", label: { en: "Books with cheating or infidelity warnings", zh: "含出軌／外遇的避雷清單" } },
+      { path: "/warnings/death", label: { en: "Books with major character death", zh: "含主要角色死亡的避雷清單" } },
+    ],
+    faq: [
+      { q: { en: "Does The End of the Affair have a happy ending?", zh: "《戀情的終結》是 HE 嗎？" }, a: { en: "No. It is Bittersweet at 88 confidence: the ending offers the narrator meaning rather than happiness, and it does not reunite anyone.", zh: "不是。本站標為 Bittersweet、信心 88 分：結局給敘事者的是意義而不是幸福，也沒有讓任何人重聚。" } },
+      { q: { en: "Are infidelity and cheating two separate warnings in this book?", zh: "infidelity 和 cheating 在這本書裡是兩件事嗎？" }, a: { en: "No. Both codes exist in our data, but for this title they mark the same relationship line. We count it once, as a single high-intensity warning.", zh: "不是。兩個代碼在我們的資料裡都存在，但就這本書而言，它們標的是同一條感情線。我們只計為一項高強度警示。" } },
+      { q: { en: "Is it suitable for readers who avoid relationship betrayal?", zh: "排斥關係背叛題材的讀者適合讀嗎？" }, a: { en: "Generally no. The affair is not a subplot you can skim past — it is the narrating consciousness of the whole book, told sympathetically from inside.", zh: "通常不適合。那段外遇不是可以略過的支線，而是整本書的敘事意識本身，並且是從內部、帶著同理地講述。" } },
+      { q: { en: "How emotionally intense is it?", zh: "情緒強度大嗎？" }, a: { en: "High, but cold rather than loud. The pressure comes from obsessive jealousy and a slow illness, not from dramatic scenes, so it accumulates rather than spikes.", zh: "強度高，但屬於冷的那一種而不是喧鬧的。壓力來自偏執的嫉妒與緩慢的病程，而不是戲劇性場面，所以它是累積型而非爆發型。" } },
+      { q: { en: "Do I need to care about the religious themes to enjoy it?", zh: "不在意宗教主題也能讀得下去嗎？" }, a: { en: "You do not need to share the belief, but you do need to tolerate the argument. The final third takes the religious question seriously and will not step around it.", zh: "你不需要認同那個信仰，但你需要能忍受那場辯論。最後三分之一認真處理宗教問題，而且不會繞開。" } },
+      { q: { en: "Is the death shown in detail?", zh: "死亡是否有具體描寫？" }, a: { en: "It is an illness death, foreshadowed rather than graphic. The novel spends far more time on the aftermath than on the event.", zh: "那是因病去世，有預示但不血腥。小說花在「之後」的篇幅遠多於事件本身。" } },
+    ],
+  },
+
+  "scythe": {
+    endingTone: {
+      en: "We tag Scythe OE, and readers should read that label as 'the first movement of a longer argument' rather than 'the author refused to decide'. The main character arcs of this volume do land — questions raised in the apprenticeship storyline get answered — but the world's central problem is deliberately left standing, and the closing chapters open a new front rather than closing the old one. That is why the decision is read rather than caution: this is a satisfying ending that is honest about being incomplete. Practically, that means two things. If you finish book one and stop, you will have a complete story about two apprentices and an unresolved story about the society they live in. If you are willing to continue, the trilogy does resolve, so the open ending is a structural choice with a payoff rather than a permanent void. Readers who dislike cliff-edge finishes should simply plan to have the next volume available.",
+      zh: "本站把《鐮刀》標為 OE，而這個標籤該讀成「一場更長論證的第一樂章」，而不是「作者不肯做決定」。這一集主要角色的弧線其實有落地——學徒線提出的問題得到了回答——但這個世界的核心難題被刻意保留，收尾的章節開的是新戰場，而不是收舊帳。這也是為什麼決策是 read 而不是 caution：這是一個令人滿足、同時誠實承認自己尚未完成的結局。實務上這代表兩件事。如果你只讀第一集就停下，你會得到一個完整的「兩位學徒」故事，加上一個未完的「他們所處社會」的故事。如果你願意繼續，三部曲最終是有收束的，所以這個開放結局是有回報的結構選擇，而不是永久的空白。討厭斷崖式結尾的讀者，只要事先把下一集準備好即可。",
+    },
+    warningsExplained: {
+      en: "Two tags apply, and both come from the premise rather than from shock writing. Death (high) is unavoidable: in a world where natural death has been engineered away, sanctioned killing is the job the book is about, so mortality is discussed constantly, at scale, and in numbers. That framing is what makes the tag high intensity — not gore, but volume and normalisation. Violence (high) covers those sanctioned killings, which our catalog notes are present but restrained: the novel is far more interested in who decides, by what quota, and with what conscience, than in what the act looks like. We do not describe individual scenes here, and readers should know that the discomfort is mostly ethical rather than visceral. One structural note: violence is a book-level tag in our data and does not currently have its own warning hub page, so treat it as a consideration recorded on this page rather than something you can cross-reference sitewide. Adjacent content includes institutional corruption, teenagers placed under lethal professional pressure, and a sustained philosophical argument about whether death should exist at all — which is precisely the thing some readers find heavier than any individual scene.",
+      zh: "本書適用兩個標籤，而且兩者都源自設定本身，不是靠衝擊性描寫堆出來的。死亡（高強度）無可避免：在一個自然死亡已被工程手段消除的世界裡，「經授權的殺人」正是本書的職業主題，因此死亡被持續討論，並且是以規模與數字的方式被討論。讓標籤成為高強度的是這個框架——不是血腥，而是數量與常態化。暴力（高強度）指的就是那些經授權的處決；本站資料註記為「存在但克制」：小說遠更關心的是誰有權決定、依什麼配額決定、以及決定者的良知，而不是行為本身長什麼樣子。本頁不描述個別場景，讀者可以理解為：不適感主要是倫理層面的，而不是生理層面的。一點結構上的說明：violence 在我們的資料中屬於書籍層級的標籤，目前沒有對應的警示主題頁，所以請把它當成記錄在本頁上的閱讀考量，而不是可以在全站互相對照的分類。相關內容還包括制度性腐敗、被放在致命職業壓力下的青少年，以及一場關於「死亡究竟該不該存在」的持續思辨——對部分讀者而言，那比任何單一場景都更沉重。",
+    },
+    verdict: {
+      en: "Read, with one caveat about the ending. This is a strong pick for readers who want dystopia that argues rather than dystopia that chases, and it is unusually good at making an ethical dilemma feel like a plot engine. Read with caution if death-as-philosophy is a subject you would rather not spend 400 pages inside, or if you are reading for a younger teen who finds systemic bleakness harder than action. Skip only if you need a self-contained single volume with everything resolved.",
+      zh: "推薦閱讀，唯一但書在結局。對於想讀「會辯論」而不是「一路追殺」的反烏托邦讀者，這是很好的選擇；它把倫理兩難變成情節引擎的功力相當罕見。若「死亡哲學」是你不想花四百頁泡在裡面的題目，或你是替一位對制度性壓抑比對動作場面更難承受的青少年挑書，請謹慎。只有在你需要一本完全自足、所有事情都收乾淨的單冊作品時，才建議跳過。",
+    },
+    similarByEnding: ["the-giver", "the-handmaids-tale"],
+    similarByWarning: ["the-giver", "the-handmaids-tale"],
+    relatedLinks: [
+      { path: "/endings/OE", label: { en: "More open endings", zh: "更多開放結局的書" } },
+      { path: "/warnings/death", label: { en: "Books with major character death", zh: "含主要角色死亡的避雷清單" } },
+    ],
+    faq: [
+      { q: { en: "Does Scythe have a happy ending?", zh: "《鐮刀》是 HE 嗎？" }, a: { en: "Not a HE. We tag it OE — the apprenticeship storyline resolves, but the wider situation is deliberately left open for the rest of the trilogy.", zh: "不是 HE。本站標為 OE——學徒線有收束，但更大的局面被刻意留給三部曲的後續。" } },
+      { q: { en: "Is Scythe's ending open-ended?", zh: "《鐮刀》的結局是開放式的嗎？" }, a: { en: "Yes, at the world level. Character questions are answered; the society's central problem is not, and the final chapters set up the next book rather than closing this one.", zh: "在世界觀層面是的。角色層面的問題有答案；社會的核心難題沒有，而且最後幾章是為下一集鋪路，而不是收掉這一集。" } },
+      { q: { en: "Is Scythe violent?", zh: "《鐮刀》暴力嗎？" }, a: { en: "It is tagged high for violence because sanctioned killing is the premise, but our catalog notes describe the depiction as restrained. The weight is ethical rather than graphic.", zh: "暴力標籤標為高強度，因為「經授權的殺人」就是設定本身，但本站資料註記描寫方式是克制的。壓力來自倫理，而不是血腥。" } },
+      { q: { en: "What content warnings should readers know?", zh: "讀者該知道哪些避雷項目？" }, a: { en: "Death at high intensity, including mass death discussed as policy, and violence at high intensity in the form of sanctioned executions. Institutional corruption and heavy pressure on teenage characters run alongside both.", zh: "高強度死亡，包含被當作政策討論的大量死亡；以及高強度暴力，形式是經授權的處決。制度性腐敗與青少年角色承受的巨大壓力同時貫穿全書。" } },
+      { q: { en: "Is Scythe suitable for readers sensitive to death?", zh: "對死亡題材敏感的讀者適合讀嗎？" }, a: { en: "Probably not. Death is not an incident here, it is the subject; a reader who avoids mortality themes will find no section of the book that steps away from it.", zh: "多半不適合。死亡在這裡不是事件，而是主題；想避開死亡議題的讀者，在書中找不到任何一段是離開這個題目的。" } },
+      { q: { en: "Do I have to read the whole trilogy?", zh: "一定要讀完整套三部曲嗎？" }, a: { en: "Not necessarily, but the open ending means book one alone leaves the world unresolved. If unresolved worldbuilding frustrates you, treat the trilogy as the unit rather than the volume.", zh: "不一定，但開放結局代表只讀第一集會留下未解的世界觀。如果未收束的世界設定會讓你煩躁，請把三部曲當成一個整體來讀，而不是單集。" } },
     ],
   },
 };
