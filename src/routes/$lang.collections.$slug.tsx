@@ -151,7 +151,31 @@ function CollectionPage() {
         {intro.map((p, i) => (
           <p key={i} className="leading-relaxed" dangerouslySetInnerHTML={{ __html: p }} />
         ))}
-      </article>
+        </article>
+
+      {lang === "en" && (slug === "sad-ending-books" || slug === "open-ending-books") && (
+        <section className="mb-10 rounded-xl border border-border bg-card p-5">
+          <h2 className="font-display text-lg font-semibold mb-2">Start with this guide</h2>
+          {slug === "sad-ending-books" ? (
+            <p className="text-sm leading-relaxed text-foreground/90">
+              If you want the clearest example of how we grade a sad ending, read{" "}
+              <a href="/en/book/the-song-of-achilles" className="text-accent hover:underline">
+                The Song of Achilles ending guide
+              </a>
+              : happy, sad or bittersweet, the warnings that matter, and folded full spoilers.
+            </p>
+          ) : (
+            <p className="text-sm leading-relaxed text-foreground/90">
+              For an open ending that rewards patience, see{" "}
+              <a href="/en/book/piranesi" className="text-accent hover:underline">
+                Piranesi ending explained
+              </a>
+              , including what the House means and whether the finish counts as happy.
+            </p>
+          )}
+        </section>
+      )}
+
 
       {enrich && (
         <section aria-labelledby="how-to-use" className="mb-10 rounded-xl border border-border bg-card p-6">

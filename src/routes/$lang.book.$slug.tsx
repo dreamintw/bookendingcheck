@@ -24,14 +24,14 @@ export const Route = createFileRoute("/$lang/book/$slug")({
     const ctrOverrides: Record<string, { en?: { title: string; desc: string }; zh?: { title: string; desc: string } }> = {
       "the-song-of-achilles": {
         en: {
-          title: "Does The Song of Achilles Have a Happy Ending? Ending & Spoilers | NovelCheck",
-          desc: "Wondering if The Song of Achilles has a happy ending? Check the ending tone, spoiler-safe summary, trigger warnings, and full spoilers only if you choose to open them.",
+          title: "The Song of Achilles Ending: Happy or Sad? Warnings & Spoilers | NovelCheck",
+          desc: "Is The Song of Achilles HE, BE, or bittersweet? Get a spoiler-safe answer, major-character-death and war-violence warnings, a Read-or-Skip verdict, and optional full spoilers.",
         },
       },
       "piranesi": {
         en: {
-          title: "Piranesi Ending Explained — Spoiler-Safe Summary & Full Spoilers | NovelCheck",
-          desc: "Piranesi ending explained in spoiler layers: start with a spoiler-safe summary and ending tone, then open full spoilers only if you choose. Trigger warnings included.",
+          title: "Piranesi Ending Explained: Meaning, Happy or Sad? | NovelCheck",
+          desc: "What does the Piranesi ending mean, and is it happy or sad? Start spoiler-free, check captivity and identity warnings, then open the complete ending explanation only when ready.",
         },
         zh: {
           title: "《皮拉內西》結局解析｜無雷摘要、劇透分層與閱讀建議 | NovelCheck",
@@ -39,6 +39,7 @@ export const Route = createFileRoute("/$lang/book/$slug")({
         },
       },
     };
+
     const override = ctrOverrides[b.slug]?.[lang];
     const title = override?.title ?? (lang === "zh"
       ? `《${b.title.zh}》結局與避雷標籤｜${b.author.zh} | 讀前決策站`
@@ -120,14 +121,14 @@ function NotFound() {
 const CTR_HERO: Record<string, { en?: { h1: string; intro: string }; zh?: { h1: string; intro: string } }> = {
   "the-song-of-achilles": {
     en: {
-      h1: "Does The Song of Achilles Have a Happy Ending?",
-      intro: "Short answer: no — The Song of Achilles does not have a happy ending. Madeline Miller's retelling closes on a tragic, bittersweet note rather than a HE. Below you'll find a spoiler-safe summary, the ending tone at a glance, and trigger warnings. Full spoilers are folded by default — open them only if you've decided you want the details.",
+      h1: "Does The Song of Achilles Have a Happy or Sad Ending?",
+      intro: "Short answer: it is not a happy ending. Madeline Miller's retelling closes on loss and grief rather than a HE, and we classify it as BE. Beyond that one-line answer, this page gives you why we file it as sad rather than bittersweet, the major-character-death and war-violence warnings, how emotionally intense the final stretch is, a Read-or-Skip verdict, and full spoilers folded away so you only open them if you have already decided you want the details.",
     },
   },
   "piranesi": {
     en: {
-      h1: "Piranesi Ending Explained",
-      intro: "This page explains the ending of Susanna Clarke's Piranesi in spoiler layers. We start spoiler-free with the ending tone and a safe summary, then offer mild spoilers about direction, and finally full spoilers behind a click. Full spoilers are folded by default, so you can stop at the layer that suits you.",
+      h1: "Piranesi Ending Explained: What Does It Mean?",
+      intro: "Susanna Clarke's Piranesi ends on an ambiguous note rather than a clean happy or sad one, and this page explains what that ending means in layers. You start spoiler-free with the ending tone and what the House stands for, then get the captivity, gaslighting and identity-erasure warnings, then a Read-or-Skip verdict. The complete ending explanation sits in a collapsed block near the bottom, so you can stop at whichever layer suits you.",
     },
     zh: {
       h1: "《皮拉內西》結局解析",
@@ -136,11 +137,59 @@ const CTR_HERO: Record<string, { en?: { h1: string; intro: string }; zh?: { h1: 
   },
 };
 
+// Extra long-form sections for the two highest-impression English pages.
+// Each block is hand-written and must not restate the existing "Ending tone
+// explained" copy.
+const CTR_SECTIONS: Record<string, { en?: { heading: string; body: string[] } }> = {
+  "the-song-of-achilles": {
+    en: {
+      heading: "Happy, sad, or bittersweet?",
+      body: [
+        "We file The Song of Achilles as BE rather than bittersweet, and the distinction matters if you are choosing a book for a specific mood. In our taxonomy, bittersweet means the loss is offset by something the surviving characters get to keep and use: a future, a changed life, a relationship that continues in a different shape. Sad, or BE, means the loss is the final state — the book stops while the grief is still the loudest thing in the room, and nothing in the last pages is offered as compensation.",
+        "Readers who call it bittersweet are usually responding to two real things. The first is the tenderness of the first half, which is warm enough that many people finish the book remembering the intimacy as strongly as the ending. The second is the sense of resolution in the closing pages: the novel does grant a quiet, formal kind of closure rather than ending mid-collapse, and that closure can read as consoling. Both readings are fair descriptions of the experience.",
+        "Our classification tracks outcome, not aftertaste. Because the outcome is loss with no restored future, the ending is BE by our rules, even though the tone of the final pages is gentler than the events. Practically: if you want a book that hurts and then hands you something to hold, this is not it. If you want a book that hurts beautifully and asks you to sit with it, it is. The trigger matrix below and the folded full spoilers will tell you how much intensity you are signing up for before you commit.",
+      ],
+    },
+  },
+  "piranesi": {
+    en: {
+      heading: "What does the Piranesi ending mean?",
+      body: [
+        "The ending of Piranesi is about who you are after a place has finished making you. The narrator spends the novel with an identity that was not chosen and a name that was not his, and the ending has to answer a harder question than whether he escapes: whether the person the House produced is someone worth continuing to be. Clarke's answer is not a restoration. Nothing rewinds him to who he was before, and the novel does not treat that as a failure.",
+        "Loss runs in both directions here, which is why readers often find the last pages harder to categorise than the plot events suggest. There is loss of the years and the self that were taken, and there is also loss of the House itself — a world that was genuinely beautiful to him, and genuinely a cage. Grieving something that harmed you is a strange, specific feeling, and the ending is built to hold both truths without asking you to pick one.",
+        "That is the double meaning the book keeps circling. The House is captivity and it is also the source of the narrator's attention, gentleness and capacity for wonder; those qualities are not damage, they are his. The ending declines to declare the House either a prison to be denounced or a home to be idealised, and it declines to say his current self is a lesser draft of an earlier one.",
+        "So the mood is acceptance rather than triumph or defeat. He carries what the House gave him into a life that is not organised around it, and the novel closes with that continuity intact rather than resolved. If you need to know exactly which choices and images carry that acceptance in the final chapter, open the collapsed full explanation below — everything above this line stays spoiler-safe.",
+      ],
+    },
+  },
+};
+
+// SSR-rendered but collapsed by default: the text ships in the raw HTML inside
+// a <details>, so crawlers can read it while readers must actively expand.
+const FULL_SPOILER_DETAILS: Record<string, { en?: { summary: string; body: string[] } }> = {
+  "piranesi": {
+    en: {
+      summary: "Full spoilers — the complete Piranesi ending explained (click to expand)",
+      body: [
+        "Spoilers from here. The narrator is not a native of the House. He is Matthew Rose Sorensen, a researcher who was lured into the labyrinth by Val Ketterley, an academic who used the world as a private resource and used the people he brought there as disposable labour. Sorensen's memory was stripped by the House itself, and the identity that grew in its place — the gentle, meticulous, deeply attentive Piranesi — is the person the reader has spent the book with and come to like.",
+        "The ending's central tension is therefore not escape but succession. Recovering Sorensen's records and history does not delete Piranesi, and returning to the world does not restore Sorensen. What emerges is a third person who holds both: someone who remembers the researcher's life as documented fact and the House's years as lived experience, and who does not rank one above the other. Clarke stages the rescue so that the practical danger resolves while this identity question stays deliberately open.",
+        "Ketterley's exposure and the intervention that ends the captivity are handled almost briskly, which is a choice. The novel refuses to let the thriller machinery become the point. What it lingers on instead is the narrator standing in ordinary modern surroundings and still reading them with the House's habits of attention — noticing weather, kindness, and the shape of things as if they were statues in a hall.",
+        "The final movement is the return. He goes back, or wants to go back, not because he is broken but because the House is where his sense of meaning was formed, and the novel treats that as legitimate rather than pathological. Nothing declares whether he will settle in either world. That refusal is the meaning: the book argues that a self assembled inside captivity is still a real self, that grief and gratitude can be aimed at the same place, and that acceptance — not rescue, not vengeance — is the only honest ending available to him.",
+      ],
+    },
+  },
+};
+
+
 function BookDetail() {
   const { book } = Route.useLoaderData();
   const lang = useLang();
   const related = books.filter((b) => b.slug !== book.slug && b.ending === book.ending).slice(0, 3);
   const hero = CTR_HERO[book.slug]?.[lang];
+  const extraSection = lang === "en" ? CTR_SECTIONS[book.slug]?.en : undefined;
+  const fullDetails = lang === "en" ? FULL_SPOILER_DETAILS[book.slug]?.en : undefined;
+
+
 
   return (
     <main className="mx-auto max-w-4xl w-full px-4 py-10 flex-1">
@@ -181,6 +230,19 @@ function BookDetail() {
         </section>
       )}
 
+      {extraSection && (
+        <section className="mb-10">
+          <h2 className="font-display text-xl font-semibold mb-3">{extraSection.heading}</h2>
+          <div className="space-y-3">
+            {extraSection.body.map((p, i) => (
+              <p key={i} className="text-base leading-relaxed text-foreground/90">{p}</p>
+            ))}
+          </div>
+        </section>
+      )}
+
+
+
 
 
       <div className="rounded-2xl border border-border bg-card p-6 mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -200,6 +262,23 @@ function BookDetail() {
         <SpoilerBlock level="soft" title={t.spoilerSoft[lang]}>{book.spoilerSoft[lang]}</SpoilerBlock>
         <SpoilerBlock level="hard" title={t.spoilerHard[lang]}>{book.spoilerHard[lang]}</SpoilerBlock>
       </section>
+
+      {fullDetails && (
+        <section className="mb-10">
+          <details className="rounded-xl border border-destructive/40 bg-destructive/5 p-5">
+            <summary className="cursor-pointer font-display font-semibold text-sm">
+              {fullDetails.summary}
+            </summary>
+            <div className="mt-3 space-y-3">
+              {fullDetails.body.map((p, i) => (
+                <p key={i} className="text-sm leading-relaxed text-foreground/90">{p}</p>
+              ))}
+            </div>
+          </details>
+        </section>
+      )}
+
+
 
       <section className="mb-10">
         <h2 className="font-display text-xl font-semibold mb-4">{t.triggers[lang]}</h2>

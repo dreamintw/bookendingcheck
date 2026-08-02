@@ -214,6 +214,28 @@ function BooksPage() {
         </section>
       )}
 
+      {lang === "en" && (
+        <section className="mb-10">
+          <h2 className="font-display text-xl font-semibold mb-3">Most-read ending guides</h2>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <a href="/en/book/the-song-of-achilles" className="text-accent hover:underline">
+                Does The Song of Achilles have a happy ending?
+              </a>{" "}
+              <span className="text-muted-foreground">— sad vs bittersweet, warnings and verdict.</span>
+            </li>
+            <li>
+              <a href="/en/book/piranesi" className="text-accent hover:underline">
+                Piranesi ending explained
+              </a>{" "}
+              <span className="text-muted-foreground">— what the ambiguous finish actually means.</span>
+            </li>
+          </ul>
+        </section>
+      )}
+
+
+
       <div className="flex flex-wrap gap-2 mb-8">
         {endingsList.map((e) => (
           <button key={e} onClick={() => setFilter(e)}
