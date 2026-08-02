@@ -24,14 +24,14 @@ export const Route = createFileRoute("/$lang/book/$slug")({
     const ctrOverrides: Record<string, { en?: { title: string; desc: string }; zh?: { title: string; desc: string } }> = {
       "the-song-of-achilles": {
         en: {
-          title: "Does The Song of Achilles Have a Happy Ending? Ending & Spoilers | NovelCheck",
-          desc: "Wondering if The Song of Achilles has a happy ending? Check the ending tone, spoiler-safe summary, trigger warnings, and full spoilers only if you choose to open them.",
+          title: "The Song of Achilles Ending: Happy or Sad? Warnings & Spoilers | NovelCheck",
+          desc: "Is The Song of Achilles HE, BE, or bittersweet? Get a spoiler-safe answer, major-character-death and war-violence warnings, a Read-or-Skip verdict, and optional full spoilers.",
         },
       },
       "piranesi": {
         en: {
-          title: "Piranesi Ending Explained — Spoiler-Safe Summary & Full Spoilers | NovelCheck",
-          desc: "Piranesi ending explained in spoiler layers: start with a spoiler-safe summary and ending tone, then open full spoilers only if you choose. Trigger warnings included.",
+          title: "Piranesi Ending Explained: Meaning, Happy or Sad? | NovelCheck",
+          desc: "What does the Piranesi ending mean, and is it happy or sad? Start spoiler-free, check captivity and identity warnings, then open the complete ending explanation only when ready.",
         },
         zh: {
           title: "《皮拉內西》結局解析｜無雷摘要、劇透分層與閱讀建議 | NovelCheck",
@@ -39,6 +39,7 @@ export const Route = createFileRoute("/$lang/book/$slug")({
         },
       },
     };
+
     const override = ctrOverrides[b.slug]?.[lang];
     const title = override?.title ?? (lang === "zh"
       ? `《${b.title.zh}》結局與避雷標籤｜${b.author.zh} | 讀前決策站`
