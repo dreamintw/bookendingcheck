@@ -180,8 +180,18 @@ function AuthorDetail() {
             {lang === "zh" ? "從哪本作品開始讀" : "Where to start"}
           </h2>
           <p className="text-sm leading-relaxed text-foreground/90">{en.startWith[lang]}</p>
+          {lang === "en" && slug === "madeline-miller" && (
+            <p className="mt-3 text-sm leading-relaxed text-foreground/90">
+              Deciding between them? Our{" "}
+              <a href="/en/book/the-song-of-achilles" className="text-accent hover:underline">
+                The Song of Achilles ending guide
+              </a>{" "}
+              answers the happy-or-sad question first and lists the heaviest warnings before you commit.
+            </p>
+          )}
         </section>
       )}
+
 
       <section className="mb-10">
         <h2 className="font-display text-xl font-semibold mb-4">
