@@ -263,6 +263,23 @@ function BookDetail() {
         <SpoilerBlock level="hard" title={t.spoilerHard[lang]}>{book.spoilerHard[lang]}</SpoilerBlock>
       </section>
 
+      {fullDetails && (
+        <section className="mb-10">
+          <details className="rounded-xl border border-destructive/40 bg-destructive/5 p-5">
+            <summary className="cursor-pointer font-display font-semibold text-sm">
+              {fullDetails.summary}
+            </summary>
+            <div className="mt-3 space-y-3">
+              {fullDetails.body.map((p, i) => (
+                <p key={i} className="text-sm leading-relaxed text-foreground/90">{p}</p>
+              ))}
+            </div>
+          </details>
+        </section>
+      )}
+
+
+
       <section className="mb-10">
         <h2 className="font-display text-xl font-semibold mb-4">{t.triggers[lang]}</h2>
         <div className="rounded-xl border border-border bg-card p-5">
