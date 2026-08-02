@@ -230,6 +230,19 @@ function BookDetail() {
         </section>
       )}
 
+      {extraSection && (
+        <section className="mb-10">
+          <h2 className="font-display text-xl font-semibold mb-3">{extraSection.heading}</h2>
+          <div className="space-y-3">
+            {extraSection.body.map((p, i) => (
+              <p key={i} className="text-base leading-relaxed text-foreground/90">{p}</p>
+            ))}
+          </div>
+        </section>
+      )}
+
+
+
 
 
       <div className="rounded-2xl border border-border bg-card p-6 mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
