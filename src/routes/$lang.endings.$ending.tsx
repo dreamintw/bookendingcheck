@@ -221,6 +221,31 @@ function EndingDetail() {
         <p className="text-base leading-relaxed">{side.spoilerNote}</p>
       </section>
 
+      {lang === "en" && (ending === "BE" || ending === "Ambiguous") && (
+        <section className="mb-10">
+          <h2 className="font-display text-xl font-semibold mb-3">Reader-favourite guide in this category</h2>
+          {ending === "BE" ? (
+            <p className="text-base leading-relaxed">
+              Start with our{" "}
+              <a href="/en/book/the-song-of-achilles" className="text-accent hover:underline">
+                The Song of Achilles ending guide
+              </a>{" "}
+              — it explains why we file the book as BE rather than bittersweet, lists the heaviest warnings, and keeps full spoilers folded.
+            </p>
+          ) : (
+            <p className="text-base leading-relaxed">
+              A good place to see how we handle open endings is{" "}
+              <a href="/en/book/piranesi" className="text-accent hover:underline">
+                what does the Piranesi ending mean
+              </a>{" "}
+              — spoiler-safe meaning first, complete explanation only if you expand it.
+            </p>
+          )}
+        </section>
+      )}
+
+
+
       <section className="mb-10">
         <h2 className="font-display text-xl font-semibold mb-3">{heading.picks}</h2>
         {curated.length === 0 ? (
