@@ -186,6 +186,10 @@ function BookDetail() {
   const lang = useLang();
   const related = books.filter((b) => b.slug !== book.slug && b.ending === book.ending).slice(0, 3);
   const hero = CTR_HERO[book.slug]?.[lang];
+  const extraSection = lang === "en" ? CTR_SECTIONS[book.slug]?.en : undefined;
+  const fullDetails = lang === "en" ? FULL_SPOILER_DETAILS[book.slug]?.en : undefined;
+
+
 
   return (
     <main className="mx-auto max-w-4xl w-full px-4 py-10 flex-1">
