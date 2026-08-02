@@ -180,7 +180,7 @@ function AuthorDetail() {
             {lang === "zh" ? "從哪本作品開始讀" : "Where to start"}
           </h2>
           <p className="text-sm leading-relaxed text-foreground/90">{en.startWith[lang]}</p>
-          {lang === "en" && slug === "madeline-miller" && (
+          {lang === "en" && author.slug === "madeline-miller" && (
             <p className="mt-3 text-sm leading-relaxed text-foreground/90">
               Deciding between them? Our{" "}
               <a href="/en/book/the-song-of-achilles" className="text-accent hover:underline">
