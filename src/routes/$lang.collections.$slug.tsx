@@ -166,13 +166,14 @@ function CollectionPage() {
             </p>
           ) : (
             <p className="text-sm leading-relaxed text-foreground/90">
-              For an open ending that rewards patience, see{" "}
+              Open endings are often confused with ambiguous ones. For the contrast, compare this list with{" "}
               <a href="/en/book/piranesi" className="text-accent hover:underline">
-                Piranesi ending explained
-              </a>
-              , including what the House means and whether the finish counts as happy.
+                Piranesi, which we classify as an Ambiguous ending
+              </a>{" "}
+              — its plot resolves, but the meaning stays open, so it is not counted as an OE title here.
             </p>
           )}
+
         </section>
       )}
 
