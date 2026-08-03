@@ -260,8 +260,11 @@ function BookDetail() {
 
       <section className="grid md:grid-cols-2 gap-4 mb-10">
         <SpoilerBlock level="soft" title={t.spoilerSoft[lang]}>{book.spoilerSoft[lang]}</SpoilerBlock>
-        <SpoilerBlock level="hard" title={t.spoilerHard[lang]}>{book.spoilerHard[lang]}</SpoilerBlock>
+        {!fullDetails && (
+          <SpoilerBlock level="hard" title={t.spoilerHard[lang]}>{book.spoilerHard[lang]}</SpoilerBlock>
+        )}
       </section>
+
 
       {fullDetails && (
         <section className="mb-10">
