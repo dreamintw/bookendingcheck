@@ -9,35 +9,35 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangRouteImport } from './routes/$lang'
+import { Route as IndexRouteImport } from './routes/index'
 import { Route as LangIndexRouteImport } from './routes/$lang.index'
-import { Route as LangAboutRouteImport } from './routes/$lang.about'
-import { Route as LangBooksRouteImport } from './routes/$lang.books'
-import { Route as LangContactRouteImport } from './routes/$lang.contact'
-import { Route as LangDisclaimerRouteImport } from './routes/$lang.disclaimer'
-import { Route as LangEditorialPolicyRouteImport } from './routes/$lang.editorial-policy'
 import { Route as LangPrivacyRouteImport } from './routes/$lang.privacy'
-import { Route as LangAuthorsIndexRouteImport } from './routes/$lang.authors.index'
-import { Route as LangAuthorsSlugRouteImport } from './routes/$lang.authors.$slug'
-import { Route as LangBookSlugRouteImport } from './routes/$lang.book.$slug'
-import { Route as LangCollectionsIndexRouteImport } from './routes/$lang.collections.index'
-import { Route as LangCollectionsSlugRouteImport } from './routes/$lang.collections.$slug'
-import { Route as LangEndingsIndexRouteImport } from './routes/$lang.endings.index'
-import { Route as LangEndingsEndingRouteImport } from './routes/$lang.endings.$ending'
-import { Route as LangGenresIndexRouteImport } from './routes/$lang.genres.index'
-import { Route as LangGenresSlugRouteImport } from './routes/$lang.genres.$slug'
+import { Route as LangEditorialPolicyRouteImport } from './routes/$lang.editorial-policy'
+import { Route as LangDisclaimerRouteImport } from './routes/$lang.disclaimer'
+import { Route as LangContactRouteImport } from './routes/$lang.contact'
+import { Route as LangBooksRouteImport } from './routes/$lang.books'
+import { Route as LangAboutRouteImport } from './routes/$lang.about'
 import { Route as LangWarningsIndexRouteImport } from './routes/$lang.warnings.index'
+import { Route as LangGenresIndexRouteImport } from './routes/$lang.genres.index'
+import { Route as LangEndingsIndexRouteImport } from './routes/$lang.endings.index'
+import { Route as LangCollectionsIndexRouteImport } from './routes/$lang.collections.index'
+import { Route as LangAuthorsIndexRouteImport } from './routes/$lang.authors.index'
 import { Route as LangWarningsCodeRouteImport } from './routes/$lang.warnings.$code'
+import { Route as LangGenresSlugRouteImport } from './routes/$lang.genres.$slug'
+import { Route as LangEndingsEndingRouteImport } from './routes/$lang.endings.$ending'
+import { Route as LangCollectionsSlugRouteImport } from './routes/$lang.collections.$slug'
+import { Route as LangBookSlugRouteImport } from './routes/$lang.book.$slug'
+import { Route as LangAuthorsSlugRouteImport } from './routes/$lang.authors.$slug'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const LangRoute = LangRouteImport.update({
   id: '/$lang',
   path: '/$lang',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LangIndexRoute = LangIndexRouteImport.update({
@@ -45,24 +45,9 @@ const LangIndexRoute = LangIndexRouteImport.update({
   path: '/',
   getParentRoute: () => LangRoute,
 } as any)
-const LangAboutRoute = LangAboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => LangRoute,
-} as any)
-const LangBooksRoute = LangBooksRouteImport.update({
-  id: '/books',
-  path: '/books',
-  getParentRoute: () => LangRoute,
-} as any)
-const LangContactRoute = LangContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => LangRoute,
-} as any)
-const LangDisclaimerRoute = LangDisclaimerRouteImport.update({
-  id: '/disclaimer',
-  path: '/disclaimer',
+const LangPrivacyRoute = LangPrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => LangRoute,
 } as any)
 const LangEditorialPolicyRoute = LangEditorialPolicyRouteImport.update({
@@ -70,54 +55,24 @@ const LangEditorialPolicyRoute = LangEditorialPolicyRouteImport.update({
   path: '/editorial-policy',
   getParentRoute: () => LangRoute,
 } as any)
-const LangPrivacyRoute = LangPrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
+const LangDisclaimerRoute = LangDisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
   getParentRoute: () => LangRoute,
 } as any)
-const LangAuthorsIndexRoute = LangAuthorsIndexRouteImport.update({
-  id: '/authors/',
-  path: '/authors/',
+const LangContactRoute = LangContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => LangRoute,
 } as any)
-const LangAuthorsSlugRoute = LangAuthorsSlugRouteImport.update({
-  id: '/authors/$slug',
-  path: '/authors/$slug',
+const LangBooksRoute = LangBooksRouteImport.update({
+  id: '/books',
+  path: '/books',
   getParentRoute: () => LangRoute,
 } as any)
-const LangBookSlugRoute = LangBookSlugRouteImport.update({
-  id: '/book/$slug',
-  path: '/book/$slug',
-  getParentRoute: () => LangRoute,
-} as any)
-const LangCollectionsIndexRoute = LangCollectionsIndexRouteImport.update({
-  id: '/collections/',
-  path: '/collections/',
-  getParentRoute: () => LangRoute,
-} as any)
-const LangCollectionsSlugRoute = LangCollectionsSlugRouteImport.update({
-  id: '/collections/$slug',
-  path: '/collections/$slug',
-  getParentRoute: () => LangRoute,
-} as any)
-const LangEndingsIndexRoute = LangEndingsIndexRouteImport.update({
-  id: '/endings/',
-  path: '/endings/',
-  getParentRoute: () => LangRoute,
-} as any)
-const LangEndingsEndingRoute = LangEndingsEndingRouteImport.update({
-  id: '/endings/$ending',
-  path: '/endings/$ending',
-  getParentRoute: () => LangRoute,
-} as any)
-const LangGenresIndexRoute = LangGenresIndexRouteImport.update({
-  id: '/genres/',
-  path: '/genres/',
-  getParentRoute: () => LangRoute,
-} as any)
-const LangGenresSlugRoute = LangGenresSlugRouteImport.update({
-  id: '/genres/$slug',
-  path: '/genres/$slug',
+const LangAboutRoute = LangAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => LangRoute,
 } as any)
 const LangWarningsIndexRoute = LangWarningsIndexRouteImport.update({
@@ -125,9 +80,54 @@ const LangWarningsIndexRoute = LangWarningsIndexRouteImport.update({
   path: '/warnings/',
   getParentRoute: () => LangRoute,
 } as any)
+const LangGenresIndexRoute = LangGenresIndexRouteImport.update({
+  id: '/genres/',
+  path: '/genres/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangEndingsIndexRoute = LangEndingsIndexRouteImport.update({
+  id: '/endings/',
+  path: '/endings/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangCollectionsIndexRoute = LangCollectionsIndexRouteImport.update({
+  id: '/collections/',
+  path: '/collections/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangAuthorsIndexRoute = LangAuthorsIndexRouteImport.update({
+  id: '/authors/',
+  path: '/authors/',
+  getParentRoute: () => LangRoute,
+} as any)
 const LangWarningsCodeRoute = LangWarningsCodeRouteImport.update({
   id: '/warnings/$code',
   path: '/warnings/$code',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangGenresSlugRoute = LangGenresSlugRouteImport.update({
+  id: '/genres/$slug',
+  path: '/genres/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangEndingsEndingRoute = LangEndingsEndingRouteImport.update({
+  id: '/endings/$ending',
+  path: '/endings/$ending',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangCollectionsSlugRoute = LangCollectionsSlugRouteImport.update({
+  id: '/collections/$slug',
+  path: '/collections/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangBookSlugRoute = LangBookSlugRouteImport.update({
+  id: '/book/$slug',
+  path: '/book/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangAuthorsSlugRoute = LangAuthorsSlugRouteImport.update({
+  id: '/authors/$slug',
+  path: '/authors/$slug',
   getParentRoute: () => LangRoute,
 } as any)
 
@@ -272,18 +272,18 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/$lang': {
       id: '/$lang'
       path: '/$lang'
       fullPath: '/$lang'
       preLoaderRoute: typeof LangRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$lang/': {
@@ -293,32 +293,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangIndexRouteImport
       parentRoute: typeof LangRoute
     }
-    '/$lang/about': {
-      id: '/$lang/about'
-      path: '/about'
-      fullPath: '/$lang/about'
-      preLoaderRoute: typeof LangAboutRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/$lang/books': {
-      id: '/$lang/books'
-      path: '/books'
-      fullPath: '/$lang/books'
-      preLoaderRoute: typeof LangBooksRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/$lang/contact': {
-      id: '/$lang/contact'
-      path: '/contact'
-      fullPath: '/$lang/contact'
-      preLoaderRoute: typeof LangContactRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/$lang/disclaimer': {
-      id: '/$lang/disclaimer'
-      path: '/disclaimer'
-      fullPath: '/$lang/disclaimer'
-      preLoaderRoute: typeof LangDisclaimerRouteImport
+    '/$lang/privacy': {
+      id: '/$lang/privacy'
+      path: '/privacy'
+      fullPath: '/$lang/privacy'
+      preLoaderRoute: typeof LangPrivacyRouteImport
       parentRoute: typeof LangRoute
     }
     '/$lang/editorial-policy': {
@@ -328,74 +307,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangEditorialPolicyRouteImport
       parentRoute: typeof LangRoute
     }
-    '/$lang/privacy': {
-      id: '/$lang/privacy'
-      path: '/privacy'
-      fullPath: '/$lang/privacy'
-      preLoaderRoute: typeof LangPrivacyRouteImport
+    '/$lang/disclaimer': {
+      id: '/$lang/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/$lang/disclaimer'
+      preLoaderRoute: typeof LangDisclaimerRouteImport
       parentRoute: typeof LangRoute
     }
-    '/$lang/authors/': {
-      id: '/$lang/authors/'
-      path: '/authors'
-      fullPath: '/$lang/authors/'
-      preLoaderRoute: typeof LangAuthorsIndexRouteImport
+    '/$lang/contact': {
+      id: '/$lang/contact'
+      path: '/contact'
+      fullPath: '/$lang/contact'
+      preLoaderRoute: typeof LangContactRouteImport
       parentRoute: typeof LangRoute
     }
-    '/$lang/authors/$slug': {
-      id: '/$lang/authors/$slug'
-      path: '/authors/$slug'
-      fullPath: '/$lang/authors/$slug'
-      preLoaderRoute: typeof LangAuthorsSlugRouteImport
+    '/$lang/books': {
+      id: '/$lang/books'
+      path: '/books'
+      fullPath: '/$lang/books'
+      preLoaderRoute: typeof LangBooksRouteImport
       parentRoute: typeof LangRoute
     }
-    '/$lang/book/$slug': {
-      id: '/$lang/book/$slug'
-      path: '/book/$slug'
-      fullPath: '/$lang/book/$slug'
-      preLoaderRoute: typeof LangBookSlugRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/$lang/collections/': {
-      id: '/$lang/collections/'
-      path: '/collections'
-      fullPath: '/$lang/collections/'
-      preLoaderRoute: typeof LangCollectionsIndexRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/$lang/collections/$slug': {
-      id: '/$lang/collections/$slug'
-      path: '/collections/$slug'
-      fullPath: '/$lang/collections/$slug'
-      preLoaderRoute: typeof LangCollectionsSlugRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/$lang/endings/': {
-      id: '/$lang/endings/'
-      path: '/endings'
-      fullPath: '/$lang/endings/'
-      preLoaderRoute: typeof LangEndingsIndexRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/$lang/endings/$ending': {
-      id: '/$lang/endings/$ending'
-      path: '/endings/$ending'
-      fullPath: '/$lang/endings/$ending'
-      preLoaderRoute: typeof LangEndingsEndingRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/$lang/genres/': {
-      id: '/$lang/genres/'
-      path: '/genres'
-      fullPath: '/$lang/genres/'
-      preLoaderRoute: typeof LangGenresIndexRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/$lang/genres/$slug': {
-      id: '/$lang/genres/$slug'
-      path: '/genres/$slug'
-      fullPath: '/$lang/genres/$slug'
-      preLoaderRoute: typeof LangGenresSlugRouteImport
+    '/$lang/about': {
+      id: '/$lang/about'
+      path: '/about'
+      fullPath: '/$lang/about'
+      preLoaderRoute: typeof LangAboutRouteImport
       parentRoute: typeof LangRoute
     }
     '/$lang/warnings/': {
@@ -405,11 +342,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangWarningsIndexRouteImport
       parentRoute: typeof LangRoute
     }
+    '/$lang/genres/': {
+      id: '/$lang/genres/'
+      path: '/genres'
+      fullPath: '/$lang/genres/'
+      preLoaderRoute: typeof LangGenresIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/endings/': {
+      id: '/$lang/endings/'
+      path: '/endings'
+      fullPath: '/$lang/endings/'
+      preLoaderRoute: typeof LangEndingsIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/collections/': {
+      id: '/$lang/collections/'
+      path: '/collections'
+      fullPath: '/$lang/collections/'
+      preLoaderRoute: typeof LangCollectionsIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/authors/': {
+      id: '/$lang/authors/'
+      path: '/authors'
+      fullPath: '/$lang/authors/'
+      preLoaderRoute: typeof LangAuthorsIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
     '/$lang/warnings/$code': {
       id: '/$lang/warnings/$code'
       path: '/warnings/$code'
       fullPath: '/$lang/warnings/$code'
       preLoaderRoute: typeof LangWarningsCodeRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/genres/$slug': {
+      id: '/$lang/genres/$slug'
+      path: '/genres/$slug'
+      fullPath: '/$lang/genres/$slug'
+      preLoaderRoute: typeof LangGenresSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/endings/$ending': {
+      id: '/$lang/endings/$ending'
+      path: '/endings/$ending'
+      fullPath: '/$lang/endings/$ending'
+      preLoaderRoute: typeof LangEndingsEndingRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/collections/$slug': {
+      id: '/$lang/collections/$slug'
+      path: '/collections/$slug'
+      fullPath: '/$lang/collections/$slug'
+      preLoaderRoute: typeof LangCollectionsSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/book/$slug': {
+      id: '/$lang/book/$slug'
+      path: '/book/$slug'
+      fullPath: '/$lang/book/$slug'
+      preLoaderRoute: typeof LangBookSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/authors/$slug': {
+      id: '/$lang/authors/$slug'
+      path: '/authors/$slug'
+      fullPath: '/$lang/authors/$slug'
+      preLoaderRoute: typeof LangAuthorsSlugRouteImport
       parentRoute: typeof LangRoute
     }
   }
