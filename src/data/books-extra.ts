@@ -555,7 +555,7 @@ export const extraBooks: B[] = [
     confidence: 88,
     summary: { zh: "寄宿學校學生逐漸明白自己存在的真正用途。", en: "Boarding school students slowly learn the purpose of their existence." },
     spoilerSoft: { zh: "節制、悲哀。", en: "Restrained, sorrowful." },
-    spoilerHard: { zh: "他們是器官捐贈用複製人，最終皆死。", en: "They are clones harvested for organs; all main characters die." },
+    spoilerHard: { zh: "他們是為器官捐贈而存在的複製人；敘事者最親近的朋友先後離世，她本人在結尾仍活著，但命運已定。", en: "They are clones raised for organ donation; the narrator's closest friends die, and she is still alive at the end, facing the same fate." },
     whoFor: { zh: ["文學深度"], en: ["Literary depth"] },
     whoNot: { zh: ["想要強情節"], en: ["Want plot action"] },
     triggers: [{ code: "death", zh: "主角死亡", en: "Major character death", intensity: "high" }],
@@ -744,7 +744,7 @@ export const extraBooks: B[] = [
     confidence: 86,
     summary: { zh: "畫家 Alicia 槍殺丈夫後不再說話，心理師 Theo 設法讓她開口。", en: "Painter Alicia goes silent after killing her husband; therapist Theo tries to make her speak." },
     spoilerSoft: { zh: "結局轉折強。", en: "Strong twist." },
-    spoilerHard: { zh: "Theo 才是引發悲劇之人，Alicia 被陷害。", en: "Theo is the true cause; Alicia was framed." },
+    spoilerHard: { zh: "Theo 才是引發悲劇的隱藏源頭，他與 Alicia 過去的關聯正是全書的反轉。", en: "Theo is the hidden cause of the tragedy; his link to Alicia's past is the twist." },
     whoFor: { zh: ["想看反轉"], en: ["Want a twist"] },
     whoNot: { zh: ["排斥不可靠敘事"], en: ["Dislike unreliable POV"] },
     triggers: [
@@ -765,7 +765,7 @@ export const extraBooks: B[] = [
     confidence: 84,
     summary: { zh: "Lowen 接手代寫昏迷作家 Verity 的系列，發現她藏起來的自傳手稿。", en: "Lowen ghostwrites for comatose author Verity and finds a hidden autobiographical manuscript." },
     spoilerSoft: { zh: "極具爭議結局。", en: "Highly debated ending." },
-    spoilerHard: { zh: "結尾留下兩封信，讀者自行判斷 Verity 是真兇或被陷害。", en: "Two letters at the end leave it to the reader to decide." },
+    spoilerHard: { zh: "手稿與結尾的一封信說法互相矛盾，讀者自行判斷 Verity 是真兇或被誤解。", en: "The manuscript and a final letter tell conflicting stories, leaving the reader to decide." },
     whoFor: { zh: ["享受開放解讀"], en: ["Like reader-decided endings"] },
     whoNot: { zh: ["排斥兒童死亡"], en: ["Sensitive to child death"] },
     triggers: [
