@@ -397,6 +397,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/piranesi"/>
   </url>
   <url>
+    <loc>https://bookendingcheck.xyz/zh/book/circe</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/circe"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/circe"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/circe"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/circe</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/circe"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/circe"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/circe"/>
+  </url>
+  <url>
     <loc>https://bookendingcheck.xyz/zh/book/a-little-life</loc>
     <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/a-little-life"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/a-little-life"/>
@@ -407,6 +419,18 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/a-little-life"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/a-little-life"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/a-little-life"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/never-let-me-go</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/never-let-me-go"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/never-let-me-go"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/never-let-me-go"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/never-let-me-go</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/never-let-me-go"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/never-let-me-go"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/never-let-me-go"/>
   </url>
   <url>
     <loc>https://bookendingcheck.xyz/zh/book/the-handmaids-tale</loc>
@@ -431,6 +455,30 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/gone-girl"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/gone-girl"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/gone-girl"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/the-silent-patient</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-silent-patient"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-silent-patient"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-silent-patient"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/the-silent-patient</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-silent-patient"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-silent-patient"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-silent-patient"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/verity</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/verity"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/verity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/verity"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/verity</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/verity"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/verity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/verity"/>
   </url>
   <url>
     <loc>https://bookendingcheck.xyz/zh/book/marley-and-me</loc>
@@ -527,6 +575,18 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/the-seven-husbands-of-evelyn-hugo"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/the-seven-husbands-of-evelyn-hugo"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/the-seven-husbands-of-evelyn-hugo"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/zh/book/in-five-years</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/in-five-years"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/in-five-years"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/in-five-years"/>
+  </url>
+  <url>
+    <loc>https://bookendingcheck.xyz/en/book/in-five-years</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://bookendingcheck.xyz/zh/book/in-five-years"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookendingcheck.xyz/en/book/in-five-years"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookendingcheck.xyz/en/book/in-five-years"/>
   </url>
   <url>
     <loc>https://bookendingcheck.xyz/zh/book/looking-for-alaska</loc>
