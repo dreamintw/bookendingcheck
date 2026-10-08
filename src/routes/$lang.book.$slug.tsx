@@ -40,7 +40,7 @@ export const Route = createFileRoute("/$lang/book/$slug")({
       },
     };
 
-    const override = ctrOverrides[b.slug]?.[lang];
+    const override = ctrOverrides[b.slug]?.[lang] ?? BOOK_ENRICHMENT[b.slug]?.seo?.[lang];
     const title = override?.title ?? (lang === "zh"
       ? `《${b.title.zh}》結局與避雷標籤｜${b.author.zh} | 讀前決策站`
       : `${b.title.en} — Ending, Trigger Warnings & Verdict | NovelCheck`);
@@ -185,9 +185,12 @@ function BookDetail() {
   const { book } = Route.useLoaderData();
   const lang = useLang();
   const related = books.filter((b) => b.slug !== book.slug && b.ending === book.ending).slice(0, 3);
-  const hero = CTR_HERO[book.slug]?.[lang];
-  const extraSection = lang === "en" ? CTR_SECTIONS[book.slug]?.en : undefined;
-  const fullDetails = lang === "en" ? FULL_SPOILER_DETAILS[book.slug]?.en : undefined;
+  const enr = BOOK_ENRICHMENT[book.slug];
+  const hero = CTR_HERO[book.slug]?.[lang] ?? enr?.seo?.[lang];
+  const extraSection = (lang === "en" ? CTR_SECTIONS[book.slug]?.en : undefined)
+    ?? (enr?.endingMeaning ? { heading: enr.endingMeaning.heading[lang], body: enr.endingMeaning.body[lang] } : undefined);
+  const fullDetails = (lang === "en" ? FULL_SPOILER_DETAILS[book.slug]?.en : undefined)
+    ?? (enr?.fullSpoiler ? { summary: enr.fullSpoiler.summary[lang], body: enr.fullSpoiler.body[lang] } : undefined);
 
 
 
@@ -296,7 +299,7 @@ function BookDetail() {
             <Check className="h-4 w-4" /> {t.whoFor[lang]}
           </h3>
           <ul className="space-y-1.5 text-sm">
-            {book.whoFor[lang].map((line: string) => <li key={line}>· {line}</li>)}
+            {(enr?.whoFor ?? book.whoFor)[lang].map((line: string) => <li key={line}>· {line}</li>)}
           </ul>
         </div>
         <div className="rounded-xl border border-destructive/30 bg-destructive/5 p-5">
@@ -304,7 +307,7 @@ function BookDetail() {
             <X className="h-4 w-4" /> {t.whoNot[lang]}
           </h3>
           <ul className="space-y-1.5 text-sm">
-            {book.whoNot[lang].map((line: string) => <li key={line}>· {line}</li>)}
+            {(enr?.whoNot ?? book.whoNot)[lang].map((line: string) => <li key={line}>· {line}</li>)}
           </ul>
         </div>
       </section>

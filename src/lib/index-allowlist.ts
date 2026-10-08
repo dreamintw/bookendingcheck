@@ -63,6 +63,12 @@ export const BOOK_ALLOW = new Set<string>([
   "looking-for-alaska",
   "the-end-of-the-affair",
   "scythe",
+  // Phase 5F-1 — 5 ending-intent enrichments
+  "never-let-me-go",
+  "verity",
+  "in-five-years",
+  "circe",
+  "the-silent-patient",
 ]);
 
 export const AUTHOR_ALLOW = new Set<string>([

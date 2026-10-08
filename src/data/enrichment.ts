@@ -25,6 +25,13 @@ export interface BookEnrichment {
   // prefix); the route prepends the active language. Only point these at pages
   // that are currently indexable.
   relatedLinks?: { path: string; label: Bi }[];
+  // Phase 5F-1 optional per-language SEO/hero, long-form meaning, fit lists
+  // and an SSR full-spoiler block (rendered in a collapsed <details>).
+  seo?: { en: { title: string; desc: string; h1: string; intro: string }; zh: { title: string; desc: string; h1: string; intro: string } };
+  endingMeaning?: { heading: Bi; body: BiList };
+  whoFor?: BiList;
+  whoNot?: BiList;
+  fullSpoiler?: { summary: Bi; body: BiList };
 }
 
 export interface AuthorEnrichment {
@@ -336,7 +343,10 @@ export const WARNING_ENRICHMENT: Record<string, CollectionEnrichment> = {
 // Books — 10 high-value pages
 // ---------------------------------------------------------------------------
 
+import { BOOK_ENRICHMENT_5F } from "./enrichment-5f";
+
 export const BOOK_ENRICHMENT: Record<string, BookEnrichment> = {
+  ...BOOK_ENRICHMENT_5F,
   "the-song-of-achilles": {
     endingTone: {
       en: "The Song of Achilles does not have a traditional happy ending. It is best treated as a tragic or bittersweet ending — Madeline Miller follows the Iliad's broad arc, so both leads die and the novel closes on grief. Is The Song of Achilles sad? Yes: tender first half, devastating finish. Even readers who already know the Iliad report being unprepared for the emotional weight of the last 80 pages — Miller writes the bond so warmly that the foreordained loss lands like a personal grief. If you came here asking 'does The Song of Achilles have a happy ending' for a friend or a low-mood night, the honest answer is no.",
