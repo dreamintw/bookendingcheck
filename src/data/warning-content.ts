@@ -32,8 +32,8 @@ export interface WarningContent {
 export const CURATED_BY_WARNING: Record<string, string[]> = {
   "pet-death": ["marley-and-me", "the-art-of-racing-in-the-rain"],
   "self-harm": ["a-little-life", "conversations-with-friends"],
-  "sexual-violence": ["lessons-in-chemistry", "the-handmaids-tale"],
-  suicide: ["no-longer-human", "norwegian-wood", "a-little-life", "the-great-gatsby"],
+  "sexual-violence": ["lessons-in-chemistry", "the-handmaids-tale", "circe"],
+  suicide: ["no-longer-human", "norwegian-wood", "a-little-life", "the-great-gatsby", "the-silent-patient"],
   cheating: [
     "gone-girl",
     "the-great-gatsby",
@@ -48,6 +48,9 @@ export const CURATED_BY_WARNING: Record<string, string[]> = {
     "the-seven-husbands-of-evelyn-hugo",
     "lessons-in-chemistry",
     "the-great-gatsby",
+    "never-let-me-go",
+    "verity",
+    "in-five-years",
   ],
 };
 
